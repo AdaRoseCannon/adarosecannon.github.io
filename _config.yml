@@ -5,10 +5,6 @@ author:
   email: adaroseedwards@gmail.com
   twitter: lady_ada_king
 
-# Grunt handles images and assets.
-exclude: ['img', '**.css', '**.js', 'fonts', 'node_modules',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
-
 include: ['.htaccess']
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
