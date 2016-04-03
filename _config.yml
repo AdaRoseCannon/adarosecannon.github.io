@@ -1,7 +1,3 @@
-# Jekyll configuration precedence:
-# 2. config.build.yml
-# 3. config.yml
-
 name: Ada.is
 description: The blog of Ada Rose Edwards
 author:
@@ -16,8 +12,8 @@ exclude: ['img', '**.css', '**.js', 'fonts', 'node_modules',
 include: ['.htaccess']
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
-future: true
-show_drafts: true
+future: false
+show_drafts: false
 
 permalink: pretty
 
