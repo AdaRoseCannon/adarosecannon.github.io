@@ -1,0 +1,6 @@
+# Jekyll configuration precedence:
+# 2. config.build.yml
+# 3. config.yml
+
+future: false
+show_drafts: false
