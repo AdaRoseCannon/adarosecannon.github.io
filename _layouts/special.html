@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js">
+	{% include head.html %}
+	<body class="special">
+		<div class="container">
+			<div class="header row">
+					{% include header.html %}
+					<h1 class="page-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+			</div>
+			<div class="row body">
+				<div class="by-box hidden-xs col-sm-3 col-md-4 col-lg-4">
+					<div class="head-hexagon">
+						<div class="hexTop"></div>
+						<div class="hexBottom"></div>
+					</div>
+					{% if page.title %}
+					<h3>by {{ page.author }}<br /><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">@{{ site.author.twitter }}</a></h3>
+					<time datetime="{{ page.date }}">{{ page.date | date: "%-d %B %Y"}}</time>
+					<p><a href="{{ site.pullreq }}{{ page.path }}">Make a pull request to edit this post on github.</a></p>
+					{% endif %}
+				</div>
+				<div class="content-container col-xs-12 col-sm-9 col-md-8 col-lg-7">
+					{{ content }}
+					<div class="share-or-comment">
+						<h2>Share or Comment</h2>
+						{% include twitter.html %}
+						<hr />
+						{% include disqus.html %}
+					</div>
+				</div>
+			</div>
+			<div class="footer row">
+				{% include footer.html %}
+			</div>
+		</div>
+		{% include scripts.html %}
+	</body>
+</html>

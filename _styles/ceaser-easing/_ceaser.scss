@@ -1,0 +1,12 @@
+@import "ease-types";
+@import "easing-vars";
+
+@function ceaser($type: $ease) {
+  $easingValue: returnEaseType($type);
+  @return cubic-bezier(unquote($easingValue));
+}
+
+@mixin ceaser-transition($properties: all, $duration: 500ms, $type: $ease, $delay: 0ms) {
+  $easingValue : returnEaseType($type);
+  @include transition($properties $duration cubic-bezier(unquote($easingValue)) $delay);
+}

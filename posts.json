@@ -1,0 +1,21 @@
+---
+title : JSON
+---
+{
+  "homepage": "{{ site.pageurl }}",
+  "name": "{{ site.name }}",
+  "description": "{{ site.description }}",
+  "author": "{{ site.author.name }}",
+  "posts": [{% for post in site.posts %}
+    {
+      "url": "{{ post.url }}",
+      "slug": "{{ post.id | remove:'/' }}",
+      "title": "{{ post.title }}",
+      "published_on": "{{ post.date }}",
+      "excerpt": "{{ post.content | strip_html | strip_newlines | truncatewords: 55 }}",
+      "content": {{ post.content  | jsonify}},
+      "tags": "{% for tag in post.tags %}{{ tag }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}",
+      "categories": "{% for category in post.categories %}{{ category }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"
+    },{% endfor %}
+    {}]
+}

@@ -1,0 +1,5 @@
+<h1 class="hero"><a href="{{ site.pageurl }}">{{ site.name }}</a></h1>
+<h1 class="hero-subtitle">{{ site.description }}<span class="hero-offline"> - <a href="javascript: void(0)" id="offline-link">Read Offline</a></span></h1><br />
+<script type="text/javascript">
+	window.offlineLinks = [{% for post in site.posts %}"{{ post.url }}",{% endfor %}]
+</script>

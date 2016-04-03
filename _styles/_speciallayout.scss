@@ -1,0 +1,277 @@
+
+body.special, body.special-index {
+
+	background: $ada-pink;
+
+	article {
+		h1, h2 {
+			border-bottom: 1px solid $shadow;
+		}
+
+		.highlight {
+			padding: 1em;
+			margin: 2em 0em 2em 0em;
+			clear: both;
+			box-shadow: 0.5em 0.5em 0 $shadow;
+		}
+
+		.gallery-item {
+			background: $ada-pink;
+			padding: 0.5em;
+			box-shadow: 0.5em 0.5em 0 $shadow;
+			margin: 0.5em 1em 1em 0.5em;
+			display: inline;
+			max-width: 100%;
+
+			img {
+				display: inline-block;
+				max-width: 100%;
+			}
+
+			em {
+				padding: 0.4em 1em;
+			}
+
+			&.align-left, &:nth-of-type(odd) {
+				float:left;
+				margin-left: 0;
+			}
+
+			&.align-right, &:nth-of-type(even) {
+				float:right;
+				margin-right: 0;
+			}
+		}
+
+		.notebene {
+			background: $ada-pink;
+			padding: 1.5em 1em 1em 2em;
+			box-shadow: 0.5em 0.5em 0 $shadow;
+			margin: 2em 0em 2em 0em;
+			position: relative;
+
+			&:before {
+				font-size: 140%;
+				font-family: serif;
+				font-style: italic;
+				position: absolute;
+				color: rgb(76, 76, 76);
+				display: block;
+				opacity: 0.3;
+				padding: 0.1em;
+				margin: -0.2em 0;
+				content: "NB:";
+				left: 0;
+				top: 0;
+			}
+		}
+
+		blockquote {
+			clear: both;
+			box-shadow: 0.5em 0.5em 0 $shadow;
+			background: $ada-pink;
+			margin: 1em 0;
+			color: rgb(76, 76, 76);
+			position: relative;
+			padding: 0.5em;
+
+			blockquote {
+
+				box-shadow: none;
+				background: transparent;
+				padding: 0.5em 1.5em;
+				margin: 0;
+				font-family: serif;
+				font-style: italic;
+				font-size: 140%;
+
+				&:before, &:after {
+					font-size: 3em;
+					position: absolute;
+					display: block;
+					opacity: 0.3;
+					padding: 0.1em;
+					margin: -0.2em 0;
+					height: 1em;
+				}
+				&:before {
+					content: "\201c";
+					left: 0;
+					top: -0.1em;
+				}
+				&:after {
+					content: "\201d";
+					right: 0;
+					bottom: 0.1em;
+				}
+			}
+		}
+
+		p:before {
+			content: "";
+			width: 12em;
+			display: block;
+			overflow: hidden;
+			border: red;
+		}
+
+	}
+
+	.row.header {
+		background: url("/images/pattern.svg");
+		background-size: cover;
+		padding: 1em;
+	}
+
+	.hero {
+		font-weight: 300;
+		font-size: 2em;
+	}
+
+	.hero-subtitle {
+		font-style: italic;
+		font-weight: 300;
+		font-size: 1.5em;
+
+		// Allow for it to go onto 2 rows.
+		height: 2em;
+	}
+
+	.hero-offline {
+		white-space: nowrap;
+		display: none;
+	}
+}
+
+body.special-index {
+
+	.container {
+		background: $ada-pink;
+	}
+
+	.row.header .page-title {
+		display: none;
+	}
+
+	@media screen and (orientation: landscape) {
+		.row.header {
+			width: 100vh;
+			height: 100vh;
+			float: right;
+		}
+
+		.home-posts {
+			margin-left: calc(100vh - 100vw);
+			padding-left: 1em;
+		}
+	}
+
+
+	@media screen and (orientation: portrait) {
+		.row.header {
+			width: 100%;
+			height: 100vw;
+		}
+	}
+
+	.home-posts {
+		.home-posts_item {
+			.article-link > h1 {
+				background: $foreground;
+				margin: 0;
+			}
+
+			position: relative;
+			display: block;
+			padding: 0.3em;
+			margin: 0 0 2em 0;
+			display: block;
+			box-shadow: 1em 1em 0 $shadow;
+			background: lighten($foreground, 50%);
+			max-width: 90vw;
+			padding-left: 1em;
+			overflow: hidden;
+		}
+	}
+}
+
+body.special {
+
+	.row.header {
+		height: auto;
+		min-height: 50vh;
+
+		// if the screen height is greater than 44em
+		// fix the height to 22em
+		@media (min-height: 44em) {
+			min-height: 22em;
+		}
+		width: 100%;
+		position: relative;
+		overflow: visible;
+		padding-top: 1em;
+		padding-left: 1em;
+		@media screen and (orientation: landscape) {
+			padding-left: calc(1em + 100% - 100vh);
+		}
+
+		.page-title {
+			font-weight: 800;
+			font-size: 2.5em;
+		}
+	}
+
+	.row.body {
+		padding-top: 2em;
+
+		.pr-link {
+			font-weight: bold;
+			margin-bottom: 1em;
+		}
+
+		.pr-link:before {
+			content: '> ';
+		}
+	}
+
+	.content-container {
+		height: 100%;
+		background-color: white;
+	}
+
+	time {
+		font-size: 1.5em;
+		font-weight: 300;
+		font-style: italic;
+		margin-top: 1em;
+	}
+
+	.by-box {
+		text-align: center;
+	}
+
+	.head-hexagon {
+		text-align: initial;
+		position: relative;
+		left: 50%;
+		z-index: 2;
+		transform: translate(-50%, 0) scale(0.5);
+		transition: transform 600ms ceaser($resizeAnim);
+		@media (min-width: $screen-sm-min) {
+			transform: translate(-50%, 0) scale(0.75);
+		}
+
+		@media (min-width: $screen-md-min) {
+			transform: translate(-50%, 0) scale(0.9);
+		}
+
+		@media (min-width: $screen-lg-min) {
+			transform: translate(-50%, 0) scale(1.0);
+		}
+	}
+
+	.row.footer {
+		color: darken($foreground, 50%);
+		padding: 1em;
+	}
+}

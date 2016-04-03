@@ -1,0 +1,643 @@
+.head-hexagon {
+  position: relative;
+  width: 200px;
+  height: 115.47px;
+  margin: 57.74px 0;
+  background: teal;
+  background-image: url(https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400);
+  background-size: auto 230.9401px;
+  background-position: center;
+  /*counter transform the bg image on the caps*/ }
+  .head-hexagon .hexTop,
+  .head-hexagon .hexBottom {
+    position: absolute;
+    z-index: 1;
+    width: 141.42px;
+    height: 141.42px;
+    overflow: hidden;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background: inherit;
+    left: 29.29px; }
+  .head-hexagon .hexTop:after,
+  .head-hexagon .hexBottom:after {
+    content: "";
+    position: absolute;
+    width: 200.0000px;
+    height: 115.47005383792516px;
+    -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+    -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+    transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: inherit; }
+  .head-hexagon .hexTop {
+    top: -70.7107px; }
+  .head-hexagon .hexTop:after {
+    background-position: center top; }
+  .head-hexagon .hexBottom {
+    bottom: -70.7107px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); }
+  .head-hexagon .hexBottom:after {
+    background-position: center bottom; }
+  .head-hexagon:after {
+    content: "";
+    position: absolute;
+    top: 0.0000px;
+    left: 0;
+    width: 200.0000px;
+    height: 115.4701px;
+    z-index: 2;
+    background: inherit; }
+
+/* @import "icons"; */
+html, body, .container, .row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  color: #333333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  clear: both; }
+
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.aspect-ratio-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%; }
+  .aspect-ratio-wrapper iframe, .aspect-ratio-wrapper img, .aspect-ratio-wrapper video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+
+body.special, body.special-index {
+  background: #FFF0F5; }
+  body.special article h1, body.special article h2, body.special-index article h1, body.special-index article h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  body.special article .highlight, body.special-index article .highlight {
+    padding: 1em;
+    margin: 2em 0em 2em 0em;
+    clear: both;
+    box-shadow: 0.5em 0.5em 0 rgba(0, 0, 0, 0.2); }
+  body.special article .gallery-item, body.special-index article .gallery-item {
+    background: #FFF0F5;
+    padding: 0.5em;
+    box-shadow: 0.5em 0.5em 0 rgba(0, 0, 0, 0.2);
+    margin: 0.5em 1em 1em 0.5em;
+    display: inline;
+    max-width: 100%; }
+    body.special article .gallery-item img, body.special-index article .gallery-item img {
+      display: inline-block;
+      max-width: 100%; }
+    body.special article .gallery-item em, body.special-index article .gallery-item em {
+      padding: 0.4em 1em; }
+    body.special article .gallery-item.align-left, body.special article .gallery-item:nth-of-type(odd), body.special-index article .gallery-item.align-left, body.special-index article .gallery-item:nth-of-type(odd) {
+      float: left;
+      margin-left: 0; }
+    body.special article .gallery-item.align-right, body.special article .gallery-item:nth-of-type(even), body.special-index article .gallery-item.align-right, body.special-index article .gallery-item:nth-of-type(even) {
+      float: right;
+      margin-right: 0; }
+  body.special article .notebene, body.special-index article .notebene {
+    background: #FFF0F5;
+    padding: 1.5em 1em 1em 2em;
+    box-shadow: 0.5em 0.5em 0 rgba(0, 0, 0, 0.2);
+    margin: 2em 0em 2em 0em;
+    position: relative; }
+    body.special article .notebene:before, body.special-index article .notebene:before {
+      font-size: 140%;
+      font-family: serif;
+      font-style: italic;
+      position: absolute;
+      color: #4c4c4c;
+      display: block;
+      opacity: 0.3;
+      padding: 0.1em;
+      margin: -0.2em 0;
+      content: "NB:";
+      left: 0;
+      top: 0; }
+  body.special article blockquote, body.special-index article blockquote {
+    clear: both;
+    box-shadow: 0.5em 0.5em 0 rgba(0, 0, 0, 0.2);
+    background: #FFF0F5;
+    margin: 1em 0;
+    color: #4c4c4c;
+    position: relative;
+    padding: 0.5em; }
+    body.special article blockquote blockquote, body.special-index article blockquote blockquote {
+      box-shadow: none;
+      background: transparent;
+      padding: 0.5em 1.5em;
+      margin: 0;
+      font-family: serif;
+      font-style: italic;
+      font-size: 140%; }
+      body.special article blockquote blockquote:before, body.special article blockquote blockquote:after, body.special-index article blockquote blockquote:before, body.special-index article blockquote blockquote:after {
+        font-size: 3em;
+        position: absolute;
+        display: block;
+        opacity: 0.3;
+        padding: 0.1em;
+        margin: -0.2em 0;
+        height: 1em; }
+      body.special article blockquote blockquote:before, body.special-index article blockquote blockquote:before {
+        content: "\201c";
+        left: 0;
+        top: -0.1em; }
+      body.special article blockquote blockquote:after, body.special-index article blockquote blockquote:after {
+        content: "\201d";
+        right: 0;
+        bottom: 0.1em; }
+  body.special article p:before, body.special-index article p:before {
+    content: "";
+    width: 12em;
+    display: block;
+    overflow: hidden;
+    border: red; }
+  body.special .row.header, body.special-index .row.header {
+    background: url("/images/pattern.svg");
+    background-size: cover;
+    padding: 1em; }
+  body.special .hero, body.special-index .hero {
+    font-weight: 300;
+    font-size: 2em; }
+  body.special .hero-subtitle, body.special-index .hero-subtitle {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5em;
+    height: 2em; }
+  body.special .hero-offline, body.special-index .hero-offline {
+    white-space: nowrap;
+    display: none; }
+
+body.special-index .container {
+  background: #FFF0F5; }
+
+body.special-index .row.header .page-title {
+  display: none; }
+
+@media screen and (orientation: landscape) {
+  body.special-index .row.header {
+    width: 100vh;
+    height: 100vh;
+    float: right; }
+  body.special-index .home-posts {
+    margin-left: calc(100vh - 100vw);
+    padding-left: 1em; } }
+
+@media screen and (orientation: portrait) {
+  body.special-index .row.header {
+    width: 100%;
+    height: 100vw; } }
+
+body.special-index .home-posts .home-posts_item {
+  position: relative;
+  display: block;
+  padding: 0.3em;
+  margin: 0 0 2em 0;
+  display: block;
+  box-shadow: 1em 1em 0 rgba(0, 0, 0, 0.2);
+  background: white;
+  max-width: 90vw;
+  padding-left: 1em;
+  overflow: hidden; }
+  body.special-index .home-posts .home-posts_item .article-link > h1 {
+    background: #FFFFFF;
+    margin: 0; }
+
+body.special .row.header {
+  height: auto;
+  min-height: 50vh;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  padding-top: 1em;
+  padding-left: 1em; }
+  @media (min-height: 44em) {
+    body.special .row.header {
+      min-height: 22em; } }
+  @media screen and (orientation: landscape) {
+    body.special .row.header {
+      padding-left: calc(1em + 100% - 100vh); } }
+  body.special .row.header .page-title {
+    font-weight: 800;
+    font-size: 2.5em; }
+
+body.special .row.body {
+  padding-top: 2em; }
+  body.special .row.body .pr-link {
+    font-weight: bold;
+    margin-bottom: 1em; }
+  body.special .row.body .pr-link:before {
+    content: '> '; }
+
+body.special .content-container {
+  height: 100%;
+  background-color: white; }
+
+body.special time {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 1em; }
+
+body.special .by-box {
+  text-align: center; }
+
+body.special .head-hexagon {
+  text-align: initial;
+  position: relative;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, 0) scale(0.5);
+  transition: transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550); }
+  @media (min-width: 768px) {
+    body.special .head-hexagon {
+      transform: translate(-50%, 0) scale(0.75); } }
+  @media (min-width: 992px) {
+    body.special .head-hexagon {
+      transform: translate(-50%, 0) scale(0.9); } }
+  @media (min-width: 1200px) {
+    body.special .head-hexagon {
+      transform: translate(-50%, 0) scale(1); } }
+
+body.special .row.footer {
+  color: gray;
+  padding: 1em; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+.highlight {
+  color: white;
+  background-color: #49483e; }
+
+.c {
+  color: #75715e; }
+
+/* Comment          */
+.err {
+  color: #960050;
+  background-color: #1e0010; }
+
+/* Error */
+.k {
+  color: #66d9ef; }
+
+/* Keyword          */
+.l {
+  color: #ae81ff; }
+
+/* Literal          */
+.n {
+  color: #f8f8f2; }
+
+/* Name  */
+.o {
+  color: #f92672; }
+
+/* Operator         */
+.p {
+  color: #f8f8f2; }
+
+/* Punctuation      */
+.cm {
+  color: #75715e; }
+
+/* Comment.Multiline*/
+.cp {
+  color: #75715e; }
+
+/* Comment.Preproc  */
+.c1 {
+  color: #75715e; }
+
+/* Comment.Single   */
+.cs {
+  color: #75715e; }
+
+/* Comment.Special  */
+.ge {
+  font-style: italic; }
+
+/* Generic.Emph     */
+.gs {
+  font-weight: bold; }
+
+/* Generic.Strong   */
+.kc {
+  color: #66d9ef; }
+
+/* Keyword.Constant */
+.kd {
+  color: #66d9ef; }
+
+/* Keyword.Declaration         */
+.kn {
+  color: #f92672; }
+
+/* Keyword.Namespace*/
+.kp {
+  color: #66d9ef; }
+
+/* Keyword.Pseudo   */
+.kr {
+  color: #66d9ef; }
+
+/* Keyword.Reserved */
+.kt {
+  color: #66d9ef; }
+
+/* Keyword.Type     */
+.ld {
+  color: #e6db74; }
+
+/* Literal.Date     */
+.m {
+  color: #ae81ff; }
+
+/* Literal.Number   */
+.s {
+  color: #e6db74; }
+
+/* Literal.String   */
+.na {
+  color: #a6e22e; }
+
+/* Name.Attribute   */
+.nb {
+  color: #f8f8f2; }
+
+/* Name.Builtin     */
+.nc {
+  color: #a6e22e; }
+
+/* Name.Class       */
+.no {
+  color: #66d9ef; }
+
+/* Name.Constant    */
+.nd {
+  color: #a6e22e; }
+
+/* Name.Decorator   */
+.ni {
+  color: #f8f8f2; }
+
+/* Name.Entity      */
+.ne {
+  color: #a6e22e; }
+
+/* Name.Exception   */
+.nf {
+  color: #a6e22e; }
+
+/* Name.Function    */
+.nl {
+  color: #f8f8f2; }
+
+/* Name.Label       */
+.nn {
+  color: #f8f8f2; }
+
+/* Name.Namespace   */
+.nx {
+  color: #a6e22e; }
+
+/* Name.Other       */
+.py {
+  color: #f8f8f2; }
+
+/* Name.Property    */
+.nt {
+  color: #f92672; }
+
+/* Name.Tag         */
+.nv {
+  color: #f8f8f2; }
+
+/* Name.Variable    */
+.ow {
+  color: #f92672; }
+
+/* Operator.Word    */
+.w {
+  color: #f8f8f2; }
+
+/* Text.Whitespace  */
+.mf {
+  color: #ae81ff; }
+
+/* Literal.Number.Float        */
+.mh {
+  color: #ae81ff; }
+
+/* Literal.Number.Hex          */
+.mi {
+  color: #ae81ff; }
+
+/* Literal.Number.Integer      */
+.mo {
+  color: #ae81ff; }
+
+/* Literal.Number.Oct          */
+.sb {
+  color: #e6db74; }
+
+/* Literal.String.Backtick     */
+.sc {
+  color: #e6db74; }
+
+/* Literal.String.Char         */
+.sd {
+  color: #e6db74; }
+
+/* Literal.String.Doc          */
+.s2 {
+  color: #e6db74; }
+
+/* Literal.String.Double       */
+.se {
+  color: #ae81ff; }
+
+/* Literal.String.Escape       */
+.sh {
+  color: #e6db74; }
+
+/* Literal.String.Heredoc      */
+.si {
+  color: #e6db74; }
+
+/* Literal.String.Interpol     */
+.sx {
+  color: #e6db74; }
+
+/* Literal.String.Other        */
+.sr {
+  color: #e6db74; }
+
+/* Literal.String.Regex        */
+.s1 {
+  color: #e6db74; }
+
+/* Literal.String.Single       */
+.ss {
+  color: #e6db74; }
+
+/* Literal.String.Symbol       */
+.bp {
+  color: #f8f8f2; }
+
+/* Name.Builtin.Pseudo         */
+.vc {
+  color: #f8f8f2; }
+
+/* Name.Variable.Class         */
+.vg {
+  color: #f8f8f2; }
+
+/* Name.Variable.Global        */
+.vi {
+  color: #f8f8f2; }
+
+/* Name.Variable.Instance      */
+.il {
+  color: #ae81ff; }
+
+/* Literal.Number.Integer.Long */
+.gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* Generic.Deleted */
+.gd .x {
+  color: #000000;
+  background-color: #ffaaaa; }
+
+/* Generic.Deleted.Specific */

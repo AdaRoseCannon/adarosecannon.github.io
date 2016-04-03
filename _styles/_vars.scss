@@ -1,0 +1,23 @@
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-sm-min: $screen-sm;
+$screen-xs-max: ($screen-sm-min - 1px);
+$screen-xs-min: $screen-xs;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+$screen-sm-max: ($screen-md-min - 1px);
+$screen-phone: $screen-xs-min;
+$screen-tablet: $screen-sm-min;
+$screen-desktop: $screen-md-min;
+$screen-lg-desktop: $screen-lg-min;
+$screen-md-max: ($screen-lg-min - 1px);
+
+
+$ada-pink: #FFF0F5;
+$foreground: #FFFFFF;
+$background: darken($ada-pink, 80%);
+$shadow: rgba(darken($background, 50%), 0.2);
+$font-color: darken($foreground, 80%);
+$resizeAnim: easeInOutBack;

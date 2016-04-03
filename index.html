@@ -1,0 +1,15 @@
+---
+layout: special-index
+blog_title: Ada Rose Edwards
+title: Ada.is
+---
+
+<section class="home-posts">
+  {% for post in site.posts %}
+    <div class="home-posts_item">
+    	<a class="article-link" href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+		<article>{{ post.excerpt }}</article>
+    	<time>{{ post.date | date_to_string }}</time>
+    </div>
+  {% endfor %}
+</section>
