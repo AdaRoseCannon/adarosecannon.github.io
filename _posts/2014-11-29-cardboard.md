@@ -24,7 +24,7 @@ The Algorithm is nice and simple. (/js/processVerts.js) I take the Audio data wh
 The algo:
 
 
-{% highlight javascript %}
+```javascript
 
 
 function updateAudioData(d) {
@@ -68,7 +68,7 @@ function convertCartesianToSpherical(cartesian) {
 	};
 }
 
-{% endhighlight %}
+```
 
 `scaleSphere` maps different frequencies to different points on the sphere. Higher frequencies have more spikes and lower frequencies have fewer the video below shows what happens if we turn on only one frequency bin at a time:
 
@@ -84,9 +84,9 @@ As you'll remember from physics the function for a simple plane wave is
     y = Amplitude * sin(2π*Frequency * x);
 In this case the amplitude is `amplitude/(l * Math.log(i + 2))` It is damped at higher frequencies since they tended to have higher amplitudes and the frequency in the `phi` direction is `i`<sup>2</sup>`/2l`. In the `theta` direction it is the same frequency but offset by `π/2`.
 
-{% highlight javascript %}
+```javascript
 amplitude/(l * Math.log(i + 2)) * (Math.sin(i * i * Math.PI * p / l) + Math.cos(i * i * Math.PI * t / l));
-{% endhighlight %}
+```
 
 ## Performance
 

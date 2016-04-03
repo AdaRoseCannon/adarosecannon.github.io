@@ -18,7 +18,7 @@ I write code for two audiences:
 
 (Almost entirely the second)
 
-I happen to like myself. Unfortunately past Ada often makes mistakes future Ada needs to fix. 
+I happen to like myself. Unfortunately past Ada often makes mistakes future Ada needs to fix.
 As present time Ada it is the least I can do to write code so that my good friend, future Ada, can repair my code easily.
 
 The source code we write as developers is primarily to be written for _Humans_.
@@ -29,7 +29,7 @@ One should assume the code one writes is broken.
 Provide all the hints so that someone who has never seen it your code can repair it.
 Not because one is a poor developer; but _your code will only be read when it is broken_.
 
-No software greater than 0 bytes is bug free. There will be unexpected edge cases or new use cases. When that comes someone will need to read it, probably you. Make life easy on yourself. 
+No software greater than 0 bytes is bug free. There will be unexpected edge cases or new use cases. When that comes someone will need to read it, probably you. Make life easy on yourself.
 
 Your code in reading it should describe itself through the code or the comments to future developers.
 
@@ -66,7 +66,7 @@ In the example above both lines describe the same axiom, but the first example m
 When reading our code one issue we have is boilerplate.
 Boilerplate is content in our code which contains no information *useful to _us_*. Whether it is information for the compiler or for setting up a framework.
 In stretching the previous letter metaphor it is the pleasantries and small talk at the beginning and end which is not what concerns us when we have a job to do.
-The information contained in boilerplate code is not useful in helping us to complete our task at hand. It is intended for the computer, but the computer is not our audience. 
+The information contained in boilerplate code is not useful in helping us to complete our task at hand. It is intended for the computer, but the computer is not our audience.
 
 If we define information as only the information we care about, boilerplate reduces the information density of our source code without improving the clarity. This can make it harder to work out what a piece of code is intended for because it is too hard to see the proverbial forest through all the trees.
 
@@ -102,7 +102,7 @@ let, const
 
 Many languages allow you to be very terse, especially scripting languages. I am primarily a JavaScript developer and have picked up many tricks over the (too many) years.
 
-In my drive for writing concise code I have often 
+In my drive for writing concise code I have often
 
 ```
 // Crazy JS example.
@@ -117,7 +117,7 @@ In my drive for writing concise code I have often
 
 Code like this is too information dense to make sense of easily. Information isn't always what is on the surface a simple line of code which takes into account many edge cases or far reaching effects should be visually isolated and/or commented to key the developer that this line of code is a wolf in sheep's clothing.
 
-Code like this is hard to maintain if, like me, you are not an infallible developer you probably will have to make changes. In disrupting your elegant code you may be tempted to maintain the structure and turn something elegant into a Frankenstein's monster. 
+Code like this is hard to maintain if, like me, you are not an infallible developer you probably will have to make changes. In disrupting your elegant code you may be tempted to maintain the structure and turn something elegant into a Frankenstein's monster.
 
 * Refactoring
 * * Reducing scope
@@ -134,7 +134,7 @@ In my opinion, Good comments, should be in the order:
 
 ```
 // What this line does in the content of the script
-// Break down of how it does it and potential edge cases it accounts for 
+// Break down of how it does it and potential edge cases it accounts for
 // Why this is the optimal solution
 ```
 
@@ -160,14 +160,14 @@ Schaudenfreude
 
 In JavaScript ES2015 it seemed to gain a lot of syntactic sugar, here is one example:
 <div>
-{% highlight js %}
+```javascript
 
 	function MyClass(arg1, arg2) {
 		this.prop1 = arg1;
 	}
 
 	MyClass.prototype.myMethod2 = function myMethod2() {
-		console.log(this.prop1);	
+		console.log(this.prop1);
 	}
 
 	// becomes
@@ -182,11 +182,11 @@ In JavaScript ES2015 it seemed to gain a lot of syntactic sugar, here is one exa
 		}
 	}
 
-{% endhighlight %}
+```
 </div>
-I have seen complaints about Syntactic sugar being flawed because it hides behaviour behind syntax so reduces how explicit code is, because there is some implicit behaviour. 
+I have seen complaints about Syntactic sugar being flawed because it hides behaviour behind syntax so reduces how explicit code is, because there is some implicit behaviour.
 
-I would like to disagree, and say that syntactic sugar makes code more explicit because it makes the authors intent more explicit. Syntactic sugar hides commonly used idioms behind well defined syntax. Idioms have the problem that they tend to only well known to more senior developers. To someone new to the language some Idioms may be hard to understand. 
+I would like to disagree, and say that syntactic sugar makes code more explicit because it makes the authors intent more explicit. Syntactic sugar hides commonly used idioms behind well defined syntax. Idioms have the problem that they tend to only well known to more senior developers. To someone new to the language some Idioms may be hard to understand.
 
 Syntactic sugar is easier to look up in documentation and will have it's side effects well defined unlike idioms which due to their word of mouth nature may have behaviour which the person writing them maybe unaware of.
 
@@ -203,7 +203,7 @@ Opening a can of worms..
 
 Do what ever is appropriate, snake poem, ouroborus code.
 
-Promises, generators and loss of pyramid code. WHitespace  with .then() and dangling semi-colon. 
+Promises, generators and loss of pyramid code. WHitespace  with .then() and dangling semi-colon.
 
 ## Linting
 
@@ -352,12 +352,12 @@ I believe linting rules should be allowed to be broken when it makes the authors
   Directory tree from <a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition">FizzBuzz Enterprise Edition</a>, Java FizzBuzz Implementation
 </blockquote>
 
-> {% highlight js %}
+> ```javascript
  for (var i = 1; i <= 100; i++) {
    var f = i % 3 == 0, b = i % 5 == 0;
    console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
  }
-{% endhighlight %}
+```
 > FizzBuzz in JavaScript by [Paul Irish](http://twitter.com/paul_irish)
 >
 > from [https://gist.github.com/jaysonrowe/1592432](https://gist.github.com/jaysonrowe/1592432)

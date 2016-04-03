@@ -35,7 +35,7 @@ It is also still just as performant since there are no DOM reads in the tween on
 
 This is an edited version of what I did in some proprietary code from habit I iterate `t` from `1` to `0` but you may probably want to do it the other way round for clarity:
 
-{% highlight javascript %}
+```javascript
 modules.forEach(module => {
 	let newM = module.el.getBoundingClientRect();
 	let oldM = oldModuleMeasurements[module._fmid];
@@ -84,6 +84,6 @@ modules.forEach(module => {
 	}
 	tween();
 });
-{% endhighlight %}
+```
 
 The css transform is still a good solution in many cases and does not require as much javascript work.

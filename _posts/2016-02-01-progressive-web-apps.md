@@ -6,7 +6,7 @@ author: Ada Rose Edwards
 image: https://ada.is/images/post_resources/photo.jpg
 ---
 
-A major Science Fiction blockbuster, in a Franchise I am a big fan of, hit cinemas a short while ago. 
+A major Science Fiction blockbuster, in a Franchise I am a big fan of, hit cinemas a short while ago.
 In a furore of brand fan-girl-ism and being unable to afford to buy a Force-Effect lightsabre of my own, I did what any reasonable developer would do and I built my own.
 This was a quick one afternoon project and I wanted to break down what went into it.
 
@@ -28,7 +28,7 @@ This post has two main parts depending on what you are most interested in: ['Bui
 
 <h2 id="demo">Building the demo.</h2>
 
-First I began with the audio. I bought the audio files for lightsabre sound effects: on, off and the idle hum and the collision sound. Using Audacity I cut and mixed them to make them loop and crossface nicely. 
+First I began with the audio. I bought the audio files for lightsabre sound effects: on, off and the idle hum and the collision sound. Using Audacity I cut and mixed them to make them loop and crossface nicely.
 
 To play the sounds first one must [load the audio files into the audio context,](https://github.com/AdaRoseEdwards/starsword/blob/master/app/_scripts/main.js#L8) I used a small library for to load the audio files and create audio buffers for later use. These audio buffers can be used again.
 
@@ -62,12 +62,12 @@ To make a progressive Web App there are [some requirements](https://developers.g
 
 For a simple web app like this instead of writing everything from scratch sw-toolbox probably has everything you need. The library sw-toolbox abstracts away a lot of routing logic often used on websites/web apps.
 
-For most web apps you want the service worker to perform two tasks: 
+For most web apps you want the service worker to perform two tasks:
 
 1. Cache/Precache your assets.
 1. Supply cached assets in the event of network failure.
 
-{% highlight js %}
+```javascript
 
 'use strict';
 
@@ -90,7 +90,7 @@ toolbox.precache([
 // Update the cache after fetch.
 toolbox.router.default = toolbox.fastest;
 
-{% endhighlight %}
+```
 
 ## Web App manifest file
 

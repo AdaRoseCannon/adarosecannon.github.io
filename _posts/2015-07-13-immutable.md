@@ -13,13 +13,13 @@ The goal of this blog post is to go into detail about const and cover some ways 
 One question I've been asked a few times recently is in the following situation:
 
 <div>
-{% highlight js %}
+```javascript
 // This Array will be populated later
 const myArray = [];
 
 // this Object too:
 const myObject = {};
-{% endhighlight %}
+```
 </div>
 
 > > If myArray and myObject are const how can you populate them later?
@@ -34,14 +34,14 @@ This prevents variables being [hoisted](https://developer.mozilla.org/en-US/docs
 
 The property of const that differentiates it from `let` is that the value assigned to it will not change if it is updated. For example:
 
-{% highlight js %}
+```javascript
 const myVar = 2;
 // undefined
 myVar = 3;
 // 3
 myVar
 // 2
-{% endhighlight %}
+```
 
 <div class="notebene">
 When trying to overwrite a const variable the variable is left unchanged.
@@ -54,7 +54,7 @@ A well known subtlety of JavaScript is that, much like other C based languages, 
 
 In the case of Arrays, it is not the array itself which cannot change but the reference to the array.
 
-{% highlight js %}
+```javascript
 const myArray = [];
 // undefined
 
@@ -69,21 +69,21 @@ myArray = [5, 6];
 // [5, 6]
 myArray
 // [3]
-{% endhighlight %}
+```
 
 This is good because it allows us to declare that this array should not be overridden and will maintain the same memory space. This is a good property because we will not be creating new Arrays and Objects and using up lots of memory needlessly.
 
 <div class="notebene">
 In JavaScript strings are primitives, not objects like arrays. So like other primitive types, they are immutable if const. This behaviour differs from other C-like languages where strings are usually passed via reference.
 
-{% highlight js %}
+```javascript
 const myString = "Hello World";
 // undefined
 myString[0] = "'";
 // "'"
 myString
 // "Hello World"
-{% endhighlight %}
+```
 </div>
 
 ## What do I do if I want my object to be immutable?
@@ -97,7 +97,7 @@ The two new ES6 Object properties Seal and Freeze are for this purpose.
 `Object.freeze(myObject)` makes the object totally immutable. Like seal, new properties cannot not be added or removed but also they cannot be changed.
 It is important to remember that as with `const`, child Arrays and Objects are just references so although they cannot be replaced they can still be modified.
 
-{% highlight js %}
+```javascript
 const myObject = {a: {b: 1}, c: 2};
 
 Object.freeze(myObject);
@@ -115,7 +115,7 @@ myObject.a.d = 2; // child object is not frozen
 
 myObject
 // {a: {b: 1, d: 2}, c: 2}
-{% endhighlight %}
+```
 
 <h2 id="block-scoping">Block scoping of let and const</h2>
 
@@ -124,7 +124,7 @@ This means that they only have scope in their block (i.e. between the innermost 
 This is great because it allows variables to be declared in only the smallest possible block of code in which they are used.
 `const` and `let` also allow for more explicit code as one can infer what the developer's intentions are with regards to the mutabilty of these variables.
 
-{% highlight js %}
+```javascript
 if (true) {
   const myVar = 1;
   const myFunc = function (a) { console.log(a) };
@@ -136,14 +136,14 @@ myFunc(2);
 
 myVar;
 // ReferenceError: myVar is not defined
-{% endhighlight %}
+```
 
 In ES5, declaring functions and variables can leave the scope (and memory) cluttered with declared variables not relevant to all the parts of the code they are made available.
 The hoisted variables have the value `undefined` before they are initialized and linger after they are used.
 
 If you wanted to further restrict the scope of a variable in ES5 one would use an Immediately-Invoked Function Expression (IIFE).
 
-{% highlight js %}
+```javascript
 
 myVar;
 // undefined
@@ -182,7 +182,7 @@ myFunc(2);
 scopedVar;
 // ReferenceError: scopedVar is not defined
 
-{% endhighlight %}
+```
 
 ## Use these today
 

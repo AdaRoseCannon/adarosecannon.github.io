@@ -36,7 +36,7 @@ Once the DOM is read if it has been invalidated the layout needs to be recalcula
 One common problem is reading, then writing in a loop, which is known as thrashing the DOM; the layout is invalidated and recalculated on every single read.
 Interleaving reads and writes could mean multiple layout operations per frame
 
-{% highlight js %}
+```javascript
 el.height = (myVar + 1) + "px"
 myVar = el.clientHeight;
 el.height = (myVar + 1) + "px"
@@ -45,17 +45,17 @@ el.height = (myVar + 1) + "px"
 myVar = el.clientHeight;
 el.height = (myVar + 1) + "px"
 myVar = el.clientHeight;
-{% endhighlight %}
+```
 
 Animating properties which cause layouts on the DOM will trigger a layout on every frame. In the slides I've put in some examples of bad practise where I naively do css animations on the width property.
 
-{% highlight css %}
+```css
 @keyframes bad {
 	0% {width: 1.5em;}
 	50% {width: 4em;}
 	100% {width: 1.5em;}
 }
-{% endhighlight %}
+```
 
 The fix for the first situation tends to be fairly simple: batch your reads and write all together. Don't change a property then immediately read it.
 E.g.Don't append to an `innerhtml` in a loop INSTEAD add it to a separate string and update the `innerHTML` in one go.
@@ -112,7 +112,7 @@ Doing so doesn't accelerate the animation, but it does make the layout change le
 There is a draft css spec called <a href="http://dev.w3.org/csswg/css-containment/" target="_blank">containment</a> which will hint to the browser in much the same way as the will-change property that this element will not affect the rest of the DOM tree.
 The containment spec requires certain properties, such as no scrolling and fixed dimensions.
 
-{% highlight css %}
+```css
 {
     height: <fixed value>;
     width: <fixed value or a %>;
@@ -120,7 +120,7 @@ The containment spec requires certain properties, such as no scrolling and fixed
     position: absolute;
     contain: strict; // In draft
 }
-{% endhighlight %}
+```
 
 Containment could be done in browsers previously, but it relied on the element having certain properties before it would have layout boundaries, such as a fixed height and no scroll and relied upon the browser's implementation.
 
