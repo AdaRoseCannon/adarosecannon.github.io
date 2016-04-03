@@ -21,13 +21,9 @@ show_drafts: true
 
 permalink: pretty
 
-# Markdown library
-markdown: redcarpet
-#   extensions: ['fenced_code_blocks', 'smart']
-
 pygments: true
 highlighter: pygments
 
 giturl: https://github.com/AdaRoseEdwards
 pageurl: /
-pullreq: https://github.com/AdaRoseEdwards/ada.is/tree/master/app/
+pullreq: https://github.com/AdaRoseEdwards/adaroseedwards.github.io/tree/master/
