@@ -10,14 +10,14 @@ This is a bookmarklet to run on any page to analyse the contrast of the text on 
 
 This project was grew out of a piece of work I did for general page analysis but I thought this component was interesting enough to explore as a standalone tool as it doesn't need to use any 3rd party service to perform the analysis.
 
-The project page is hosted on GitHub pages: <a href="https://gh.ada.is/contrast-widget/">Contrast Widget</a>.
+The project page is hosted on GitHub pages: <a href="https://ada.is/contrast-widget/">Contrast Widget</a>.
 
 <span class="gallery-item" style="float: right;"><img src="/images/post_resources/contrast.png" alt="Screenshot of Contrast Widget" title="Screenshot of Contrast Widget" width="320px" /><br /><caption>Screenshot of Contrast Widget</caption></span>
-<span id='a11y-contrast-replace'>The project page should be embedded here, <a href="https://gh.ada.is/contrast-widget/">click here if it does not load automatically.</a></span>
+<span id='a11y-contrast-replace'>The project page should be embedded here, <a href="https://ada.is/contrast-widget/">click here if it does not load automatically.</a></span>
 <script src="https://cdn.rawgit.com/PM5544/scoped-polyfill/master/scoped.js"></script>
 
 <script id="a11y-contrast-load-external-blogpost-script" type="text/javascript">
-	fetch('https://gh.ada.is/contrast-widget/')
+	fetch('https://ada.is/contrast-widget/')
 	.then(response => response.text())
 	.then(text => {
 		const parent = document.getElementById('a11y-contrast-load-external-blogpost-script').parentNode;
