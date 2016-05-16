@@ -73,10 +73,14 @@ self.addEventListener('message', function(event) {
 		});
 });
 
-toolbox.router.default = function(request, values = {}, options = {}) {
+toolbox.router.any(/(.mp4|.webm|.avi|.wmv)$/i, toolbox.networkOnly);
+
+toolbox.router.get(/./, function (request, values, options) {
+
+	options = options || {};
 
 	const defaultRoute = (location.protocol === 'http:' || location.hostname === 'localhost') ? toolbox.networkFirst : toolbox.fastest;
 
 	options.cache = RESOURCES_CACHE_NAME;
 	return defaultRoute(request, values, options);
-};
+});
