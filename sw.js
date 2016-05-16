@@ -73,9 +73,14 @@ self.addEventListener('message', function(event) {
 		});
 });
 
-toolbox.router.any(/(\.mp4|\.webm|\.avi|\.wmv)$/i, toolbox.networkOnly);
-toolbox.router.any(/data:/i, toolbox.networkOnly);
 toolbox.router.get(/./, function (request, values, options) {
+
+	if (
+		request.url.match(/(\.mp4|\.webm|\.avi|\.wmv)$/i) ||
+		request.url.match(/data:/i)
+	) {
+		return toolbox.networkOnly(request, values, options);
+	}
 
 	options = options || {};
 
