@@ -73,7 +73,7 @@ self.addEventListener('message', function(event) {
 		});
 });
 
-toolbox.router.any(/(.mp4|.webm|.avi|.wmv)$/i, toolbox.networkOnly);
+toolbox.router.any(/(\.mp4|\.webm|\.avi|\.wmv)$/i, toolbox.networkOnly);
 
 toolbox.router.get(/./, function (request, values, options) {
 
