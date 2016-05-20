@@ -6,9 +6,8 @@
     "build:main": "mkdir -p scripts && rollup -i ./_scripts/main.js -o ./scripts/main.js -c -m && cd scripts && uglifyjs --source-map main.min.js.map -m --screw-ie8 main.js -o main.min.js && wc -c main.min.js",
     "build:js": "npm run build:main",
     "build:other": "mkdir -p scripts && true && cp ./node_modules/sw-toolbox/sw-toolbox.* ./scripts/",
-    "watch": "./parallel.sh \"nodemon --watch ./_scripts -e js --exec npm run build:js\" \"nodemon --watch ./client/styles -e scss --exec npm run build:styles\" \"nodemon --watch ./client -e css,html,png,json --exec npm run build:other\"",
-    "build": "./parallel.sh \"npm run build:other\" \"npm run build:js\" \"npm run build:styles\"",
-    "build:styles": "node-sass ./_styles/main.scss -o ./styles/",
+    "watch": "./parallel.sh \"nodemon --watch ./_scripts -e js --exec npm run build:js\" \"nodemon --watch ./client -e css,html,png,json --exec npm run build:other\"",
+    "build": "./parallel.sh \"npm run build:other\" \"npm run build:js\"",
     "clean": "git clean -f",
     "install": "npm run build"
   },

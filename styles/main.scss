@@ -1,8 +1,27 @@
+---
+---
+
 @import "vars";
 @import "ceaser-easing";
 @import "hexagons";
 
 /* @import "icons"; */
+
+body, html {
+	margin: 0;
+	padding: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #428bca;
+    text-decoration: none;
+}
 
 html, body, .container, .row {
 	margin-left: 0;
@@ -13,6 +32,12 @@ html, body, .container, .row {
 	font-family: 'Open Sans', 'sans-serif';
 	font-weight: 400;
 	color: $font-color;
+}
+
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

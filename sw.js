@@ -73,6 +73,8 @@ self.addEventListener('message', function(event) {
 		});
 });
 
+toolbox.options.networkTimeoutSeconds = 5;
+toolbox.options.cache.name = RESOURCES_CACHE_NAME;
 toolbox.router.get(/./, function (request, values, options) {
 
 	if (
@@ -85,7 +87,5 @@ toolbox.router.get(/./, function (request, values, options) {
 	options = options || {};
 
 	const defaultRoute = (location.protocol === 'http:' || location.hostname === 'localhost') ? toolbox.networkFirst : toolbox.fastest;
-
-	options.cache = RESOURCES_CACHE_NAME;
 	return defaultRoute(request, values, options);
 });
