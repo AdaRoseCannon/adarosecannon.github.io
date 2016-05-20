@@ -32,13 +32,6 @@ function reply(event) {
 		});
 }
 
-self.addEventListener('install', function(event) {
-	console.log('Installing service worker');
-	if (typeof event.replace !== 'undefined') {
-		event.replace();
-	}
-});
-
 // Recieve messages from the client and reply back onthe same port
 self.addEventListener('message', function(event) {
 		Promise.resolve()
