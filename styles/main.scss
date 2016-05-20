@@ -68,11 +68,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 0;
 
 	&:after {
-		font-size: 2rem;
+		font-size: 3rem;
 		width: 1em;
 		height: 1em;
 		background-position: center center;
-		background-size: contain;
+		background-repeat: no-repeat;
 		content: '';
 		display: inline-block;
 		-webkit-filter: invert(50%) sepia(5%) saturate(100) hue-rotate(181deg) brightness(110%) saturate(64%);
