@@ -15,29 +15,6 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
   });
 };
 
-function fetchAndReplace(url, selector) {
-
-	if (!window.fetch) {
-		return location.assign(url);
-	}
-	fetch(url)
-		.then(function(response) {
-			return response.text();
-		})
-		.then(function(body) {
-			const htmlDoc = (new DOMParser()).parseFromString(body, 'text/html');
-			const replacer = htmlDoc.querySelectorAll(selector);
-			const toReplace = $(selector).slice(0, replacer.length);
-			toReplace.forEach(function (el, i) {
-				el.parentNode.replaceChild(replacer[i], el);
-			});
-			return replacer;
-		})
-		.catch(function () {
-			location.assign(url);
-		});
-}
-
 (function () {
 	function sendSWMessage(message) {
 
@@ -63,80 +40,22 @@ function fetchAndReplace(url, selector) {
 		});
 	}
 
-	function storeStaticResources(staticResources) {
-
-		const action = 'STORE_ALL';
-		const id = action + '_' + Date.now();
-
-		return sendSWMessage({
-				action: action,
-				urls: JSON.stringify(staticResources),
-				id: id
-			});
-	}
-
-	function offlineLocalLinks() {
-		const localUrls = $('a')
-			.filter(function (i) {
-				return (
-
-					// Cache all https local resources
-					i.hostname === location.hostname &&
-					i.protocol === 'https'
-				);
-			})
-			.map(function (i) {
-				return i.toString();
-			});
-
-		return storeStaticResources(localUrls)
-			.then(function (result) {
-				if (result.success) {
-					console.log('Successfully cached resources');
-				} else {
-					console.log('Some resourcecs failed to cache');
-				}
-				return result;
-			});
-	}
-
 	if ('serviceWorker' in navigator && location.protocol === 'https:') {
 		navigator.serviceWorker.register('/sw.js', { scope: '/' })
-			.then(function(reg) {
-				console.log('sw registered', reg);
-			}).catch(function(error) {
-				console.log('sw registration failed with ' + error);
-			});
-
-		window.addEventListener('message', function (e) {
-			if( e.data.action === 'ASSET_REFRESHED') {
-				if (e.data.url === location.toString()) {
-					console.log('Refreshing ' + e.data.url);
-					fetchAndReplace(e.data.url, 'body');
-				}
-			}
+		.then(function(reg) {
+			console.log('sw registered', reg);
+		}).catch(function(error) {
+			console.log('sw registration failed with ' + error);
 		});
-
-		if (navigator.serviceWorker.controller) {
-			window.offlineLocalLinks = offlineLocalLinks;
-			window.storeStaticResources = storeStaticResources;
-			console.log('Offlining Available');
-			$('.hero-offline')[0].style.display = 'inline';
-			$('.hero-offline a').on('click', function () {
-				this.innerHTML = 'Caching';
-				(window.offlineLinks ? storeStaticResources(window.offlineLinks) : offlineLocalLinks())
-				.then(function (data) {
-					this.innerHTML = data.success ? 'Cached' : 'Failed to Cache';
-				}.bind(this));
-			});
-		}
 	}
 
 	$('video')
 	.forEach(function (video) {
 		video.preload = 'none';
 		video.autoplay = false;
-		video.src = video.dataset.src;
+		if (video.dataset.src) {
+			video.src = video.dataset.src;
+		}
 	});
 
 	function wrapHeader(node, i) {
@@ -152,4 +71,4 @@ function fetchAndReplace(url, selector) {
 	}
 
 	$('article h1,h2,h3,h4,h5,h6').forEach(wrapHeader);
-})();
+}());

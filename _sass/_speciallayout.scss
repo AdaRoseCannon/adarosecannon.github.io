@@ -132,9 +132,7 @@ body.special, body.special-index {
 		font-style: italic;
 		font-weight: 300;
 		font-size: 1.5em;
-
-		// Allow for it to go onto 2 rows.
-		height: 2em;
+		line-height: 1.2em;
 	}
 
 	.hero-offline {
