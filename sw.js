@@ -84,6 +84,11 @@ toolbox.router.get(/./, function (request, values, options) {
 		return toolbox.networkOnly(request, values, options);
 	}
 
+	if (request.mode === 'navigate') {
+		options.networkTimeoutSeconds = 2;
+		return toolbox.networkFirst(request, values, options);
+	}
+
 	options = options || {};
 
 	const defaultRoute = (location.protocol === 'http:' || location.hostname === 'localhost') ? toolbox.networkFirst : toolbox.fastest;
