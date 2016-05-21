@@ -32,6 +32,17 @@ html, body, .container, .row {
 	color: $font-color;
 }
 
+.container {
+	display: flex;
+	align-content: flex-end;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+
+	& > * {
+		flex-shrink: 0;
+	}
+}
+
 
 h1 {
 	font-size: 2em;
@@ -63,9 +74,21 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.icon-container {
+	white-space: nowrap;
+    flex-grow: 1;
+	flex-shrink: 0;
+	font-size: 1.3em;
+    height: 2.4em;
+    text-align: right;
+    overflow: hidden;
+}
+
 .icon {
 
 	font-size: 0;
+	margin: 0.1em 0.1em 0 0.1em;
+	overflow: hidden;
 
 	&:after {
 		font-size: 3rem;
