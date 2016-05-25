@@ -8,7 +8,7 @@ title: Ada.is
   {% for post in site.posts %}
     <div class="home-posts_item">
 	{% if post.link %}
-    	<h1><a class="article-link" href="{{ post.link }}">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">🔗</span></h1>
+    	<h1><a class="article-link" href="{{ post.link }}">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h1>
 		<article><p>{{ post.description }}</p></article>
     	<time>{{ post.date | date_to_string }}</time>
 	{% else %}
