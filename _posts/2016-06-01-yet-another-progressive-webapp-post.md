@@ -25,17 +25,19 @@ In Chrome 31 (November 2013) Chrome for Android Introduced this functionality.
 
 In Chrome 38 (October 2014) Web App manifest support in Chrome, this is a JSON file which describes the installed app configuration of your Web App.
 
-In late 2015 Service Workers started to be rolled out across Firefox and Chrome, nothing on Safari at the time of writing.
+In Chrome 40 (December 2014) Service Workers started to be rolled out across Firefox and Chrome, nothing on Safari at the time of writing.
 
 So, Web Apps have been around since 2011 using older Web Technology and in the 4 years between then and when Service workers became mainstream they have been around but not as a large part of the community consciousness. It was around the time Service Workers started to be 'a thing' that the Chrome team started to push for *Progressive Web Apps*.
 
-*Progressive Web Apps* is not a spec, it is Chrome's definition of a Web App which fulfills a number of conditions so gets an install prompt in Google Chrome. The conditions are:
+*Progressive Web Apps* is not a spec, it started as a definition of what a _modern_ Web App should be. Chrome uses this definition so when a number of conditions are fulfilled an install prompt in the browser is displayed. The conditions are:
 
 * has a service worker (requires https)
 * has a web app manifest (with at least minimal config)
 * it is the second distinct visit to the web site.
 
 In this case progressive means it progressively becomes more app the more features the device supports.
+
+The prompt is currently shown under varying conditions across Opera, Chrome and the Samsung Browser.
 
 ## Features of a Web App
 
