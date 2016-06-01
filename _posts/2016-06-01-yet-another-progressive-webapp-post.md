@@ -103,3 +103,7 @@ If many native developers take advantage of this then perhaps the user interacti
 * Web Apps have been around for a relatively long time.
 * The install banner is the browser manufacturers choice. It is not a spec. Should it be?
 * In our rush to be native-like to be cool and popular we shouldn't stop being web-like.
+
+<span class="gallery-item" style="float: right;">
+<img src="https://ada.is/progressive-web-apps-talk/images/FinancialTimes_G-FTUS_Balloon_LordMayorsAppeal.jpg" alt="The FT Web App on a Balloon." title="The FT Web App on a Balloon." />The FT Web App on a Balloon.
+</span>
