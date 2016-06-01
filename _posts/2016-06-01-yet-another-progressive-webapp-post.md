@@ -8,14 +8,14 @@ author: Ada Rose Edwards
 
 Progressive Web Apps are in flux at the moment, these are the opinions of someone who has been working on web apps before they got conflated with Service Workers and new web tech.
 
-## Some other writings,
+## Other people's recent thoughts on the issues I will also talk on
 
 * [Regression toward being mean - Jeremy Keith](https://adactio.com/journal/10736)
 * [State of the Gap by Remy Sharp](https://remysharp.com/2016/05/28/state-of-the-gap)
 
 ## Before I begin,
 
-I will be referencing work done at the Financial Times but my views do not represent the opinions of my employer the Financial Times.
+I will be referring to work done at the Financial Times but my views do not represent the opinions of my employer the Financial Times.
 
 ## Some History and Background
 
@@ -25,19 +25,21 @@ In Chrome 31 (November 2013) Chrome for Android Introduced this functionality.
 
 In Chrome 38 (October 2014) Web App manifest support in Chrome, this is a JSON file which describes the installed app configuration of your Web App.
 
-In late 2015 Service Workers started to be rolled out across Firefox and Chrome, nothing on Safari at the t ime of writing.
+In late 2015 Service Workers started to be rolled out across Firefox and Chrome, nothing on Safari at the time of writing.
 
-So Web Apps have been around since 2011 using older Web Technology and in the 4 years between then and Service workers they have been around but not as a large part of the community consciousness. It was around the time Service Workers started to be 'a thing' that the Chrome team started to push for *Progressive Web Apps*.
+So, Web Apps have been around since 2011 using older Web Technology and in the 4 years between then and when Service workers became mainstream they have been around but not as a large part of the community consciousness. It was around the time Service Workers started to be 'a thing' that the Chrome team started to push for *Progressive Web Apps*.
 
-*Progressive Web Apps* is not a spec, it is a Web App which fulfills a number of conditions so gets an install prompt in Google Chrome. The conditions are:
+*Progressive Web Apps* is not a spec, it is Chrome's definition of a Web App which fulfills a number of conditions so gets an install prompt in Google Chrome. The conditions are:
 
 * has a service worker (requires https)
 * has a web app manifest (with at least minimal config)
-* it is the second time the user has visited the web site
+* it is the second distinct visit to the web site.
+
+In this case progressive means it progressively becomes more app the more features the device supports.
 
 ## Features of a Web App
 
-Over the past 5 years the features of a Web App have largely been nailed down:
+Over the past 5 years the features of what makes a good Web App have largely been nailed down:
 
 * On the open web, can be reached via any browser.
 * Offline capable, shows useful content when the network cannot be reached.
@@ -45,6 +47,7 @@ Over the past 5 years the features of a Web App have largely been nailed down:
 * Good touch and gesture support.
 * Installable, provides a homescreen icon.
 * Accessible
+* Progressive - in that it still works as a normal website on older browsers
 
 http://labs.ft.com/2012/06/what-exactly-is-an-app/
 
@@ -62,14 +65,8 @@ The issue I have with this is that the basis for what chrome defines as a Web Ap
 
 The features, I listed in the section above aren't exclusive to these new technology Google requires to be defined as a 'Progressive Web App' though, the [FT web app](https://app.ft.com) has been doing offline and installability this with flair since 2012. It supports older platforms and was even on old Android devices via a thin wrapper. If you see an iPhone user with the FT App on the phone they will have installed it via 'add to homescreen'. We are not in the app store.
 
-A service worker is very powerful but is not applicable to everyone, many commercial applications need to support a lot of legacy platforms such as iOS Safari. This means that in order to work offline you need to use a WebApp Manifest, the WebApp manifest is a horrible thing to use but it has extremely wide support.
-
-I feel that the prompt to add to homescreen should be something a web site requests the browser to show and not something it sniffs out itself.
-Of course it is not a spec and it is entirely Chrome's decision to add the banner in the first place, without there would be no prompt at all.
-
-It feels to me Google's Chrome team put the prompt there as a carrot to encourage a good user experience through the sniffing of the technology used. I feel a better metric would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline.
-
-But it has raised the question should browsers do more to promote Web Apps.
+A service worker is very powerful but is not applicable to everyone, many commercial applications need to support a lot of legacy platforms such as iOS Safari.
+This means that in order to work offline with this constraint you need to use an AppCache Manifest, the AppCache manifest is a horrible thing to develop with but it has extremely wide support.
 
 > #NB
 > if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work Correctly.
@@ -77,6 +74,15 @@ But it has raised the question should browsers do more to promote Web Apps.
 > When the FT was working with AppCache we served a minimal bootstrap via AppCache and the rest was loaded from Local Storage or IndexedDB due to the difficulty in dealing with it.
 >
 > If you already have an app with AppCache which works but want to progress to a Service Worker then you can use [sw-appcache-behavior](https://github.com/GoogleChrome/sw-helpers)
+
+Because the browser sniffs technology rather than user experience I don't think the browser should determine whether something is app-like or not.
+I feel that the prompt to add to homescreen should be something a web site requests the browser to show and not something it sniffs out itself. Perhaps by lowering the bar and only requiring a Web App manifest and a number of distinct visits.
+Of course it is not a spec and it is entirely Chrome's decision to add the banner in the first place, without there would be no prompt at all.
+
+It feels to me Google's Chrome team put the prompt there as a carrot to encourage a good user experience through the sniffing of the technology used.
+I feel a more precise carrot would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline. Thus encouraging wider offline support. It could also flag up progressive web apps in the search results via judging how app-like the web site is using it's own metrics such as the user experience metrics from [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+
+But it has raised the question should browsers themselves do more to promote Web Apps.
 
 ## In our rush to feel native we shouldn't lose our Webiness
 
