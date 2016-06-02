@@ -89,7 +89,7 @@ But it has raised the question should browsers themselves do more to promote Web
 
 >> URL sharing is the proto-social behavior. It’s what enabled the web to spread and prosper, and it’s something we take for granted. In fact, if you look at any of my talks, you’ll see that I call it out as the web’s superpower.
 >>
->> -- [Alex Russel](https://infrequently.org/2016/05/not-the-post-i-wanted-to-be-writing/)
+>> -- [Alex Russell](https://infrequently.org/2016/05/not-the-post-i-wanted-to-be-writing/)
 
 One of the core principals of the Web is Urls and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
 
