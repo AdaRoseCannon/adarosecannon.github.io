@@ -91,7 +91,7 @@ But it has raised the question should browsers themselves do more to promote Web
 >>
 >> -- [Alex Russell](https://infrequently.org/2016/05/not-the-post-i-wanted-to-be-writing/)
 
-One of the core principals of the Web is Urls and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
+One of the core principles of the Web is Urls and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
 
 In the web developer community's collective drive to be more App Like and compete with native apps we may lose or weaken some of the web's strongest features and we need to consider carefully before we throw away urls or the entire browser chrome in an effort to look like and behave like the cool kids of native.
 
