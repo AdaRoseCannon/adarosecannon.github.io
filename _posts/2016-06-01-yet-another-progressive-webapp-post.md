@@ -51,7 +51,7 @@ Over the past 5 years the features of what makes a good Web App have largely bee
 * Accessible
 * Progressive - in that it still works as a normal website on older browsers
 
-http://labs.ft.com/2012/06/what-exactly-is-an-app/
+[What exactly is an app? - by FTLabs](http://labs.ft.com/2012/06/what-exactly-is-an-app/)
 
 These features aren't entirely inline with what Chrome defines as a Progressive Web App.
 
