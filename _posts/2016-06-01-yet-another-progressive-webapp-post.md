@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Yet another blog about the state and future of progressive web app"
+title: "Yet another blog about the state and future of Progressive Web App"
 description: Progressive Web Apps are in flux at the moment, these are the opinions of someone who has been working on web apps before they got conflated with Service Workers and new web tech.
 categories: Blog
 author: Ada Rose Edwards
@@ -35,7 +35,7 @@ So, Web Apps have been around since 2011 using older Web Technology and in the 4
 * has a web app manifest (with at least minimal config)
 * it is the second distinct visit to the web site.
 
-In this case progressive means it progressively becomes more app the more features the device supports.
+In this case progressive means it progressively becomes more app-like the more features the device supports.
 
 The prompt is currently shown under varying conditions across Opera, Chrome and the Samsung Browser.
 
@@ -81,7 +81,7 @@ I feel that the prompt to add to homescreen should be something a web site reque
 Of course it is not a spec and it is entirely Chrome's decision to add the banner in the first place, without there would be no prompt at all.
 
 It feels to me Google's Chrome team put the prompt there as a carrot to encourage a good user experience through the sniffing of the technology used.
-I feel a more precise carrot would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline. Thus encouraging wider offline support. It could also flag up progressive web apps in the search results via judging how app-like the web site is using it's own metrics such as the user experience metrics from [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+I feel a more precise carrot would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline. Thus encouraging wider offline support. It could also flag up Progressive Web Apps in the search results via judging how app-like the web site is using it's own metrics such as the user experience metrics from [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
 But it has raised the question should browsers themselves do more to promote Web Apps.
 
@@ -91,7 +91,7 @@ But it has raised the question should browsers themselves do more to promote Web
 >>
 >> -- [Alex Russel](https://infrequently.org/2016/05/not-the-post-i-wanted-to-be-writing/)
 
-One of the core principals of the Web is Urls and progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
+One of the core principals of the Web is Urls and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
 
 In the web developer community's collective drive to be more App Like and compete with native apps we may lose or weaken some of the web's strongest features and we need to consider carefully before we throw away urls or the entire browser chrome in an effort to look like and behave like the cool kids of native.
 
