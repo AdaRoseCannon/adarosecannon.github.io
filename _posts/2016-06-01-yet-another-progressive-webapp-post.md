@@ -65,7 +65,7 @@ The issue I have with this is that the basis for what chrome defines as a Web Ap
 
 >> You do not need a service worker to be offline and conversely not every site with a service worker works well offline.
 
-The features, I listed in the section above aren't exclusive to these new technology Google requires to be defined as a 'Progressive Web App' though, the [FT web app](https://app.ft.com) has been doing offline and installability this with flair since 2012. It supports older platforms and was even on old Android devices via a thin wrapper. If you see an iPhone user with the FT App on the phone they will have installed it via 'add to homescreen'. We are not in the app store.
+The features I listed in the section above aren't exclusive to these new technology Google requires to be defined as a 'Progressive Web App' though, the [FT web app](https://app.ft.com) has been doing offline and installability this with flair since 2012. It supports older platforms and was even on old Android devices via a thin wrapper. If you see an iPhone user with the FT App on the phone they will have installed it via 'add to homescreen'. We are not in the app store.
 
 A service worker is very powerful but is not applicable to everyone, many commercial applications need to support platforms which do not support the newer Web App related technology, such as iOS Safari or Android 2.3
 
