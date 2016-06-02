@@ -72,7 +72,7 @@ A service worker is very powerful but is not applicable to everyone, many commer
 This means that in order to work offline with this constraint you need to use an AppCache Manifest, the AppCache manifest is a horrible thing to develop with but it has extremely wide support.
 
 <div class="notebene">
-<p>if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work Correctly.</p>
+<p>if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work correctly.</p>
 <p>When the FT was working with AppCache we served a minimal bootstrap via AppCache and the rest was loaded from Local Storage or IndexedDB due to the difficulty in dealing with it.</p>
 <p>If you already have an app with AppCache which works but want to progress to a Service Worker then you can use <a href="https://github.com/GoogleChrome/sw-helpers">sw-appcache-behavior</a></p></div>
 
