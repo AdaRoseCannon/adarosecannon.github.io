@@ -67,15 +67,14 @@ The issue I have with this is that the basis for what chrome defines as a Web Ap
 
 The features, I listed in the section above aren't exclusive to these new technology Google requires to be defined as a 'Progressive Web App' though, the [FT web app](https://app.ft.com) has been doing offline and installability this with flair since 2012. It supports older platforms and was even on old Android devices via a thin wrapper. If you see an iPhone user with the FT App on the phone they will have installed it via 'add to homescreen'. We are not in the app store.
 
-A service worker is very powerful but is not applicable to everyone, many commercial applications need to support a lot of legacy platforms such as iOS Safari.
+A service worker is very powerful but is not applicable to everyone, many commercial applications need to support platforms which do not support the newer Web App related technology, such as iOS Safari or Android 2.3
+
 This means that in order to work offline with this constraint you need to use an AppCache Manifest, the AppCache manifest is a horrible thing to develop with but it has extremely wide support.
 
-> #NB
-> if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work Correctly.
->
-> When the FT was working with AppCache we served a minimal bootstrap via AppCache and the rest was loaded from Local Storage or IndexedDB due to the difficulty in dealing with it.
->
-> If you already have an app with AppCache which works but want to progress to a Service Worker then you can use [sw-appcache-behavior](https://github.com/GoogleChrome/sw-helpers)
+<div class="notebene">
+<p>if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work Correctly.</p>
+<p>When the FT was working with AppCache we served a minimal bootstrap via AppCache and the rest was loaded from Local Storage or IndexedDB due to the difficulty in dealing with it.</p>
+<p>If you already have an app with AppCache which works but want to progress to a Service Worker then you can use <a href="https://github.com/GoogleChrome/sw-helpers">sw-appcache-behavior</a></p></div>
 
 Because the browser sniffs technology rather than user experience I don't think the browser should determine whether something is app-like or not.
 I feel that the prompt to add to homescreen should be something a web site requests the browser to show and not something it sniffs out itself. Perhaps by lowering the bar and only requiring a Web App manifest and a number of distinct visits.
