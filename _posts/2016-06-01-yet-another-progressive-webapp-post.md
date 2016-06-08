@@ -61,18 +61,18 @@ One of the problems Web Apps have is that users don't know to look for the 'add 
 If your web app meets Chrome's requirements of a 'Progressive Web App' The install banner prompt is displayed to get around this, it is not a spec, it is implemented at the browser developer's discretion. In the case of Chrome it encourages web app developers to build using newer Web Technology such as Service Workers and Web App manifest.
 It is great because it encourages the building of Web Apps as opposed to native by greatly reducing the barrier to getting your company's app on the user's home screen.
 
-The issue I have with this is that the basis for what chrome defines as a Web App is based upon a set of technology rather than a set of features. e.g. It judges based on service worker as opposed to whether an web app can provide useful data when offline.
+The issue I have with this is that the basis for what Chrome defines as a Web App is based upon a set of technology rather than a set of features. e.g. It judges based on Service Worker as opposed to whether an web app can provide useful data when offline.
 
->> You do not need a service worker to be offline and conversely not every site with a service worker works well offline.
+>> You do not need a Service Worker to be offline and conversely not every site with a Service Worker works well offline.
 
 The features I listed in the section above aren't exclusive to these new technology Google requires to be defined as a 'Progressive Web App' though, the [FT web app](https://app.ft.com) has been doing offline and installability this with flair since 2012. It supports older platforms and was even on old Android devices via a thin wrapper. If you see an iPhone user with the FT App on the phone they will have installed it via 'add to homescreen'. We are not in the app store.
 
-A service worker is very powerful but is not applicable to everyone, many commercial applications need to support platforms which do not support the newer Web App related technology, such as iOS Safari or Android 2.3
+A Service Worker is very powerful but is not applicable to everyone, many commercial applications need to support platforms which do not support the newer Web App related technology, such as iOS Safari or Android 2.3
 
 This means that in order to work offline with this constraint you need to use an AppCache Manifest, the AppCache manifest is a horrible thing to develop with but it has extremely wide support.
 
 <div class="notebene">
-<p>if you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the service worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work correctly.</p>
+<p>If you are building a web site today and are wondering if you should use AppCache over Service workers to increase offline support. Don't. Although the Service Worker will play nicely with an AppCache being present by taking control if one is there. AppCache forces you to do horrendous things with your page navigation to work correctly.</p>
 <p>When the FT was working with AppCache we served a minimal bootstrap via AppCache and the rest was loaded from Local Storage or IndexedDB due to the difficulty in dealing with it.</p>
 <p>If you already have an app with AppCache which works but want to progress to a Service Worker then you can use <a href="https://github.com/GoogleChrome/sw-helpers">sw-appcache-behavior</a></p></div>
 
@@ -80,8 +80,7 @@ Because the browser sniffs technology rather than user experience I don't think 
 I feel that the prompt to add to homescreen should be something a web site requests the browser to show and not something it sniffs out itself. Perhaps by lowering the bar and only requiring a Web App manifest and a number of distinct visits.
 Of course it is not a spec and it is entirely Chrome's decision to add the banner in the first place, without there would be no prompt at all.
 
-It feels to me Google's Chrome team put the prompt there as a carrot to encourage a good user experience through the sniffing of the technology used.
-I feel a more precise carrot would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline. Thus encouraging wider offline support. It could also flag up Progressive Web Apps in the search results via judging how app-like the web site is using it's own metrics such as the user experience metrics from [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+It feels to me Google's Chrome team put the prompt there as a carrot to encourage a good user experience through the sniffing of the technology used. I feel a more precise carrot would be for their popular search engine to perhaps to improve search rankings based upon the content provided between online and offline. Thus encouraging wider offline support. It could also flag up Progressive Web Apps in the search results via judging how app-like the web site is using it's own metrics such as the user experience metrics from [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
 But it has raised the question should browsers themselves do more to promote Web Apps.
 
@@ -91,19 +90,17 @@ But it has raised the question should browsers themselves do more to promote Web
 >>
 >> -- [Alex Russell](https://infrequently.org/2016/05/not-the-post-i-wanted-to-be-writing/)
 
-One of the core principles of the Web is Urls and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
+One of the core principles of the Web is URLs and Progressive Web Apps since their inception in 2011 have given developers the *choice* of hiding them. This prevents user's from easily sharing deep links into web apps.
 
-In the web developer community's collective drive to be more App Like and compete with native apps we may lose or weaken some of the web's strongest features and we need to consider carefully before we throw away urls or the entire browser chrome in an effort to look like and behave like the cool kids of native.
+In the web developer community's collective drive to be more App Like and compete with native apps we may lose or weaken some of the web's strongest features and we need to consider carefully before we throw away URLs or the entire browser chrome in an effort to look like and behave like the cool kids of native.
 
-It's now very easy to shoot oneself in the foot with a web app by preventing the user from finding the url to share your content. User's expect a web site to have a url which will work from anywhere but they expect a native app to _not_ have one. By not differentiating ourselves from native apps enough they won't try to share our content.
+It's now very easy to shoot oneself in the foot with a web app by preventing the user from finding the URL to share your content. Users expect a web site to have a URL which will work from anywhere but they expect a native app to _not_ have one. By not differentiating ourselves from native apps enough they won't try to share our content.
 
 Perhaps this sacrifice is too great if you are relying on word of mouth/tweet to get yourself known.
 
-I've seen it asked repeatedly should we build an App Store for Web Apps, and I think that is missing one of the key aspects of the web. The ability to share content with a url and make content available via search engines and social media.
+I've seen it asked repeatedly should we build an App Store for Web Apps, and I think that is missing one of the key aspects of the web. The ability to share content with a URL and make content available via search engines and social media.
 
-Recently Google unveiled Android Instant Apps which are trying to emulate the behaviour of the web native Android by linking native apps to web urls.
-Such an endeavour shows us that urls are on the right track and we shouldn't be so fast throw them away.
-If many native developers take advantage of this then perhaps the user interactions to reveal a sharing url on mobile may come out of the native sector as they strive to make their own content sharable via urls.
+Recently Google unveiled Android Instant Apps which are trying to emulate the behaviour of the web native Android by linking native apps to web URLs. Such an endeavour shows us that URLs are on the right track and we shouldn't be so fast throw them away. If many native developers take advantage of this then perhaps the user interactions to reveal a sharing url on mobile may come out of the native sector as they strive to make their own content sharable via URLs.
 
 ## tl;dr
 
