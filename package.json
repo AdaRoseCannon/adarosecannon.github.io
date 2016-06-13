@@ -25,7 +25,7 @@
     "rollup-plugin-commonjs": "^2.2.1",
     "rollup-plugin-json": "^2.0.0",
     "rollup-plugin-node-resolve": "^1.4.0",
-    "sw-toolbox": "^3.1.1",
+    "sw-toolbox": "^3.2.1",
     "uglify-js": "^2.6.1"
   }
 }
