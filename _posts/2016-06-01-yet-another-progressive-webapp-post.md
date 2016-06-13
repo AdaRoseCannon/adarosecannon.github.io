@@ -19,7 +19,7 @@ I will be referring to work done at the Financial Times but my views do not repr
 
 ## Some History and Background
 
-iOS introduced install to homescreen in iOS 5 (November 2011), at it's core functionality this was not much more than a glorified bookmark. There is some slightly different behaviour developers may need to be aware of but nothing of note but this was enough introduce the concept of a web app. You declared your installed app configuration in the head of the page with meta tags. (icons etc)
+iOS introduced install to homescreen in iOS 2.1 (September 2008), at it's core functionality this was [not much more than a glorified bookmark](http://gizmodo.com/5072967/iphone-secret-web-apps-can-mimic-real-apps). There is some slightly different behaviour developers may need to be aware of but nothing of note but this was enough introduce the concept of a web app. You declared your installed app configuration in the head of the page with meta tags. (icons etc)
 
 In Chrome 31 (November 2013) Chrome for Android Introduced this functionality.
 
