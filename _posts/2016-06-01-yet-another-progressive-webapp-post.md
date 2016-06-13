@@ -27,7 +27,7 @@ In Chrome 38 (October 2014) Web App manifest support in Chrome, this is a JSON f
 
 In Chrome 40 (December 2014) Service Workers started to be rolled out across Firefox and Chrome, nothing on Safari at the time of writing.
 
-So, Web Apps have been around since 2011 using older Web Technology and in the 4 years between then and when Service workers became mainstream they have been around but not as a large part of the community consciousness. It was around the time Service Workers started to be 'a thing' that the Chrome team started to push for *Progressive Web Apps*.
+So, Web Apps have been around since 2008 using older Web Technology and in the 7 years between that time and when Service workers became mainstream they have been around but not as a large part of the community consciousness. It was around the time Service Workers started to be 'a thing' that the Chrome team started to push for *Progressive Web Apps*.
 
 *Progressive Web Apps* is not a spec, it started as a definition of what a _modern_ Web App should be. Chrome uses this definition so when a number of conditions are fulfilled an install prompt in the browser is displayed. The conditions are:
 
