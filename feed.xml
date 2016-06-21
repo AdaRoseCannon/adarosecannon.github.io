@@ -5,7 +5,7 @@
 	<channel>
 		<title>{{ site.name | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
-		<link>{{ site.url }}</link>
+		<link>https://ada.is</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 			<item>
@@ -22,7 +22,7 @@
           <description>{{ post.excerpt | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
           <link>{{ post.url }}</link>
-          <guid isPermaLink="true">{{ post.url }}</guid>
+          <guid isPermaLink="true">https://ada.is/{{ post.url }}</guid>
       	{% endif %}
 			</item>
 		{% endfor %}
