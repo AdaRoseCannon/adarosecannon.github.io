@@ -1,0 +1,31 @@
+
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>{{ site.name | xml_escape }}</title>
+		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		{% for post in site.posts limit:10 %}
+			<item>
+      	{% if post.link %}
+  				<title>{{ post.title | xml_escape }}</title>
+  				<dc:creator>Ada Rose Edwards</dc:creator>    
+  				<description>{{ post.description | xml_escape }}</description>
+  				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+  				<link>{{ post.link }}</link>
+  				<guid isPermaLink="true">{{ post.link }}</guid>
+      	{% else %}
+          <title>{{ post.title | xml_escape }}</title>
+          <dc:creator>Ada Rose Edwards</dc:creator>    
+          <description>{{ post.excerpt | xml_escape }}</description>
+          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+          <link>{{ post.url }}</link>
+          <guid isPermaLink="true">{{ post.url }}</guid>
+      	{% endif %}
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
