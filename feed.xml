@@ -6,7 +6,7 @@
 		<title>{{ site.name | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
 		<link>https://ada.is</link>
-		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<atom:link href="https://ada.is/{{ page.path }}" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 			<item>
       	{% if post.link %}
@@ -21,7 +21,7 @@
           <dc:creator>Ada Rose Edwards</dc:creator>    
           <description>{{ post.excerpt | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-          <link>{{ post.url }}</link>
+          <link>https://ada.is/{{ post.url }}</link>
           <guid isPermaLink="true">https://ada.is/{{ post.url }}</guid>
       	{% endif %}
 			</item>
