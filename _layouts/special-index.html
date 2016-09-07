@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js">
-	{% include head.html %}
-	<body class="special-index">
-		<div class="container">
-			<div class="icon-container">
-				<a href="https://twitter.com/lady_ada_king"><span class="icon twitter">twitter</span></a>
-				<a href="https://github.com/adaroseedwards"><span class="icon github">github</span></a>
-				<a href="https://uk.linkedin.com/in/adarose"><span class="icon linkedin">linkedIn</span></a>
-				<a href="https://lanyrd.com/profile/lady_ada_king/"><span class="icon lanyrd">lanyrd</span></a>
-			</div>
-			<div class="header row">
-					{% include header.html %}
-					{{ content }}
-			</div>
+{% include head.html %}
+
+<body class="special-index">
+	<div class="container">
+		<div class="icon-container">
+			<a href="https://twitter.com/lady_ada_king"><span class="icon twitter">twitter</span></a>
+			<a href="https://github.com/adaroseedwards"><span class="icon github">github</span></a>
+			<a href="https://uk.linkedin.com/in/adarose"><span class="icon linkedin">linkedIn</span></a>
+			<a href="https://lanyrd.com/profile/lady_ada_king/"><span class="icon lanyrd">lanyrd</span></a>
 		</div>
-		{% include scripts.html %}
-	</body>
+		<div class="header row">
+			{% include header.html %} {{ content }}
+		</div>
+	</div>
+	{% include scripts.html %}
+</body>
+
 </html>

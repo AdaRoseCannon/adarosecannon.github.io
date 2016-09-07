@@ -220,6 +220,9 @@ body.special {
 
 	.row.body {
 		padding-top: 2em;
+		display: flex;
+		justify-content: space-around;
+		margin: auto;
 
 		.pr-link {
 			font-weight: bold;
@@ -245,6 +248,29 @@ body.special {
 
 	.by-box {
 		text-align: center;
+		position: relative;
+		min-height: 1px;
+		padding-left: 1em;
+		padding-right: 1em;
+		float: left;
+		display: none;
+		@media (min-width: $screen-sm-min) {
+			display: block;
+		}
+
+		@media (min-width: $screen-md-min) {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+	}
+
+	article {
+		position: relative;
+		min-height: 1px;
+		padding-left: 1em;
+		padding-right: 1em;
+		float: left;
+		max-width: 80rem;
 	}
 
 	.head-hexagon {
