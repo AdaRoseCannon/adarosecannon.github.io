@@ -8,8 +8,8 @@
 body, html {
 	margin: 0;
 	padding: 0;
-    font-size: 14px;
-    line-height: 1.42857143;
+    font-size: 16px;
+    line-height: 1.52857143;
 }
 
 * {
@@ -45,7 +45,7 @@ html, body, .container, .row {
 
 
 h1 {
-	font-size: 2em;
+	font-size: 2rem;
 	margin: 0.67em 0;
 }
 
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 2.4em;
     text-align: left;
     overflow: hidden;
-	margin-left: 0.5em;
+	padding-left: 0.5em;
 }
 
 .icon {

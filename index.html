@@ -8,14 +8,22 @@ title: Ada.is
   {% for post in site.posts %}
     <div class="home-posts_item">
 	{% if post.link %}
-    	<h1><a class="article-link" href="{{ post.link }}">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h1>
-		<article><p>{{ post.description }}</p></article>
+    	<h2><a class="article-link" href="{{ post.link }}">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h2>
+			<article><p>{{ post.description }}</p></article>
     	<time>{{ post.date | date_to_string }}</time>
 	{% else %}
-    	<h1><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h1>
+		<h2><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h2>
 		<article>{{ post.excerpt }}</article>
-    	<time>{{ post.date | date_to_string }}</time>
+		<time>{{ post.date | date_to_string }}</time>
 	{% endif %}
     </div>
+		{% assign loopindex = forloop.index | modulo: 3 %}
+		{% if loopindex == 0 %}
+		<input class="more-content" type="checkbox" id="toggle-{{ forloop.index }}" style="visibility: hidden;" checked />
+		<label for="toggle-{{ forloop.index }}"></label>
+		{% endif %}
   {% endfor %}
+  <div class="home-posts_item">
+		<h2>No more posts.</h2>
+  </div>
 </section>

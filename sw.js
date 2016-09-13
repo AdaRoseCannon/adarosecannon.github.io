@@ -66,24 +66,18 @@ self.addEventListener('message', function(event) {
 		});
 });
 
-toolbox.options.networkTimeoutSeconds = 5;
-toolbox.options.cache.name = RESOURCES_CACHE_NAME;
-toolbox.router.get(/./, function (request, values, options) {
-
+// Recieve messages from the client and reply back onthe same port
+self.addEventListener('fetch', function (event) {
+	const request = event.request;
+	const handler = (request.url.match(/^http:\/\/localhost/) && location.protocol === 'http:' || location.hostname === 'localhost') ? toolbox.networkFirst : toolbox.fastest;
 	if (
-		request.url.match(/(\.mp4|\.webm|\.avi|\.wmv)$/i) ||
-		request.url.match(/data:/i)
+		!(
+			request.url.match(/(\.mp4|\.webm|\.avi|\.wmv|\.m4v)$/i) ||
+			request.url.match(/data:/i)
+		)
 	) {
-		return toolbox.networkOnly(request, values, options);
+		event.respondWith(handler(request, [], {
+			networkTimeoutSeconds: 3
+		}));
 	}
-
-	if (request.mode === 'navigate') {
-		options.networkTimeoutSeconds = 2;
-		return toolbox.networkFirst(request, values, options);
-	}
-
-	options = options || {};
-
-	const defaultRoute = (location.protocol === 'http:' || location.hostname === 'localhost') ? toolbox.networkFirst : toolbox.fastest;
-	return defaultRoute(request, values, options);
 });

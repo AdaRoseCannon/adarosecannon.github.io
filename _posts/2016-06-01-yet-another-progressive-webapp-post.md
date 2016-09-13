@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Yet another blog about the state and future of Progressive Web App"
-description: Progressive Web Apps are in flux at the moment, these are the opinions of someone who has been working on web apps before they got conflated with Service Workers and new web tech.
+description: <b>Progressive Web Apps</b> are in flux at the moment, these are the opinions of someone who has been working on web apps before they got conflated with <b>Service Workers</b> and new web tech.
 categories: Blog
 author: Ada Rose Edwards
 ---
