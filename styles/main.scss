@@ -81,8 +81,33 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.3em;
     height: 2.4em;
     text-align: left;
-    overflow: hidden;
 	padding-left: 0.5em;
+	position: relative;
+}
+
+.profile-pic {
+	font-size: 3rem;
+	width: 5em;
+	height: 5em;
+	float: right;
+	display: inline-block;
+	transition: transform 1s ease;
+	transform: scale(0.2, 0.2);
+	transform-origin: 100% 0;
+	background: url(https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400);
+	background-size: cover;
+    margin-left: -4em;
+    margin-bottom: -4em;
+	border-radius: 1em;
+	z-index: 3;
+	position: relative;
+	transition-delay: 1s;
+	box-shadow: 0 0 1em 0.1em rgba(0,0,0,0.2);
+
+	a:hover & {
+		transform: translate(-0.5em, 0.5em);
+		transition-delay: 0s;
+	}
 }
 
 .icon {

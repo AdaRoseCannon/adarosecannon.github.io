@@ -24,7 +24,7 @@
 				{{ content }}
 				<div class="share-or-comment">
 					<h2>Share or Comment</h2> {% include twitter.html %}
-					<hr /> {% include disqus.html %}
+					<hr /> {% if page.no_disqus %}{% else %}{% include disqus.html %}{% endif %}
 				</div>
 			</div>
 		</div>
