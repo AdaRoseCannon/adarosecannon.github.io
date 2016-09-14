@@ -5,13 +5,13 @@ categories: Blog
 author: Ada Rose Edwards
 ---
 
-[[Glitch Bunny]](https://gh.ada.is/SoundThing/) is an audio visualisation. It uses input from the microphone via webaudio and maps it onto a bunny.
+[[Glitch Bunny]](https://ada.is/SoundThing/) is an audio visualisation. It uses input from the microphone via webaudio and maps it onto a bunny.
 
 <video class="gallery-item" data-src="/post_resources/BunnyBunny.m4v" poster="/images/post_resources/BunnyBunnyPreview.jpeg" loop="true" controls="controls">
 	Sorry it appears video is not supported in your browser.
 </video>
 
-[Later support for google cardboard and better lighting was added.](https://gh.ada.is/SoundThing/?vr) The source code is [[Here]](https://github.com/AdaRoseEdwards/SoundThing)
+[Later support for google cardboard and better lighting was added.](https://ada.is/SoundThing/?vr) The source code is [[Here]](https://github.com/AdaRoseEdwards/SoundThing)
 
 ## Why?
 

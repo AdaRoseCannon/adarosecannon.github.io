@@ -282,7 +282,10 @@ body.special {
 
 	.content-container {
 		height: 100%;
+   		overflow: hidden;
 		background-color: white;
+		flex-basis: 100%;
+		flex-grow: 1;
 	}
 
 	time {
@@ -300,6 +303,8 @@ body.special {
 		padding-right: 1em;
 		float: left;
 		display: none;
+		flex-shrink: 1;
+		flex-grow: 0;
 		@media (min-width: $screen-sm-min) {
 			display: block;
 		}
@@ -317,6 +322,7 @@ body.special {
 		padding-right: 1em;
 		float: left;
 		max-width: 80rem;
+		width: 100%;
 	}
 
 	.head-hexagon {

@@ -12,7 +12,7 @@ This was a quick one afternoon project and I wanted to break down what went into
 
 ><img src="/images/post_resources/photo.jpg" alt="Photo of the app on my phone" style="float: right;" title="Photo of the app on my phone" width="270px" />
 >
-> End result: [https://gh.ada.is/starsword/](https://gh.ada.is/starsword/) - Open on your phone, put up the volume, turn it on, wave it around.
+> End result: [https://ada.is/starsword/](https://ada.is/starsword/) - Open on your phone, put up the volume, turn it on, wave it around.
 >
 > Source code: [https://github.com/AdaRoseEdwards/starsword](https://github.com/AdaRoseEdwards/starsword)
 >
