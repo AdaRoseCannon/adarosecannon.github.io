@@ -13,6 +13,7 @@ body.special, body.special-index {
 			margin: 2em 0em 2em 0em;
 			clear: both;
 			box-shadow: 0.5em 0.5em 0 $shadow;
+			overflow: auto;
 		}
 
 		.gallery-item {
