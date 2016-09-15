@@ -87,17 +87,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-pic {
 	font-size: 3rem;
-	width: 5em;
-	height: 5em;
-	float: right;
+	width: 4.5em;
+	height: 4.5em;
 	display: inline-block;
 	transition: transform 1s ease;
 	transform: scale(0.2, 0.2);
 	transform-origin: 100% 0;
 	background: url(https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400);
 	background-size: cover;
-    margin-left: -4em;
-    margin-bottom: -4em;
+    margin: 0.1em 0.1em -3.6em -3.6em;
 	border-radius: 1em;
 	z-index: 3;
 	position: relative;
