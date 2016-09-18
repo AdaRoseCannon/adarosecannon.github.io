@@ -8,11 +8,11 @@ title: Ada.is
   {% for post in site.posts %}
     <div class="home-posts_item">
 	{% if post.link %}
-    	<h2>{% if post.star %}⭐{% endif %}<a class="article-link" href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h2>
+    	<h2>{% if post.star %}⭐ {% endif %}<a class="article-link" href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h2>
 			<article><p>{{ post.description }}</p></article>
     	<time>{{ post.date | date_to_string }}</time>
 	{% else %}
-		<h2>{% if post.star %}⭐{% endif %}<a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h2>
+		<h2>{% if post.star %}⭐ {% endif %}<a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h2>
 		<article>{{ post.excerpt }}</article>
 		<time>{{ post.date | date_to_string }}</time>
 	{% endif %}
