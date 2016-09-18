@@ -4,6 +4,7 @@ title:  "Accessibility and Contrast Bookmarklet"
 categories: Blog
 author: Ada Rose Edwards
 image: https://ada.is/images/post_resources/contrast.png
+star: 1
 ---
 
 This is a bookmarklet to run on any page to analyse the contrast of the text on a page and highlight elements which may have readability issues.
