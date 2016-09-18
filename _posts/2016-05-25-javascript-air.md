@@ -6,4 +6,5 @@ description: A Progressive Web App "uses modern web capabilities to deliver an a
 categories: Link
 external: javascriptair.com
 author: JavaScript Air
+star: 1
 ---
