@@ -6,4 +6,5 @@ description: Web apps can replace all of the functions of native apps and websit
 categories: Link
 external: smashingmagazine.com
 author: Ada Rose Edwards
+star: 1
 ---
