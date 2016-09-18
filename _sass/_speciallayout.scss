@@ -1,11 +1,12 @@
 
 body.special, body.special-index {
-
-  .share-or-comment {
-    padding: 0 1em 0 1em;
-  }
-
+	
 	background: $ada-pink;
+	
+	.share-or-comment {
+		padding: 1em 1em 0 1em;
+		clear: both;
+	}
 
 	article {
 		h1, h2 {
