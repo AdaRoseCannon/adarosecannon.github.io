@@ -15,9 +15,9 @@ As part of the developer relations effort from Samsung Internet my role is to en
 
 <figure class="gallery-item"><img src="/images/ada-vr.jpg" alt="Ada and Daniel wearing VR headsets." width="320px" /></figure>
 
-<p><h2>Popular Posts</h2></p>
+<p><h2 style="clear:none;">Popular Posts</h2></p>
 
-{% for post in site.posts %}x
+{% for post in site.posts %}
 {% if post.link %}
 {% if post.star %}
 <div><a class="article-link" href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a></div>
