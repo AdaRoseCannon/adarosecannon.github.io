@@ -4,6 +4,7 @@ title:  "Const & Immutable Objects"
 categories: Blog
 author: Ada Rose Edwards
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pusa_hispida_pup.jpg/1023px-Pusa_hispida_pup.jpg
+star: 1
 ---
 
 ES6 introduces the `const` keyword. One issue I've seen raised a few times by people who are skilled with Javascript but unfamiliar with ES6 is confusion because when an object is defined using const it is not immutable.
