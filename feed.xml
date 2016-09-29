@@ -7,7 +7,7 @@
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
 		<link>https://ada.is</link>
 		<atom:link href="https://ada.is/{{ page.path }}" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		{% for post in site.posts %}
 			<item>
       	{% if post.link %}
   				<title>{{ post.title | xml_escape }}</title>
