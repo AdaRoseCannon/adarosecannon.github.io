@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 	transform-origin: 100% 0;
 	background: url(https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400);
 	background-size: cover;
-  margin: 0.1em 0.1em -3.1em -3.1em;
+	margin: 0.1em 0.1em -3.1em -3.1em;
 	border-radius: 1em;
 	z-index: 3;
 	position: relative;
@@ -146,6 +146,11 @@ h1, h2, h3, h4, h5, h6 {
 	&.lanyrd:after {
 		background-image: url(icons/svg/lanyrd.svg), url(icons/png/lanyrd.png);
 	}
+}
+
+.star {
+	color: transparent;
+	text-shadow: 0 0 0 darkgoldenrod;
 }
 
 @import "speciallayout";
