@@ -23,11 +23,11 @@ The web has grown in complexity over the years. The web faces pressures to grow 
 * Trying to compete with or replace existing media platforms such as scientific literature, newspapers, books, radio, tv, mobile apps, virtual reality.
 * Trying to fix where existing users of the web are not being served optimally by our existing best practises.
 * As we learn more about how the web is being used we change what we do to reflect how our users do it and push for new modes of communication to assist them.
-* Discovery of best practises. E.g. For performance (network and animation), accessibility and new mediums such as mobile and VR has shaped the the goals for our tooling.
+* Discovery of best practises. E.g. For performance (network and animation), accessibility and new mediums such as mobile and VR has shaped the goals for our tooling.
 
 The flexibility of the web and the strong cross device compatibility between browsers allows us to shape the web as we see fit through tooling, frameworks and libraries.
 
-The the state of the native web today reflects the community’s needs of yesterday. The state of the community’s development efforts reflects the needs of today, which the web as it is often falls short on.
+The state of the native web today reflects the community’s needs of yesterday. The state of the community’s development efforts reflects the needs of today, which the web as it is often falls short on.
 
 ## **The Web is unfashionable**
 
