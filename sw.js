@@ -77,7 +77,7 @@ self.addEventListener('fetch', function (event) {
 	}
   
   // Index page should be fresh i ncase of new stories
-  if (request.url.match(/^https:\/\/ada.is\/?(index.html)?/) {
+  if (request.url.match(/^https:\/\/ada.is\/?(index.html)?/)) {
       handler = toolbox.networkFirst;
   }
 	
