@@ -75,6 +75,11 @@ self.addEventListener('fetch', function (event) {
 	if (request.url.match(/^http:\/\/localhost/) && location.protocol === 'http:' || location.hostname === 'localhost') {
 		 handler = toolbox.networkFirst
 	}
+  
+  // Index page should be fresh i ncase of new stories
+  if (request.url.match(/^https:\/\/ada.is\/?(index.html)?/) {
+      handler = toolbox.networkFirst;
+  }
 	
 	// Network first if it is a page navigation to try to get an up-to-date result
 	if (request.mode === 'navigate') {
