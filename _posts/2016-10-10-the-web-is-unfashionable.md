@@ -117,4 +117,4 @@ HTML has a lot of power which I don’t think is being taken advantage of. Read 
 
 The Web has history. If you build with web technology it will stick around. We try not to break the web even if it means the mistakes and bad decisions we have made in the past (and will make in the future) get set in stone.
 
-Give vanilla web ago. It’s not fashionable but it works[.](http://www.warnerbros.com/archive/spacejam/movie/jam.htm)
+Give vanilla web a go. It’s not fashionable but it works[.](http://www.warnerbros.com/archive/spacejam/movie/jam.htm)
