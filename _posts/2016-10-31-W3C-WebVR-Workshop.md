@@ -6,5 +6,4 @@ description: The W3C WebVR workshop, in in San Jose, was the first workshop on W
 categories: Link
 external: medium.com
 author: Ada Rose Edwards
-star: 1
 ---
