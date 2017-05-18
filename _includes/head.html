@@ -31,4 +31,20 @@
 	<link rel="prefetch" href="/images/pattern.svg">
 	<meta name="theme-color" content="#FFF0F5">
 	<link rel="stylesheet" href="/styles/main.css">
+	{% if page.style %}
+	<link rel="stylesheet" href="{{page.style}}">
+	{% endif %}
+	{% if page.styles %}
+	{% for item in page.styles %}
+	<link rel="stylesheet" href="{{item}}">
+	{% endfor %}
+	{% endif %}
+	{% if page.script %}
+	<script src="{{page.script}}"></script>
+	{% endif %}
+	{% if page.scripts %}
+	{% for item in page.scripts %}
+	<script src="{{ item }}"></script>
+	{% endfor %}
+	{% endif %}
 </head>

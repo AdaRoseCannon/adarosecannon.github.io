@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="HandheldFriendly" content="true">
+	<title>Vaporwave Physics</title>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@lady_ada_king">
+	<meta name="twitter:title" content="VR Vaporwa(v|r)e">
+	<meta name="twitter:description" content="What is vaporwave? According to commenters in various music forums, it’s 'chillwave for Marxists,' 'post-elevator music,' 'corporate smooth jazz Windows 95 pop,'">
+	<meta name="twitter:image" content="http://i.imgur.com/B84J9uG.jpg">
+	<script src="https://rawgit.com/AdaRoseEdwards/aframe/v0.3.3-ada/dist/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/AdaRoseEdwards/facetype-fonts-for-a-frame/master/Dawning-of-a-New-Day_Regular.js"></script>
+    <script src="https://cdn.rawgit.com/AdaRoseEdwards/facetype-fonts-for-a-frame/master/Exo%202%20Black_Regular.js"></script>
+    <script src="https://cdn.rawgit.com/AdaRoseEdwards/facetype-fonts-for-a-frame/master/Exo%202_Bold%20Italic.js"></script>
+	<!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.0.3/dist/aframe-physics-system.min.js"></script> -->
+	<script src="https://samsunginternet.github.io/a-frame-components/dist/fire-item.js"></script>
+	<script src="https://samsunginternet.github.io/a-frame-components/dist/clapper.js"></script>
+
+</head>
+<body>
+	<a-scene screenshot>
+		<a-assets>
+			<img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
+			<img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+			<img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+			<img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+			<a-mixin id="shiny" material="color: pink; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;"></a-mixin>
+			<a-mixin id="net"   material="color: pink; shader: flat; wireframe: true;"></a-mixin>
+			<a-mixin id="matte" material="color: darkmagenta; metalness:0.75; roughness: 0.5; sphericalEnvMap: #sky;"></a-mixin>
+		</a-assets>
+		<a-sky src="#sky" rotation="0 -90 0" material="depthTest:false;"></a-sky>
+		<a-entity position="0 0 0"
+				  static-body
+				  geometry="primitive: plane; width: 1000; height: 1000;" rotation="-90 0 0"
+				  material="src: #grid; repeat: 1000 1000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky; depthTest:false;"></a-entity>
+		<!--
+		<a-sphere id="projectile" velocity="1 2 5" dynamic-body="shape: sphere;" position="0 2 -4" radius="0.5" mixin="net" segments-height="5" segments-width="10">
+			<a-sphere radius="0.4" mixin="matte" segments-height="5" segments-width="10">
+			</a-sphere>
+		</a-sphere> -->
+
+		<a-box dynamic-body="shape: box;" rotation="0 -30 0" position="5 2 -4" height="3" width="2" depth="0.5" mixin="matte" segments-height="5" segments-width="10"></a-box>
+		<a-box dynamic-body="shape: box;" rotation="0 30 0" position="-5 2 -4" height="3" width="2" depth="0.5" mixin="matte" segments-height="5" segments-width="10"></a-box>
+		<a-box dynamic-body="shape: box;" rotation="0 30 0" position="4 2 4" height="3" width="2" depth="0.5" mixin="matte" segments-height="5" segments-width="10"></a-box>
+		<a-box dynamic-body="shape: box;" rotation="0 -30 0" position="-4 2 4" height="3" width="2" depth="0.5" mixin="matte" segments-height="5" segments-width="10"></a-box>
+
+		<a-entity position="0 1.4 3">
+			<!-- <a-camera user-height=0 fire-item="el: #projectile; on: clap;" clapper="debounce: false; trigger: 0.4;" static-body geometry="primitive: cylinder; height: 1.8; segmentsRadial: 8; segmentsHeight: 1;"></a-camera> -->
+			<a-camera user-height='0'></a-camera>
+		</a-entity>
+
+		<a-entity position="0 6 -10">
+
+			<a-entity scale="1 1 1" geometry="primitive: torusKnot;" mixin="shiny">
+				<a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
+			</a-entity>
+
+			<a-entity geometry="primitive: tetrahedron; radius:4;" material="shader: flat; color: red; wireframe: true;">
+				<a-animation direction="alternate" attribute="rotation" dur="8300" to="720 60 360" repeat="indefinite"></a-animation>
+				<a-entity geometry="primitive: tetrahedron; radius:4;" material="shader: flat; color: red; wireframe: true;">
+					<a-animation direction="alternate" attribute="rotation" dur="2000" to="0 -5 8" from="0 5 -8" repeat="indefinite"></a-animation>
+					<a-entity geometry="primitive: tetrahedron; radius:4;" material="shader: flat; color: red; wireframe: true;">
+						<a-animation direction="alternate" attribute="rotation" dur="2000" to="0 -5 8" from="0 5 -8" repeat="indefinite"></a-animation>
+						<a-entity geometry="primitive: tetrahedron; radius:4;" material="shader: flat; color: red; wireframe: true;">
+							<a-animation direction="alternate" attribute="rotation" dur="2000" to="0 -5 8" from="0 5 -8" repeat="indefinite"></a-animation>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+		</a-entity>
+
+		<a-entity position="-3 1 -6" rotation="5 0 0" static-body="shape:box;">
+			<a-entity
+					  rotation="0 0 5"
+					  position="0 2 0.2"
+					  text="text: Hello World; font:dawning of a new day; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
+					  material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
+			></a-entity>
+
+			<a-entity
+					  position="-0.5 0.5 -0.5"
+					  scale="0.6 1.2 1" text="text: VAPORWAVE; font: exo 2 black; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;"
+					  material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"
+			></a-entity>
+
+			<a-entity position="1 0 0.3" text="text: Aesthetic; font: exo 2;  style: italic; size: 0.8; weight: bold; height: 0;" material="shader: flat; color:white;"></a-entity>
+			<a-entity position="1 0 0.3" text="text: Aesthetic; font: exo 2;  style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1;" material="shader: flat; color:white;transparent: true; opacity: 0.4;"></a-entity>
+		</a-entity>
+
+
+		<a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+		<a-entity light="color: #ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
+		<a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
+		<a-entity light="color: white; type: ambient;"></a-entity>
+
+	</a-scene>
+</body>
+</html>
