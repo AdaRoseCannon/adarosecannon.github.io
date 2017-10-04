@@ -134,6 +134,10 @@ h1, h2, h3, h4, h5, h6 {
 	&.linkedin:after {
 		background-image: url(icons/svg/linkedin.svg), url(icons/png/linkedin.png);
 	}
+ 
+	&.linkedin:after {
+		background-image: url(https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-sunset.svg);
+	}
 
 	&.github:after {
 		background-image: url(icons/svg/github.svg), url(icons/png/github.png);
