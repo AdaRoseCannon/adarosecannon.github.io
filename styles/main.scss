@@ -135,8 +135,10 @@ h1, h2, h3, h4, h5, h6 {
 		background-image: url(icons/svg/linkedin.svg), url(icons/png/linkedin.png);
 	}
  
-	&.linkedin:after {
+	&.glitch:after {
 		background-image: url(https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-sunset.svg);
+    -webkit-filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+    filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
 	}
 
 	&.github:after {
