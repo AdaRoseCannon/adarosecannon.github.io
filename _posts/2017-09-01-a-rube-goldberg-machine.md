@@ -1,4 +1,3 @@
-2017-09-01-a-rube-goldberg-machine.md
 ---
 layout: post
 link: "https://samsunginter.net/rube-goldberg-article/"
