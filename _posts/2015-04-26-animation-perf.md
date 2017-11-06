@@ -2,14 +2,14 @@
 layout: post
 title:  "Animation Performance"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 On Monday 20/04/2015 I gave a ligtning talk at the extensible on animation performance in the browser.
 These are the notes from the talk prose-ified.  
 [Link to the talk](https://www.1am.club/~ada/ews-slides/). Talk notes are displayed on mobile.
 
-<blockquote class="twitter-tweet" lang="en"><p>Just saw <a href="https://twitter.com/slightlylate">@slightlylate</a> and <a href="https://twitter.com/timberners_lee">@timberners_lee</a> here, trying to not panic.</p>&mdash; Ada Rose Edwards ♥ (@Lady_Ada_King) <a href="https://twitter.com/Lady_Ada_King/status/590189790248587264">April 20, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p>Just saw <a href="https://twitter.com/slightlylate">@slightlylate</a> and <a href="https://twitter.com/timberners_lee">@timberners_lee</a> here, trying to not panic.</p>&mdash; Ada Rose Cannon ♥ (@Lady_Ada_King) <a href="https://twitter.com/Lady_Ada_King/status/590189790248587264">April 20, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ----
@@ -100,7 +100,7 @@ This method follows up from a great talk given by Paul Lewis ([@aerotwist](https
 * Restore the transitions
 * Fire any callbacks
 
-<blockquote class="twitter-tweet" lang="en"><p>This is the code for the smooth layout demo: <a href="https://t.co/fgWeP4DhrG">https://t.co/fgWeP4DhrG</a> <a href="https://twitter.com/hashtag/extwebsummit?src=hash">#extwebsummit</a> apolgies for the jQuery I wrote it in a hurry.</p>&mdash; Ada Rose Edwards ♥ (@Lady_Ada_King) <a href="https://twitter.com/Lady_Ada_King/status/590200595086082049">April 20, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p>This is the code for the smooth layout demo: <a href="https://t.co/fgWeP4DhrG">https://t.co/fgWeP4DhrG</a> <a href="https://twitter.com/hashtag/extwebsummit?src=hash">#extwebsummit</a> apolgies for the jQuery I wrote it in a hurry.</p>&mdash; Ada Rose Cannon ♥ (@Lady_Ada_King) <a href="https://twitter.com/Lady_Ada_King/status/590200595086082049">April 20, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Layout Boundaries and Containment

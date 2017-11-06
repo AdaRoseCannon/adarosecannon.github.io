@@ -2,7 +2,7 @@
 layout: post
 title:  "Const & Immutable Objects"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pusa_hispida_pup.jpg/1023px-Pusa_hispida_pup.jpg
 star: 1
 ---

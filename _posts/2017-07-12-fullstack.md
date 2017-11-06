@@ -5,6 +5,6 @@ title: "[Video] Virtual Reality and the Future of the Web"
 description: 'New Virtual Reality browsers means we need to consider how the web platform is going to need evolve to take advantage of the benefits that Virtual Reality can bring.'
 categories: Link
 external: skillsmatter.com
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 star: 1
 ---

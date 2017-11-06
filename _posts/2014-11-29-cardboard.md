@@ -2,7 +2,7 @@
 layout: post
 title:  "Audio visualisation in WebGL"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 [[Glitch Bunny]](https://ada.is/SoundThing/) is an audio visualisation. It uses input from the microphone via webaudio and maps it onto a bunny.
@@ -11,7 +11,7 @@ author: Ada Rose Edwards
 	Sorry it appears video is not supported in your browser.
 </video>
 
-[Later support for google cardboard and better lighting was added.](https://ada.is/SoundThing/?vr) The source code is [[Here]](https://github.com/AdaRoseEdwards/SoundThing)
+[Later support for google cardboard and better lighting was added.](https://ada.is/SoundThing/?vr) The source code is [[Here]](https://github.com/AdaRoseCannon/SoundThing)
 
 ## Why?
 

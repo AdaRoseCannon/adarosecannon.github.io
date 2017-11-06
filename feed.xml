@@ -11,14 +11,14 @@
 			<item>
       	{% if post.link %}
   				<title>{{ post.title | xml_escape }}</title>
-  				<dc:creator>Ada Rose Edwards</dc:creator>    
+  				<dc:creator>Ada Rose Cannon</dc:creator>    
   				<description>{{ post.description | xml_escape }}</description>
   				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
   				<link>{{ post.link }}</link>
   				<guid isPermaLink="true">{{ post.link }}</guid>
       	{% else %}
           <title>{{ post.title | xml_escape }}</title>
-          <dc:creator>Ada Rose Edwards</dc:creator>    
+          <dc:creator>Ada Rose Cannon</dc:creator>    
           <description>{% if post.description %}{{ post.description | xml_escape }}{% else %}{{ post.excerpt | xml_escape }}{% endif %}</description>
           <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
           <link>https://ada.is/{{ post.url }}</link>

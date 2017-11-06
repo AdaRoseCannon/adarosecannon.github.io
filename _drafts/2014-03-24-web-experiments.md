@@ -2,7 +2,7 @@
 layout: post
 title:  "Experiments in web tech"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 This project has been cancelled. After some work I realised I was
@@ -12,7 +12,7 @@ I will look into creating a web-component fruitmachine helper.
 
 This project explores progressive enhancement, web components, spdy and a few other bits and bobs.
 
-[[LINK]](https://github.com/AdaRoseEdwards/spdyproject)
+[[LINK]](https://github.com/AdaRoseCannon/spdyproject)
 
 Key goals of this project:
 
@@ -37,7 +37,7 @@ The Hogan templates are written such that is compiled with a usePolymer flag wil
 
 Using hulk these templates are compiled to a javascript file which is included in the client side javascript via commonjs. 
 
-In [components](https://github.com/AdaRoseEdwards/spdyproject/tree/master/app/javascript/modules/components) these templates are turned into web components and javascript is bound to them.
+In [components](https://github.com/AdaRoseCannon/spdyproject/tree/master/app/javascript/modules/components) these templates are turned into web components and javascript is bound to them.
 
 From then on any dom recieved from the server can be requested as web components or they can be rendered straight from the hogan files with data from the servers rest api.
 
@@ -47,16 +47,16 @@ This has the nice result that all the components can be shared between the clien
 
 There is not much to say about spdy, using the existing modules it is easy to use and the code should be pretty self explanitory. What is quite interesting though is the path the route takes in express.
 
-[app.js](https://github.com/AdaRoseEdwards/spdyproject/tree/master/app.js)
+[app.js](https://github.com/AdaRoseCannon/spdyproject/tree/master/app.js)
 
  * Sets up server
 
-[./lib/server](https://github.com/AdaRoseEdwards/spdyproject/tree/master/lib/server/index.js)
+[./lib/server](https://github.com/AdaRoseCannon/spdyproject/tree/master/lib/server/index.js)
 
  * Route through the app
  * Set up static routes
 
-[./lib/server/templateData.js](https://github.com/AdaRoseEdwards/spdyproject/tree/master/lib/server/templateData.js)
+[./lib/server/templateData.js](https://github.com/AdaRoseCannon/spdyproject/tree/master/lib/server/templateData.js)
 
  * Set the render function to handle returning either html or json
  * Set cache control headers
@@ -66,11 +66,11 @@ There is not much to say about spdy, using the existing modules it is easy to us
   * A cookie of JSON=1 will return all template data as JSON useful for debugging.
   * A cookie of polymer=1 will always render web component templates and will load the polymer platform and generate web components in a blocking fashion, useful for experimenting with polymer.
 
-[./lib/rest](https://github.com/AdaRoseEdwards/spdyproject/tree/master/lib/rest/index.js)
+[./lib/rest](https://github.com/AdaRoseCannon/spdyproject/tree/master/lib/rest/index.js)
 
  * rest api functionality these get loaded dynamically by parsing the requested url
 
-[./lib/server/defaultHandler](https://github.com/AdaRoseEdwards/spdyproject/tree/master/lib/server/defaultHandler.js)
+[./lib/server/defaultHandler](https://github.com/AdaRoseCannon/spdyproject/tree/master/lib/server/defaultHandler.js)
 
  * Handle dynamic routes, load pages from routes in a similar fashion to the way rest loads.
 

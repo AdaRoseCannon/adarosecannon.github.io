@@ -2,7 +2,7 @@
 layout: post
 title:  "Accessibility and Contrast Bookmarklet"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 image: https://ada.is/images/post_resources/contrast.png
 star: 1
 ---

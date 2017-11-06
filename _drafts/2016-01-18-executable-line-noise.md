@@ -2,7 +2,7 @@
 layout: post
 title:  "Executable line noise"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 Sometimes being concise is not the way forward.

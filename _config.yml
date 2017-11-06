@@ -1,8 +1,8 @@
 name: Ada.is
-description: The blog of Ada Rose Edwards
+description: The blog of Ada Rose Cannon
 author:
-  name: Ada Rose Edwards
-  email: adaroseedwards@gmail.com
+  name: Ada Rose Cannon
+  email: ada@ada.is
   twitter: lady_ada_king
 
 include: ['.htaccess']
@@ -13,7 +13,7 @@ show_drafts: false
 
 permalink: pretty
 
-giturl: https://github.com/AdaRoseEdwards
+giturl: https://github.com/AdaRoseCannon
 pageurl: /
-pullreq: https://github.com/AdaRoseEdwards/adaroseedwards.github.io/tree/master/
+pullreq: https://github.com/AdaRoseCannon/adarosecannon.github.io/tree/master/
 

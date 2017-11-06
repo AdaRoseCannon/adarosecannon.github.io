@@ -2,7 +2,7 @@
 layout: post
 title:  "Animation Performance - Follow Up"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 I and someone from slack tried implementing an accordion with the techniques discussed in my [previous post](/blog/2015/04/26/animation-perf/).

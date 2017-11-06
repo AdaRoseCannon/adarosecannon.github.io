@@ -3,7 +3,7 @@ layout: "post"
 title: "The Web is not Fashionable."
 description: 'or: How I Learned to Love the Web.<br />  On giving vanilla web tech a go and how there is more to the web than knowing JS frameworks. Encouraging a focus on <b>Progressive Enhancement</b>'
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 image: https://cdn-images-1.medium.com/max/800/0*kd1ljzl6j1GAJAOv.jpg
 star: 1
 ---

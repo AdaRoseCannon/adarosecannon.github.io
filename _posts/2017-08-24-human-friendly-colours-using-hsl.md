@@ -5,6 +5,6 @@ title: "Human Friendly Colours using HSL"
 description: "Introducing a way of describing colours using Hue, Saturation, Lightness which really helps with editing colours and making colours to other colours in the document. "
 categories: Link
 external: medium.com
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 star: 1
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Introduction to fruitmachine"
 categories: Blog
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 ---
 
 ### Project Goals:
@@ -40,7 +40,7 @@ My gulp configuration then parses this folder tree and generates 3 resources:
 1. A single include which requires all of the fruit definitions. i.e. require('./banana')
 1. A scss file which @imports all of the stylesheets for each module. i.e. @import "melon/style";
 
-This folder structure can be seen [[here]](https://github.com/AdaRoseEdwards/ft-ada/tree/master/app/fruit/melon)
+This folder structure can be seen [[here]](https://github.com/AdaRoseCannon/ft-ada/tree/master/app/fruit/melon)
 
 > A note on scss imports an eagle eyed reader would notice that automatic import of entire folders in scss is bad practise due to import order. BUT each module is namespaced so that import order no longer matters.
 
@@ -48,4 +48,4 @@ I through together `gulp-import-gen.js` to be used as a gulp plugin to generate 
 
 I also added browserify and tweaked gulp watch to watch the new directory tree and gulp gh deploy to deploy github pages.
 
-You can view the end result at [[http://adaroseedwards.github.io/ft-ada/]](http://adaroseedwards.github.io/ft-ada/)
+You can view the end result at [[http://adarosecannon.github.io/ft-ada/]](http://adarosecannon.github.io/ft-ada/)

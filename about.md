@@ -1,5 +1,5 @@
 ---
-author: Ada Rose Edwards
+author: Ada Rose Cannon
 title: About
 layout: post
 no_disqus: 1

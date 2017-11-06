@@ -11,8 +11,8 @@
     "clean": "git clean -f",
     "install": "npm run build"
   },
-  "repository": "https://github.com/AdaRoseEdwards/81",
-  "author": "Ada Rose Edwards <ada@ada.is>",
+  "repository": "https://github.com/AdaRoseCannon/adarosecannon.github.io",
+  "author": "Ada Rose Cannon <ada@ada.is>",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.8.1"
