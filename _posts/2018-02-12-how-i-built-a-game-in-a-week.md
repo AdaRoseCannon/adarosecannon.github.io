@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I built a game in a week"
-description: "I tried to make a game mostly using tools available on the web."
+description: "I tried to make a game mostly using tools available on the web. This is a guide to how I integrated these tools together to allow me to create a 3D RPG in a short period of time. With Twinery and AFrame."
 categories: Blog
 author: Ada Rose Cannon
 star: 1
