@@ -7,7 +7,6 @@ author: Ada Rose Cannon
 star: 0
 ---
 
-
 # Human Friendly Colours using HSL
 
 (If you are already familiar with HSL jump to the end for some fun tips.)
