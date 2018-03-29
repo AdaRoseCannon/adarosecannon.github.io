@@ -4,7 +4,7 @@ title: "How I built a game in a week"
 description: "I tried to make a game mostly using tools available on the web."
 categories: Blog
 author: Ada Rose Cannon
-star: 0
+star: 1
 ---
 
 # How I built a game in a week
