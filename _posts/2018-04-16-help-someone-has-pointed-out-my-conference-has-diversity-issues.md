@@ -4,7 +4,7 @@ title: "“Help! someone has pointed out my conference has diversity issues!"
 description: "I get asked this question a lot."
 categories: Blog
 author: Ada Rose Cannon
-star: 0
+star: 1
 ---
 
 # “Help! someone has pointed out my conference has diversity issues!
