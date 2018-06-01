@@ -39,11 +39,11 @@ They key groups of people who make up your conference culture are as follows:
 
 * **The organisers.** They set the rules, write the code of conduct (CoC) and select the other people who will be involved.
 
-* **The speakers. **They are people that the conference has selected to deliver what they believe to be a worthwhile message.
+* **The speakers.** They are people that the conference has selected to deliver what they believe to be a worthwhile message.
 
-* **The staff and volunteers. **They enforce the CoC and will be the first point of contact at the event of someone feeling uncomfortable or there is an issue.
+* **The staff and volunteers.** They enforce the CoC and will be the first point of contact at the event of someone feeling uncomfortable or there is an issue.
 
-* **The participants. **The largest group at your conference. Most will try to have fun, some will try to cause trouble. People will probably remember your conference mostly based on interactions with their fellow attendees.
+* **The participants.** The largest group at your conference. Most will try to have fun, some will try to cause trouble. People will probably remember your conference mostly based on interactions with their fellow attendees.
 
 Understanding the importance of each of these groups is key to understanding how to increase the diversity and inclusion of your event. Last-minute diversity pushes for speakers merely place a ‘diversity facade’ over a rotten core. When diversity is just done for appearance’ sake, nothing about the conference’s culture has actually changed.
 
@@ -51,7 +51,7 @@ Each group represents a microcosm of the conference as a whole. Which reflects t
 
 If your conference staff was picked by an all white male team they are likely to be chosen from their friends, who are likely also white and male. You must consider, for example, whether your attendees would feel comfortable reporting gendered harassment to someone who looks exactly like their harasser.
 
-If you have complaints about speaker diversity after you have already started selling tickets, lack of diversity is often just one symptom of a deep underlying problem and it **may already be too late to fix it. **Building a conference culture which reflects your community happens long before the speakers are even chosen. It primarily lies in having a diverse organisation team. The values of your community culture will reflect the values of the people organising it.
+If you have complaints about speaker diversity after you have already started selling tickets, lack of diversity is often just one symptom of a deep underlying problem and it **may already be too late to fix it.** Building a conference culture which reflects your community happens long before the speakers are even chosen. It primarily lies in having a diverse organisation team. The values of your community culture will reflect the values of the people organising it.
 
 Everything, including the contents of the code of conduct, the staff manning the venue, the chosen sponsors and graphic design of the website will reflect the make up and values of the organisation team whether explicitly chosen or accidentally.
 
@@ -75,9 +75,9 @@ If you are a larger conference, be sure to consider diversity at every level:
 
 * **The staff. **Usually we ask our friends to help, so this is easier with a diverse team. These are the people your attendees will turn to in the case of trouble so ensure they feel safe to do so.
 
-* **The speakers.** Speakers** **are seen as experts in their field. Many people look up to speakers as aspirational figures. It is important that all of your attendees get the chance to see role models in your speakers.
+* **The speakers.** Speakers are seen as experts in their field. Many people look up to speakers as aspirational figures. It is important that all of your attendees get the chance to see role models in your speakers.
 
-* **The participants. **If you’ve created a diverse and inclusive lineup in the rest of your event, you’ll find that you won’t drive away people from underrepresented backgrounds. It is worth noting that even if your immediate community is not very diverse, that is no reason to think that the above suggestions do not apply to your event and can’t/won’t make a difference.
+* **The participants.** If you’ve created a diverse and inclusive lineup in the rest of your event, you’ll find that you won’t drive away people from underrepresented backgrounds. It is worth noting that even if your immediate community is not very diverse, that is no reason to think that the above suggestions do not apply to your event and can’t/won’t make a difference.
 
 The venue must fully support people’s accessibility needs. This must also be clearly stated on the web site. Which must also be accessible to people using screen readers, captioning or the Loop.
 
