@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "“Help! someone has pointed out my conference has diversity issues!"
-description: "I get asked this question a lot."
+description: "I get asked this question a lot. I hope to give some advice in this article."
 categories: Blog
 author: Ada Rose Cannon
 star: 1
@@ -73,7 +73,7 @@ If you are a larger conference, be sure to consider diversity at every level:
 
 * **The organisers.** Most importantly make sure your team is diverse.
 
-* **The staff. **Usually we ask our friends to help, so this is easier with a diverse team. These are the people your attendees will turn to in the case of trouble so ensure they feel safe to do so.
+* **The staff.** Usually we ask our friends to help, so this is easier with a diverse team. These are the people your attendees will turn to in the case of trouble so ensure they feel safe to do so.
 
 * **The speakers.** Speakers are seen as experts in their field. Many people look up to speakers as aspirational figures. It is important that all of your attendees get the chance to see role models in your speakers.
 
