@@ -4,7 +4,7 @@ title: "Raindrops on roses, whiskers on kittens, declarative web APIs and truly 
 description: "This article introduces some cool things I have been playing with recently that have excited me. The thread which ties them together is getting communities of sites to work together across domains, but powered by the front end."
 categories: Blog
 author: Ada Rose Cannon
-star: 0
+star: 1
 ---
 
 # Raindrops on roses, whiskers on kittens, declarative web APIs and truly serverless web endpoints
@@ -19,7 +19,7 @@ The three topics I will cover are:
 
 * a service: *IndieAuth*
 
-* a front end library:* Comlink*
+* a front end library: *Comlink*
 
 * a pattern: *APIs as Web Components*.
 
@@ -140,7 +140,7 @@ The <a-scene> element sets up a render loop and a canvas. The child entities suc
 
 There are many 3rd party components for A-Frame. Some make network requests or run complex physics in a web worker but their interface is entirely exposed via HTML. So when we are composing our web page we don’t need to worry about how it works underneath, it is kept behind the scenes.
 
-**Another great example is [**Lea Verou](https://twitter.com/LeaVerou)’s [Mavo](https://mavo.io/) which allows us to make reactive Web Applications using only HTML. This is very powerful as it enables non-developers to produce modern Web Applications just as HTML/CSS enables anyone to produce static web pages.
+**Another great example** is [Lea Verou](https://twitter.com/LeaVerou)’s [Mavo](https://mavo.io/) which allows us to make reactive Web Applications using only HTML. This is very powerful as it enables non-developers to produce modern Web Applications just as HTML/CSS enables anyone to produce static web pages.
 
 I have made a very small library I use to help me author Web Components. It provides some callbacks to help with attribute parsing:
 
@@ -150,10 +150,10 @@ I have made a very small library I use to help me author Web Components. It prov
 
 As API authors we can design our APIs to take inspiration from these technologies.
 
-**Allow user privacy, **by limiting the data we gather, we can protect our users and reduce our own liability for holding user data. **Indie Auth** allows us to authenticate a user using only their domain name. **Client Side APIs **allow us to provide APIs which only expose select information without requiring us to give a third party information like our username or email address.
+**Allow user privacy,** by limiting the data we gather, we can protect our users and reduce our own liability for holding user data. **Indie Auth** allows us to authenticate a user using only their domain name. **Client Side APIs** allow us to provide APIs which only expose select information without requiring us to give a third party information like our username or email address.
 
 **Working together as a web community,** using **Client Side APIs**, we can let other websites work better with our services. We can lift each other up together by giving more seamless experiences. **With APIs as Web Components** we allow our APIs to be very quickly integrated into *existing CMSs and Frameworks* because our components are HTML and each web site has their own solution for authoring the HTML.
 
-**Enabling our APIs to work for anyone, **HTML is a very forgiving language and very accessible to new users. By having our API code be small chunks of HTML which can be copy pasted into existing web sites anyone can start using them without needing to be an expert.
+**Enabling our APIs to work for anyone,** HTML is a very forgiving language and very accessible to new users. By having our API code be small chunks of HTML which can be copy pasted into existing web sites anyone can start using them without needing to be an expert.
 
 Thanks for reading :)
