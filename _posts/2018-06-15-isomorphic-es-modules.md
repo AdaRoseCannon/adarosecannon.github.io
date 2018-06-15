@@ -28,11 +28,15 @@ ES Modules have really high level of browser support in spite of being so new. S
 
 You may already be using a module system in the way you work. If you are a web developer who works in *node* there is a good chance you have encountered CommonJS modules. CommonJS modules allow you to acquire snippets of JavaScript from other JavaScript files. For example:
 
-    const formatDate = require('./time-utils/format-date.js');
+```js
+const formatDate = require('./time-utils/format-date.js');
+```
 
 There is also the ability to pull JavaScript code from files provided by the *npm* packaging system.
 
-    const express = require('express');
+```js
+const express = require('express');
+```
 
 These examples also can be used in the browser by using bundling tools like *rollup*, *browserify *or *webpack*. This can result in shipping a large bundle of code to the browser rather than loading them when they are needed unless one sets your development environment to split your code automatically.
 
