@@ -24,7 +24,7 @@ ES Modules have really high level of browser support in spite of being so new. S
 
 ### Defining the terms ES Modules and Isomorphic
 
-* [**ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)** — *Noun.*
+*[**ES Modules**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) — Noun.*
 
 You may already be using a module system in the way you work. If you are a web developer who works in *node* there is a good chance you have encountered CommonJS modules. CommonJS modules allow you to acquire snippets of JavaScript from other JavaScript files. For example:
 
@@ -38,17 +38,21 @@ These examples also can be used in the browser by using bundling tools like *rol
 
 ES Modules, are similar to CommonJS modules in that they allow us to acquire snippets of JavaScript from other JavaScript files, except this time it is designed to work in the browser, over the network. For example:
 
-    <script type="module"> 
-      import formatDate from 'https://site.com/time-utils/format.js';
-      formatDate(Date.now());
-    </script>
+```html
+<script type="module"> 
+  import formatDate from 'https://site.com/time-utils/format.js';
+  formatDate(Date.now());
+</script>
+```
 
 or from a local URL:
 
-    <script type="module">
-      import formatDate from './time-utils/format.js';
-      formatDate(Date.now());
-    </script>
+```html
+<script type="module">
+  import formatDate from './time-utils/format.js';
+  formatDate(Date.now());
+</script>
+```
 
 We will explore some the differences between CommonJS modules and ES modules throughout this article.
 
@@ -97,47 +101,55 @@ So first we install HyperHTML via npm:
 
 Now we have to access it in the web browser. To do this I have to expose the files via my web server. In this case I am using *express*:
 
-    app.use('/node_modules/', express.static('./node_modules'));
+```js
+app.use('/node_modules/', express.static('./node_modules'));
+```
 
 Now I can access any file in my node_modules directory on the client. I can import HyperHTML from the esm directory on the server:
 
-    <script type="module">
+```js
+<script type="module">
 
-      // `wire` is used for making templates in HyperHTML
-      // `bind` is for writing those templates to the DOM
-      import {wire, bind} from '/node_modules/hyperhtml/esm/index.js';
+  // `wire` is used for making templates in HyperHTML
+  // `bind` is for writing those templates to the DOM
+  import {wire, bind} from '/node_modules/hyperhtml/esm/index.js';
 
-      // HyperHTML describes its templates using template literals
-      const myTemplate = wire()`<h1>My Template</h1>`;
+  // HyperHTML describes its templates using template literals
+  const myTemplate = wire()`<h1>My Template</h1>`;
 
-      // We use `bind` to render it.
-      const render = bind(document.body);
-      render`This is my template: ${myTemplate}`;
-    </script>
+  // We use `bind` to render it.
+  const render = bind(document.body);
+  render`This is my template: ${myTemplate}`;
+</script>
+```
 
 The code we will share between the client and the server is the templates. They will contain logic to fetch information and display it in lists. I will store it in a seperate .js file to be referenced by both the client and the server:
 
-    // in templates.js
+```js
+// in templates.js
 
-    import {wire} from '/node_modules/hyperhtml/esm/index.js';
+import {wire} from '/node_modules/hyperhtml/esm/index.js';
 
-    const myTemplate = wire()`<h1>My Template</h1>`;
+const myTemplate = wire()`<h1>My Template</h1>`;
 
-    export {
-      myTemplate
-    };
+export {
+  myTemplate
+};
+```
 
 We can then import this file as usual in our script:
 
-    <!-- In main.html -->
+```html
+<!-- In main.html -->
 
-    <script type="module">
-      import { bind } from '/node_modules/hyperhtml/esm/index.js';
-      import { myTemplate } from './templates.js';
+<script type="module">
+  import { bind } from '/node_modules/hyperhtml/esm/index.js';
+  import { myTemplate } from './templates.js';
 
-      const render = bind(document.body);
-      render`This is my template: ${myTemplate}`;
-    </script>
+  const render = bind(document.body);
+  render`This is my template: ${myTemplate}`;
+</script>
+```
 
 ### 2. Responding to click events.
 
@@ -148,20 +160,22 @@ These links should include the appropriate app state information to allow us to 
 
 Once one of the ‘a’ tags are clicked we can intercept it and respond appropriately:
 
-    window.addEventListener('click', e => {
-      if (e.target.tagName === 'A' && e.target.href) {
-        const url = new URL(e.target.href);
-        const parameters = new URLSearchParams(url.search);
+```js
+window.addEventListener('click', e => {
+  if (e.target.tagName === 'A' && e.target.href) {
+    const url = new URL(e.target.href);
+    const parameters = new URLSearchParams(url.search);
 
-        // ... Some logic to check to see if this should be handled
-        // within the Single Page App ...
+    // ... Some logic to check to see if this should be handled
+    // within the Single Page App ...
 
-        render`${someTemplate(someData)}`
+    render`${someTemplate(someData)}`
 
-        // Prevent the page from reloading
-        e.preventDefault();
-      }
-    });
+    // Prevent the page from reloading
+    e.preventDefault();
+  }
+});
+```
 
 If you are using <form> tags for traversing the site, e.g. search functionalities, then you will need to intercept and handle those too.
 
@@ -171,25 +185,27 @@ But now we should have a basic Single Page App using our templates.
 
 Unfortunately users are unable to refresh the page or share the URL because we have not updated the URL bar so we should added some logic to handle that.
 
-    window.addEventListener('click', e => {
+```js
+window.addEventListener('click', e => {
 
-        // ... Our click handling logic ...
+    // ... Our click handling logic ...
 
-        // Update the URL Bar
-        history.pushState({feed}, 'Some title', e.target.href);
+    // Update the URL Bar
+    history.pushState({feed}, 'Some title', e.target.href);
 
-        render`${someTemplate(someData)}`
+    render`${someTemplate(someData)}`
 
-        // Prevent the page from reloading
-        e.preventDefault();
-      }
-    });
+    // Prevent the page from reloading
+    e.preventDefault();
+  }
+});
 
-    window.addEventListener('popstate', function () {
-      if (history.state) {
-         renderToMain`${myTemplate(history.state.feed)}`;
-      }
-    });
+window.addEventListener('popstate', function () {
+  if (history.state) {
+     renderToMain`${myTemplate(history.state.feed)}`;
+  }
+});
+```
 
 The history handling logic is the simplest possible case. If you are relying on some kind of asynchronous operation which may fail, like network events, the logic may be more complicated to handle returning to the old URL if the async operation fails.
 
@@ -209,13 +225,18 @@ Then we can change our start script to invoke node with -r esm. For example this
 
 Esm allows us to use ES modules side by side with CommonJS. These two commands are equivalent:
 
-    const path = require('path');
 
-    import path from 'path';
+```js
+const path = require('path');
+
+import path from 'path';
+```
 
 So let’s import our templates:
 
-    import { myTemplate } from './static/templates.js'
+```js
+import { myTemplate } from './static/templates.js'
+```
 
 This would normally work great for JavaScript dependencies in the same directory but in the case of depending on files from our /node_modules directory node will try to find that by the path /node_modules which is not a real directory along side the script. It is actually somewhere else.
 
@@ -225,10 +246,12 @@ In addition, on the server we want to use *viperhtml*, the node version of *hype
 
 In the video above, I solve this by creating a proxy file /static/scripts/hyper/index.js which gets loaded in node:
 
-    import {wire, bind} from 'viperhtml';
-    export {
-      wire, bind
-    }
+```js
+import {wire, bind} from 'viperhtml';
+export {
+  wire, bind
+}
+```
 
 When I try to load /static/scripts/hyper/* on the client side, express intercepts the route and returns /node_modules/hyperhtml/esm/index.js as before.
 
@@ -244,55 +267,61 @@ These modules allow, any imports to /m/something or /node_modules/something to r
 
 We still have to do a redirect for the case where the node library and the browser library are different. In this situation our JavaScript module should require the server side version, we can then add a route in the networking to redirect to the client side version when it is tried to be loaded.
 
-    // main.js
+```js
+// main.js
 
-    // This works fine when loaded on the server
-    import myLibrary from '/node_modules/node-my-library';
+// This works fine when loaded on the server
+import myLibrary from '/node_modules/node-my-library';
+```
 
 On the server we instead of serving node-my-library we serve browser-my-library instead so the browser version uses the correct file.
 
-    // server.js
-    ...
-    app.use(
-      '/node_modules/node-my-library',
-       express.static('/node_modules/browser-my-library')
-    )
+```js
+// server.js
+...
+app.use(
+  '/node_modules/node-my-library',
+   express.static('/node_modules/browser-my-library')
+)
 
-    app.use(
-      '/node_modules',
-      express.static('./node_modules')
-    )
+app.use(
+  '/node_modules',
+  express.static('./node_modules')
+)
+```
 
 ### 4. Using the templates on the server
 
 This step will vary depending on the framework you are using, but here is how we render with viperHTML on the server:
 
-    import {myTemplate} from './static/templates.js';
-    import viperHTML from 'viperhtml';
-    import fetch from 'node-fetch';
+```js
+import {myTemplate} from './static/templates.js';
+import viperHTML from 'viperhtml';
+import fetch from 'node-fetch';
 
-    // Make the browser fetch work in node
-    global.fetch = fetch;
+// Make the browser fetch work in node
+global.fetch = fetch;
 
-    // Async version of bind() for writing to the network
-    const asyncRender = viperHTML.async();
+// Async version of bind() for writing to the network
+const asyncRender = viperHTML.async();
 
-    
-    const indexFile = fs.readFileSync('./static/index.html', 'utf8').split('<!-- render here -->');
 
-    app.get('/', (req,res) => {
+const indexFile = fs.readFileSync('./static/index.html', 'utf8').split('<!-- render here -->');
 
-      // Set the content type header
-      res.set({ 'content-type': 'text/html; charset=utf-8' });
+app.get('/', (req,res) => {
 
-      // Use viperhtml's to render and pipe over the network
-      (asyncRender(chunk => res.write(chunk))`
-        ${{html: indexFile[0]}}
-        ${myTemplate(req.query.foo)}
-        ${{html: indexFile[1]}}
-      `)
-      .then(() => res.end())
-    });
+  // Set the content type header
+  res.set({ 'content-type': 'text/html; charset=utf-8' });
+
+  // Use viperhtml's to render and pipe over the network
+  (asyncRender(chunk => res.write(chunk))`
+    ${{html: indexFile[0]}}
+    ${myTemplate(req.query.foo)}
+    ${{html: indexFile[1]}}
+  `)
+  .then(() => res.end())
+});
+```
 
 We render the template according to what the url’s query parameter was by passing the foo query parameter into the template req.query.foo
 
