@@ -24,7 +24,7 @@ ES Modules have really high level of browser support in spite of being so new. S
 
 ### Defining the terms ES Modules and Isomorphic
 
-*[**ES Modules**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) — Noun.*
+* **[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)** — Noun.*
 
 You may already be using a module system in the way you work. If you are a web developer who works in *node* there is a good chance you have encountered CommonJS modules. CommonJS modules allow you to acquire snippets of JavaScript from other JavaScript files. For example:
 
@@ -38,7 +38,7 @@ There is also the ability to pull JavaScript code from files provided by the *np
 const express = require('express');
 ```
 
-These examples also can be used in the browser by using bundling tools like *rollup*, *browserify *or *webpack*. This can result in shipping a large bundle of code to the browser rather than loading them when they are needed unless one sets your development environment to split your code automatically.
+These examples also can be used in the browser by using bundling tools like *rollup*, *browserify* or *webpack*. This can result in shipping a large bundle of code to the browser rather than loading them when they are needed unless one sets your development environment to split your code automatically.
 
 ES Modules, are similar to CommonJS modules in that they allow us to acquire snippets of JavaScript from other JavaScript files, except this time it is designed to work in the browser, over the network. For example:
 
@@ -60,7 +60,7 @@ or from a local URL:
 
 We will explore some the differences between CommonJS modules and ES modules throughout this article.
 
-* **Isomorphic**— *Adjective.*
+**Isomorphic**— *Adjective.*
 
 Code written in an isomorphic fashion has the property of being able to perform its function in both a node server and in the web browser.
 
