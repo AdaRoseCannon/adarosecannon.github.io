@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Isomorphic ES Modules"
-description: "Earlier I demonstrated how to build a Single Page App which shares templates with the Server Side Code. (See the video below.)"
+description: "Earlier I demonstrated how to build a Single Page App which shares templates with the Server Side Code. We share the web app’s templates to enable the first page load to be pre-rendered on the server. This practice lets Web Apps start faster and be more resilient to network failure."
 categories: Blog
 author: Ada Rose Cannon
-star: 0
+star: 1
 ---
 
 # Isomorphic ES Modules
@@ -13,7 +13,7 @@ Earlier I demonstrated how to build a Single Page App which shares templates wit
 
 We share the web app’s templates to enable the first page load to be pre-rendered on the server. This practice lets Web Apps start faster and be more resilient to network failure.
 
-![ES Modules can be shared with your Server code and the code run in the Web Browser.](https://cdn-images-1.medium.com/max/2000/1*9utC7ugklGeMjQoU_MluQQ.png)*ES Modules can be shared with your Server code and the code run in the Web Browser.*
+![ES Modules can be shared with your Server code and the code run in the Web Browser.](https://cdn-images-1.medium.com/max/2000/1*9utC7ugklGeMjQoU_MluQQ.png)
 
 In the live coding session we use the new EcmaScript (ES) Modules because it allows us to share code directly without using work-arounds such as making bundles using WebPack or Browserify.
 
@@ -24,7 +24,7 @@ ES Modules have really high level of browser support in spite of being so new. S
 
 ### Defining the terms ES Modules and Isomorphic
 
-* [**ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) **— *Noun.*
+* [**ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)** — *Noun.*
 
 You may already be using a module system in the way you work. If you are a web developer who works in *node* there is a good chance you have encountered CommonJS modules. CommonJS modules allow you to acquire snippets of JavaScript from other JavaScript files. For example:
 
@@ -36,7 +36,7 @@ There is also the ability to pull JavaScript code from files provided by the *np
 
 These examples also can be used in the browser by using bundling tools like *rollup*, *browserify *or *webpack*. This can result in shipping a large bundle of code to the browser rather than loading them when they are needed unless one sets your development environment to split your code automatically.
 
-ES Modules,** **are similar to CommonJS modules in that they allow us to acquire snippets of JavaScript from other JavaScript files, except this time it is designed to work in the browser, over the network. For example:
+ES Modules, are similar to CommonJS modules in that they allow us to acquire snippets of JavaScript from other JavaScript files, except this time it is designed to work in the browser, over the network. For example:
 
     <script type="module"> 
       import formatDate from 'https://site.com/time-utils/format.js';
@@ -197,7 +197,7 @@ The history handling logic is the simplest possible case. If you are relying on 
 
 Node modules by default use CommonJS for importing modules. If you try using import in node you will get an error because node doesn’t yet understand ES Modules.
 
-Fortunately there is solution. The node module [*esm](https://www.npmjs.com/package/esm) *allows us to use imports in the browser just by changing the way we launch the app.
+Fortunately there is solution. The node module *[esm](https://www.npmjs.com/package/esm)* allows us to use imports in the browser just by changing the way we launch the app.
 
     npm install --save esm
 
@@ -233,12 +233,10 @@ In the video above, I solve this by creating a proxy file /static/scripts/hyper/
 When I try to load /static/scripts/hyper/* on the client side, express intercepts the route and returns /node_modules/hyperhtml/esm/index.js as before.
 
 This works, but is a little messy. Fortunately since recording the video, [Andrea Giammarchi](https://twitter.com/webreflection) has come up with a neater solution by creating an additional loader which changes the path to rewrite import module from '/m/module/index.js' to import module from 'module/index.js' which works on the node side.
-[**esm-iso**
-*Isomorphic ESM Loader*www.npmjs.com](https://www.npmjs.com/package/esm-iso)
+[**esm-iso** *Isomorphic ESM Loader*www.npmjs.com](https://www.npmjs.com/package/esm-iso)
 
 In case you preferto use /node_modules/ for your URL to access node modules like I do in my examples, I forked it to map import module from '/node_modules/module/index.js' to import module from 'module/index.js'
-[**slash-node-modules-loader**
-*Use with -r slash-node-modules-loader to be able to require from require('/node_modules/:somedir/somefile.js') to have…*www.npmjs.com](https://www.npmjs.com/package/slash-node-modules-loader)
+[**slash-node-modules-loader** *Use with -r slash-node-modules-loader to be able to require from require('/node_modules/:somedir/somefile.js') to have…*www.npmjs.com](https://www.npmjs.com/package/slash-node-modules-loader)
 
 There is an example demo showing how to use this here: [https://glitch.com/edit/#!/isomorphic?path=server.js:19:0](https://glitch.com/edit/#!/isomorphic?path=server.js:19:0)
 
