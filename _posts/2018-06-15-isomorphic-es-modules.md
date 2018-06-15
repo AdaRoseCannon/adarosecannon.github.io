@@ -24,7 +24,7 @@ ES Modules have really high level of browser support in spite of being so new. S
 
 ### Defining the terms ES Modules and Isomorphic
 
-* **[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)** — Noun.*
+**[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)** — *Noun.*
 
 You may already be using a module system in the way you work. If you are a web developer who works in *node* there is a good chance you have encountered CommonJS modules. CommonJS modules allow you to acquire snippets of JavaScript from other JavaScript files. For example:
 
