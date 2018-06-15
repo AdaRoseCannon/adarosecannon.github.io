@@ -13,7 +13,7 @@ body.special, body.special-index {
 			border-bottom: 1px solid $shadow;
 		}
 
-		.highlight {
+		& > .highlighter-rouge >.highlight {
 			padding: 1em;
 			margin: 2em 0em 2em 0em;
 			clear: both;
