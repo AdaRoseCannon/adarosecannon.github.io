@@ -15,7 +15,7 @@
   				<description>{{ post.description | xml_escape }}</description>
   				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
   				<link>{{ post.link | xml_escape }}</link>
-  				<guid isPermaLink="true">{{ post.link }}</guid>
+  				<guid isPermaLink="true">{{ post.link  | xml_escape }}</guid>
       	{% else %}
           <title>{{ post.title | xml_escape }}</title>
           <dc:creator>Ada Rose Cannon</dc:creator>    
