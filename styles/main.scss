@@ -141,6 +141,12 @@ h1, h2, h3, h4, h5, h6 {
     filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
 	}
 
+	&.mastodon:after {
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/48/Mastodon_Logotype_%28Simple%29.svg);
+    -webkit-filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+    filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+	}
+
 	&.github:after {
 		background-image: url(icons/svg/github.svg), url(icons/png/github.png);
 	}
