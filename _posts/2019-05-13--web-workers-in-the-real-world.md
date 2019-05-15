@@ -136,7 +136,7 @@ Whilst in traditional desktop/server computers each processor core is almost ide
 The Exynos 9820 in my phone as illustrated below has 2 big cores, 2 medium cores and 4 little cores.
 
 ![Illustration of how processing power is split up on a mobile chipset.](https://cdn-images-1.medium.com/max/2068/1*-xS66iiLmGoICMl1HcO1tQ.png)*Illustration of how processing power is split up on a mobile chipset.*
-[**Exynos 9 Series 9820 Processor: Specs, Features | Samsung Exynos**
+> [**Exynos 9 Series 9820 Processor: Specs, Features | Samsung Exynos**
 *Samsung Exynos 9 Series 9820 is an LTE modem integrated octa-core mobile processor with tri-cluster that features 4th…*www.samsung.com](https://www.samsung.com/semiconductor/minisite/exynos/products/mobileprocessor/exynos-9-series-9820/)
 
 ### Working around the limitations of threads
@@ -393,7 +393,7 @@ This very rough guide to the timings of different types of IO operation will com
     | 1 CPU cycle                           |       0.5 |
     +---------------------------------------+-----------+
 
-[**Computer Latency at a Human Scale**
+> [**Computer Latency at a Human Scale**
 *How fast are computer systems really? Those of us who work in technology can blithely rattle off the clock speeds of…* www.prowesscorp.com](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
 
 Interestingly 1 nanolightsecond is about 30cm, so during about a single 0.5s cpu cycle a signal can only travel about 15cm, approximately the length of a mobile telephone.
