@@ -113,9 +113,9 @@ To display the results of the worker the final Pi calculation has to be sent in 
 The reason for this is because of the nature of threads. You can only access things in the memory of the same thread. The document is in the main thread so the worker thread cannot do anything with it.
 
 ### What even are threads?!
-> In the beginning computers were created.  
-This has made a lot of people very angry and been widely regarded as a bad move.  
- — Apologies to Douglas Adams
+> > In the beginning computers were created.  
+> > This has made a lot of people very angry and been widely regarded as a bad move.  
+> > — Apologies to Douglas Adams
 
 The following is a very simplified overview of how computers manage threads and memory.
 
