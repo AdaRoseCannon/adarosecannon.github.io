@@ -25,6 +25,12 @@ img {
   max-width: 100%;
 }
 
+img + em {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 html, body, .container, .row {
 	margin-left: 0;
 	margin-right: 0;
