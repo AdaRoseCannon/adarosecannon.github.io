@@ -31,7 +31,7 @@ Each time I have to retype todolist and remember to use quotes around the entrie
 
 Fortunately bash is an ideal tool for making interfaces for this, here is the code for the interface in the bottom left of the picture above, and in this post I will explain how it works, so you can make your own.
 
-<iframe src="https://medium.com/media/0c023dca16cb1127e806aa7a41989cd1" frameborder=0></iframe>
+<div><iframe style="width: 100%; height: 480px;" src="https://medium.com/media/0c023dca16cb1127e806aa7a41989cd1" frameborder=0></iframe></div>
 
 ## Breaking down the script
 
