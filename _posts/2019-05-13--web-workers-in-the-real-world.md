@@ -21,9 +21,11 @@ Using Web Workers can be very daunting especially if you are not familiar with p
 
 The web has traditionally been single threaded. Each command would execute one by one waiting for the previous one to finish. In the early days even long running commands such as XMLHttpRequest could block the main thread until they were completed:
 
-    var request = new XMLHttpRequest();
-    request.open('GET', '/bar/foo.txt', false);
-    request.send(null); // Can take several seconds
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/bar/foo.txt', false);
+request.send(null); // Can take several seconds
+```
 
 Synchronous XMLHttpRequest has been deprecated because of the poor user experience but even some newer APIs like localstorage which access disk storage are synchronous. On a spinning platter disk this can take up to 10ms which is most of our frame budget.
 
@@ -31,35 +33,41 @@ Synchronous APIs simplified the way we write our scripts because the program’s
 
 Asynchronous APIs in the Web are needed for accessing computer resources which maybe a little slower such as reading from the disk, accessing the network or peripherals such as a web cam or a microphone. These APIs frequently relied on events or callbacks to handle these resources once they were ready.
 
-    // The deprecated way of using getUserMedia with callbacks:
-    function successCallback () {}
-    navigator.getUserMedia(*constraints*, *successCallback*, *errorCallback*);
+```js
+// The deprecated way of using getUserMedia with callbacks:
+function successCallback () {}
+navigator.getUserMedia(*constraints*, *successCallback*, *errorCallback*);
 
-    // Using events for XMLHttpRequest
-    // via MDN WebDocs
+// Using events for XMLHttpRequest
+// via MDN WebDocs
 
-    function reqListener () {}
-    var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", reqListener);
-    oReq.open("GET", "http://www.example.org/example.txt");
-    oReq.send();
+function reqListener () {}
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.example.org/example.txt");
+oReq.send();
+```
 
 Node.js, a server side JavaScript environment, uses a lot of asynchronous code because Node needs to run efficiently on servers it can’t waste millions of CPU cycles waiting for IO operations to complete synchronously. Node often uses the callback pattern for asynchronous operations.
 
-    fs.readFile('/etc/passwd', (error, data) => {
-      if (error) throw error;
-      console.log(data);
-    });
+```js
+fs.readFile('/etc/passwd', (error, data) => {
+  if (error) throw error;
+  console.log(data);
+});
+```
 
 Whilst callbacks are very useful unfortunately they create some code smells caused by nested asynchronous functions relying on the results of previous asynchronous functions this lead to code being very deeply indented known as the “callback pyramid of doom”.
 
 To address this issues it became more common for newer APIs to use neither callbacks nor events but to use Promises instead. [Promises use a .then syntax to make callbacks look a lot more readable:](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-    fetch('/data.json')
-    **.then**(response => response.json())
-    **.then**(data => {
-      console.log(data);
-    });
+```js
+fetch('/data.json')
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+});
+```
 
 Promises are functionally identical to callbacks but are a lot more readable. Especially when combined with es2015 arrow functions to clearly express how each step in the promise transforms the output of the previous step.
 
@@ -67,13 +75,16 @@ The real benefit of promises though is that they were a stepping stone to enable
 
 In an async function await statements will pause the execution of the function until the promise they are awaiting completion of completes or rejects. The result is code which looks synchronous and can use synchronous constructs such as try/catch and for loops but behaves asynchronously without won’t block the main thread!
 
-    **async** function getData() {
-      const response = **await** fetch('data.json');
-      const data = **await** response.json();
-      console.log(data);
-    };
 
-    getData();
+```js
+async function getData() {
+  const response = await fetch('data.json');
+  const data = await response.json();
+  return data;
+};
+
+getData().then(data => console.log(data));
+```
 
 async functions will return a promise which itself can be used with await in other async functions it feels very elegant to me.
 
@@ -87,7 +98,9 @@ To get around the limits of running in a single thread the Web can make use of m
 
 You can start a new Web Worker running like so:
 
-    const worker = new Worker('/my-worker.js');
+```js
+const worker = new Worker('/my-worker.js');
+```
 
 It will download the JavaScript file and run it in a different thread, this allows you to run complex JavaScript without blocking the main thread. In the example below we can compare the results of calculating 30000 digits of Pi on the main thread vs in a worker.
 
@@ -100,8 +113,8 @@ To display the results of the worker the final Pi calculation has to be sent in 
 The reason for this is because of the nature of threads. You can only access things in the memory of the same thread. The document is in the main thread so the worker thread cannot do anything with it.
 
 ### What even are threads?!
-> In the beginning computers were created.
-This has made a lot of people very angry and been widely regarded as a bad move.
+> In the beginning computers were created.  
+This has made a lot of people very angry and been widely regarded as a bad move.  
  — Apologies to Douglas Adams
 
 The following is a very simplified overview of how computers manage threads and memory.
@@ -132,11 +145,13 @@ Although threads cannot share memory they can still talk to each other to exchan
 
 As well as strings, many types of data constructs such as Arrays and Objects can also be shared using postMessage. Sending these will result in the browser making a copy of the data structure in a special serialised format and then rebuilding it in the other thread:
 
-    // In the worker:
-    self.postMessage(someObject);
+```js
+// In the worker:
+self.postMessage(someObject);
 
-    // In the main thread:
-    worker.addEventListener('message', msg => console.log(msg.data));
+// In the main thread:
+worker.addEventListener('message', msg => console.log(msg.data));
+```
 
 In this situation the object someObject is cloned and turned into a transferable form, this process is known as serialising. This is then received in the main thread and turned in to a copy of the original object. This can potentially be an expensive operation, but it maybe necessary for maintaining a complex data-structure.
 
@@ -146,19 +161,21 @@ An ArrayBuffer is part of the [typed arrays](https://developer.mozilla.org/en-US
 
 You can also create a new Typed Array with a defined size and it will allocate a new piece of memory to accommodate that size. This chunk of memory is represented by an underlying ArrayBuffer and exposed as .buffer this instance of ArrayBuffer can be transferred between threads to share the contents.
 
-    // In the worker:
+```js
+// In the worker:
 
-    const buffer = new ArrayBuffer(32); // 32 Bytes
-    >> ArrayBuffer { byteLength: 32 }
+const buffer = new ArrayBuffer(32); // 32 Bytes
+>> ArrayBuffer { byteLength: 32 }
 
-    const array = new Float32Array(buffer);
-    >> Float32Array [ 0, 0, 0, 0, 0, 0, 0, 0 ]; // 4 Bytes per element, so 8 elements long.
+const array = new Float32Array(buffer);
+>> Float32Array [ 0, 0, 0, 0, 0, 0, 0, 0 ]; // 4 Bytes per element, so 8 elements long.
 
-    array[0] = 1;
-    array[1] = 2;
-    array[2] = 3;
+array[0] = 1;
+array[1] = 2;
+array[2] = 3;
 
-    self.postMessage(array.buffer, [array.buffer]);
+self.postMessage(array.buffer, [array.buffer]);
+```
 
 Be careful if you transfer an ArrayBuffer using postMessage. Once it is transferred it is no longer available in the original thread for reading or writing and will throw an error if it you try to use it.
 
@@ -180,17 +197,19 @@ In the example below we instantiate a class exposed from the worker as a new obj
 
 Fortunately async/awaitsyntax allows us to write asynchronous code which looks synchronous so the code still looks very neat and synchronous.
 
-    import {wrap} from '/comlink/comlink.js';
+```js
+import {wrap} from '/comlink/comlink.js';
 
-    // This web worker uses Comlink's expose to expose a function
-    const MyMathLibrary = wrap(new Worker('/mymath.js'));
+// This web worker uses Comlink's expose to expose a function
+const MyMathLibrary = wrap(new Worker('/mymath.js'));
 
-    async function main() {
-      const myMath = await new MyMathLibrary();
-      const result1 = await myMath.add(2,2);
-      const result2 = await myMath.add(3,7);
-      return await myMath.multiply(result1, result2);
-    }
+async function main() {
+  const myMath = await new MyMathLibrary();
+  const result1 = await myMath.add(2,2);
+  const result2 = await myMath.add(3,7);
+  return await myMath.multiply(result1, result2);
+}
+```
 
 *Look out!* By hiding the complexity of using workers it also hides the cost of sending the data back and forth as well! This short snippet of code in main involves 6 messages between the worker happening in serial, each one waits for the previous to finish before running the next one. Each time a message is sent data will have to be serialized and reconstructed and a context switch may be required before we can get a response.
 
@@ -198,37 +217,43 @@ In the ideal situation the other thread is already running on a different CPU co
 
 Writing legible and code is always a good thing but we must be wary of performance impacts. One way we could improve this would be calculating result1 and result2 in parallel. This would be a performance improvement but the code no longer looks as simple.
 
-    // This web worker uses Comlink's expose to expose a function
-    const MyMathLibrary = proxy(new Worker('/mymath.js'));
+```js
+// This web worker uses Comlink's expose to expose a function
+const MyMathLibrary = proxy(new Worker('/mymath.js'));
 
-    async function main() {
-      const myMath = await new MyMathLibrary();
-      const [result1, result2] = await Promise.all(
-        [myMath.add(2,2), myMath.add(3,7)]
-      );
-      return await myMath.multiply(result1, result2);
-    }
+async function main() {
+  const myMath = await new MyMathLibrary();
+  const [result1, result2] = await Promise.all(
+    [myMath.add(2,2), myMath.add(3,7)]
+  );
+  return await myMath.multiply(result1, result2);
+}
+```
 
 Another significant performance improvement you can do with Comlink is to take advantage of Transferables such as ArrayBuffers rather than copying them. This is really great for performance but be careful because once they have been transferred they become unusable in the original thread.
 
 If you are working with transferables try authoring your code so that they are out of scope once transferred to prevent you from accidentally trying to read from them again.
 
-    const data = [1,2,3,4];
-    await (function () {
-      const toSend = Int16Array.from(data);
-      return myMath.addArray(
-        Comlink.transfer(toSend.buffer, [toSend.buffer])
-      );
-    }());
+```js
+const data = [1,2,3,4];
+await (function () {
+  const toSend = Int16Array.from(data);
+  return myMath.addArray(
+    Comlink.transfer(toSend.buffer, [toSend.buffer])
+  );
+}());
+```
 
 The transfer function is used to wrap what you are sending whilst marking the bits which are transferable in the second argument Array. Above I am sending toSend.buffer and telling Comlink that it can be transferred rather than copied.
 
 Remember to handle the buffer case in your worker:
 
-    addArray(array) {
-      array = array.constructor === ArrayBuffer ?
-          new Int16Array(array) :
-          array;
+```js
+addArray(array) {
+  array = array.constructor === ArrayBuffer ?
+      new Int16Array(array) :
+      array;
+```
 
 When optimising your Comlink code be careful to balance the performance with code legibility. These optimisations can give you 10s or 100s of nanosecond improvements which are unnoticeable to users unless many happen at once for example in a for loop which loops 100s of times. Over optimised code which is harder to read may lead you to introducing hard to diagnose bugs.
 
@@ -260,8 +285,10 @@ I used Chrome’s performance tab to measure what was using up the CPU but to my
 
 The issue came from having to switch threads many times in for loops. When switching between threads computer the computer may need to take information from memory to populate it’s caches which is comparatively slow.
 
-    // slow [😭](https://emojipedia.org/loudly-crying-face/)
-    for (let i=0;i<100;i++) await point.doPhysics(i);
+```js
+// slow 😭
+for (let i=0;i<100;i++) await point.doPhysics(i);
+```
 
 I only had a certain amount of time and optimising the code often made it more complex to read. It was important to focus my efforts on the pieces of code which ran the most frequently and had the biggest effect on the user experience.
 
@@ -283,15 +310,17 @@ The most important thing to do is to MEASURE EVERY CHANGE you don’t know if or
 
 The [performance api](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark#Example) is used to provide accurate timings so you can see how long some code takes to run.
 
-    performance.clearMarks('start-doing-thing');
-    performance.clearMarks('end-doing-thing');
-    performance.clearMeasures("Time to do things");
-    performance.mark('start-doing-thing');
+```js
+performance.clearMarks('start-doing-thing');
+performance.clearMarks('end-doing-thing');
+performance.clearMeasures("Time to do things");
+performance.mark('start-doing-thing');
 
-    for (let i=0;i<100;i++) await myMath.doThing(i);
+for (let i=0;i<100;i++) await myMath.doThing(i);
 
-    performance.mark('end-doing-thing');
-    performance.measure("Time to do things", 'start-doing-thing', 'end-doing-thing');
+performance.mark('end-doing-thing');
+performance.measure("Time to do things", 'start-doing-thing', 'end-doing-thing');
+```
 
 Once you have measured the code you want to optimise and ensured that it is indeed the cause of your performance issue it is time to start optimising it. Here are some ways you can do optimise a piece of code:
 
@@ -301,16 +330,18 @@ Once you have measured the code you want to optimise and ensured that it is inde
 
 * Make calculations run in parallel (this is okay):
 
-    arrayOfPromises = [];
-    for (let i=0;i<100;i++) arrayOfPromises[i] = myMath.doThing(i);
-    const results = await Promise.all(arrayOfPromises);
-
+```js
+arrayOfPromises = [];
+for (let i=0;i<100;i++) arrayOfPromises[i] = myMath.doThing(i);
+const results = await Promise.all(arrayOfPromises);
+```
 * Change your API to handle receiving batches of inputs (this is better):
 
-    arrayOfArguments = [];
-    for (let i=0;i<100;i++) arrayOfArguments[i] = i;
-    const results = await myMath.doManyThings(arrayOfArguments);
-
+```js
+arrayOfArguments = [];
+for (let i=0;i<100;i++) arrayOfArguments[i] = i;
+const results = await myMath.doManyThings(arrayOfArguments);
+```
 If you do change your API to handle batches of input. Sending and returning an ArrayBuffer will make it even more efficient since the results or the arguments themselves may be a very large numeric Array.
 
 **Remember!** Be careful when transferring Transferables between threads because they will become unusable once they are in the other thread.
@@ -323,15 +354,17 @@ It is important to balance the developer experience and performance of the app. 
 
 In the below example the first version is a lot neater and easier for developers to understand and not too much slower then the bottom example.
 
-    const handle = await teapot.handle();
-    const spout = await teapot.spout();
-    const lid = await teapot.lid();
+```js
+const handle = await teapot.handle();
+const spout = await teapot.spout();
+const lid = await teapot.lid();
 
-    vs
+vs
 
-    const [handle, spout, lid] = await Promise.all([
-      teapot.handle(), teapot.spout(), teapot.lid()
-    ]);
+const [handle, spout, lid] = await Promise.all([
+  teapot.handle(), teapot.spout(), teapot.lid()
+]);
+```
 
 Optimise only in situations where the performance matters such as loops, rapid firing events like scroll or mousemove or in request animation frame.
 
@@ -359,8 +392,9 @@ This very rough guide to the timings of different types of IO operation will com
     | Accessing L1 cpu cache                |         1 |
     | 1 CPU cycle                           |       0.5 |
     +---------------------------------------+-----------+
+
 [**Computer Latency at a Human Scale**
-*How fast are computer systems really? Those of us who work in technology can blithely rattle off the clock speeds of…*www.prowesscorp.com](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
+*How fast are computer systems really? Those of us who work in technology can blithely rattle off the clock speeds of…* www.prowesscorp.com](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
 
 Interestingly 1 nanolightsecond is about 30cm, so during about a single 0.5s cpu cycle a signal can only travel about 15cm, approximately the length of a mobile telephone.
 
