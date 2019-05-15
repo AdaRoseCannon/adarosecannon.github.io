@@ -106,11 +106,10 @@ It will download the JavaScript file and run it in a different thread, this allo
 
 When it is done in the main thread the rest of the page is blocked, when it is done in the worker the page can keep running in the background until the calculation is completed.
 
-<!-- Copy and Paste Me -->
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="undefined"
+    src="https://glitch.com/embed/#!/embed/a-slice-of-pi?path=static/index.html&previewSize=100"
     alt="a-slice-of-pi on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
