@@ -106,7 +106,15 @@ It will download the JavaScript file and run it in a different thread, this allo
 
 When it is done in the main thread the rest of the page is blocked, when it is done in the worker the page can keep running in the background until the calculation is completed.
 
-<iframe src="https://medium.com/media/604f4eef611b9fd25d4f95011d83e8ac" frameborder=0></iframe>
+<!-- Copy and Paste Me -->
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe
+    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+    src="undefined"
+    alt="a-slice-of-pi on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+</div>
 
 To display the results of the worker the final Pi calculation has to be sent in a message to the main thread. The main thread then just handles displaying the number. The worker cannot display the number itself because it cannot access the variables of the main script or the document itself all it can do is pass back the final result of the calculations.
 
