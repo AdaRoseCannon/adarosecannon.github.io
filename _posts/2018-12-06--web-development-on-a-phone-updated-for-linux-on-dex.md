@@ -36,17 +36,15 @@ I plugged in a USB charger and mouse and keyboard to the dongle and DeX started 
 
 [Linux on Dex](https://www.linuxondex.com/) is an app for the Note 9 which gives you a Linux container you can access as a full desktop Linux environment on DeX. You can also access a terminal only version on the phone.
 
-![Linux on DeX running in terminal mode on the phone.](Untitled-ac64f1ee-854b-4c9c-b040-3d79295d390a.png)
-
-Linux on DeX running in terminal mode on the phone.
+![Linux on DeX running in terminal mode on the phone.](https://cdn-images-1.medium.com/max/800/0*paVGmwLb-LRi1h5E.png)
+*Linux on DeX running in terminal mode on the phone.*
 
 The terminal only mode is a great way to run commands when you are on the move.
 
 When you run it from the DeX you get full desktop Linux you'd inspect.
 
-![Linux on DeX running desktop mode in DeX](Untitled-12a71479-25be-4760-8091-8bac687ea14f.png)
-
-Linux on DeX running desktop mode in DeX
+![Linux on DeX running desktop mode in DeX](https://cdn-images-1.medium.com/max/800/0*yjvTXOmxIqg3uTaJ.png)
+*Linux on DeX running desktop mode in DeX*
 
 Linux on DeX is so performant because it's not running in a virtual machine, it's a container which takes advantage of the device's resources. So software written for it needs to be made for the device's ARM architecture.
 
