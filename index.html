@@ -13,7 +13,7 @@ title: Ada.is
     	<time>{{ post.date | date_to_string }}</time>
 	{% else %}
 		<h2>{% if post.star %}<span class="star">&#9733;</span> {% endif %}<a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h2>
-		<article>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}</article>
+		<article><p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}</p></article>
 		<time>{{ post.date | date_to_string }}</time>
 	{% endif %}
     </div>
