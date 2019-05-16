@@ -13,7 +13,7 @@ Using Houdini Paint API to Render a 3D Model
 >> That’s f*cked up  
 >> — Daniel Appelquist, co-chair of the W3C Technical Architecture Group
 
-The demo in this article show’s how to uses the [Houdini paint](https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet) API, which is a part of the larger Houdini spec. [Houdini is still coming to browsers](https://ishoudinireadyyet.com/) but is ready to try out.
+The demo in this article uses the [Houdini paint](https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet) API, which is a part of the larger Houdini spec. [Houdini is still coming to browsers](https://ishoudinireadyyet.com/) but is ready to try out.
 
 In this article I hope to inspire you to try out the Houdini Paint API. It’s really fun, and you can see just how powerful it is. Here I do something which looks cool but isn’t the most optimal way to show 3D models in the Web, but I hope it inspires you to see how far you can take the Houdini APIs.
 
