@@ -7,10 +7,6 @@ author: Ada Rose Cannon
 star: 1
 ---
 
-# Six assumptions which could break your website
-
-Six assumptions which could break your website
-
 ### A mistake consistently made by some of the biggest websites shows they are thinking about responsive web design incorrectly.
 
 On this Samsung Internet blog we often talk about building progressive web apps, one cornerstone of building web apps is responsive design. Responsive websites can behave correctly regardless of screen size. It is the recommended behavior for website’s from the UK governments digital service team:
