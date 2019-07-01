@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Basis Textures in Three.js"
-description: "Basis Universal is a new image format designed to produce very small file sizes and to be decoded on graphics cards instead of on the CPU, making it very fast to decode and perfect for WebGL scenes. Support for this is very new and requires the latest THREE.js 106."
+description: "You can have 6-8x more images in your WebGL scene by using Basis Universal textures which are very efficiently compressed. This article describes how to encode images as Basis files and read them with THREE.js"
 category: Blog
 author: Ada Rose Cannon
 star: 1
@@ -59,45 +59,47 @@ This code is largely taken from the [THREE.js basis loader example.](https://thr
 
 Importing the Basis Texture Loader uses [ES Modules Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) for loading the modules. I have exposed my ‘node_modules’ directory as a static folder. So make sure your <script> tag has type="module" . Or pre-compile it using your favourite bundler such as webpack or rollup.
 
-    import { BasisTextureLoader } from "/node_modules/three/examples/jsm/loaders/BasisTextureLoader.js";
+```js
+import { BasisTextureLoader } from "/node_modules/three/examples/jsm/loaders/BasisTextureLoader.js";
+```
 
 Create an object and assign it a texture, we will update the map on this texture later:
 
-    const geometry = new THREE.SphereBufferGeometry( 1, 50, 50 );
-    const material = new THREE.MeshBasicMaterial();
-    const sphere = new THREE.Mesh( geometry, material );
-    scene.add( sphere );
+```js
+const geometry = new THREE.SphereBufferGeometry( 1, 50, 50 );
+const material = new THREE.MeshBasicMaterial();
+const sphere = new THREE.Mesh( geometry, material );
+scene.add( sphere );
+```
 
 We can now load the texture:
 
-    // Make a new instance of the loader
-    const basisLoader = new BasisTextureLoader();
+```js
+// Make a new instance of the loader
+const basisLoader = new BasisTextureLoader();
 
-    // Set the location of the Web Worker Script from THREE.js
-    basisLoader.setTranscoderPath(
-      '/node_modules/three/examples/js/libs/basis/'
-    );
-    basisLoader.detectSupport( renderer );
+// Set the location of the Web Worker Script from THREE.js
+basisLoader.setTranscoderPath(
+  '/node_modules/three/examples/js/libs/basis/'
+);
+basisLoader.detectSupport( renderer );
 
-    // Load your Basis Image
-    basisLoader.load( '/ada.basis',
-      function (texture) {
+// Load your Basis Image
+basisLoader.load( '/ada.basis',
+  function (texture) {
 
-        // Once the texture has loaded, update the .map of the material
-        texture.encoding = THREE.sRGBEncoding;
-        material.map = texture;
-        material.needsUpdate = true;
-      }, undefined, function ( error ) {
-        console.error( error );
-      }
-    );
+    // Once the texture has loaded, update the .map of the material
+    texture.encoding = THREE.sRGBEncoding;
+    material.map = texture;
+    material.needsUpdate = true;
+  }, undefined, function ( error ) {
+    console.error( error );
+  }
+);
+```
 
 I hope this helps you take advantage of the power of Basis textures. :)
 
 ¹ In my final scene I didn’t use the 8000×4000 texture because my Android phone couldn’t load a single texture that large so I used a 4096×4096 texture instead.
 
-
-
 By Ada Rose Cannon on June 28, 2019.
-
-[Canonical link](https://medium.com/samsung-internet-dev/using-basis-textures-in-three-js-6eb7e104447d)
