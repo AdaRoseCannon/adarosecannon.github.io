@@ -7,6 +7,8 @@ author: Ada Rose Cannon
 star: 1
 ---
 
+> NB! Update 10/2019, The Linux on DeX project is not being continued I will continue looking for a solution for using a single phone as a development maching with DeX.
+
 Last year I wrote about how you can use a phone for web development using an Android Linux Terminal and a simple editor I'd made as a [Progressive Web App](https://medium.com/samsung-internet-dev/writing-software-using-a-phone-e71976f1f18d). It worked pretty well but had some drawbacks, for example you couldn't debug Samsung Internet on the DeX you had to use an external laptop.
 
 <iframe width="560" height="315" name="youtube" src="https://www.youtube.com/embed/yvpOIz7zAtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
