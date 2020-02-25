@@ -4,7 +4,7 @@ title: "Testing your websites on real devices"
 description: "As desktop browser developer tools improve continuously, the responsive design modes are incredibly useful for testing out designs on other screen sizes such as tablets and mobile phones. For web developers, it can be tempting to rely on these tools for full end to end development, but I want to highlight the important of testing on real devices."
 category: Blog
 author: Ada Rose Cannon
-star: 1
+star: 0
 ---
 
 # Testing your websites on real devices
@@ -102,7 +102,7 @@ The page is available on the mobile device at http://127.0.0.1:8080 replace 8080
 
 I hope this helps you getting your Website Working on Samsung Internet, you can find more documentation from the Samsung Internet team at:
 [**Documentation**
-*Documentation from the Samsung Internet team *samsunginter.net](https://samsunginter.net/docs)
+*Documentation from the Samsung Internet team* samsunginter.net](https://samsunginter.net/docs)
 
 
 
