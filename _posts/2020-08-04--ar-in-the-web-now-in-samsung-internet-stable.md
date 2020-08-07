@@ -13,7 +13,7 @@ AR in the Web, now in Samsung Internet Stable
 
 ### Samsung Internet 12.1 Beta adds support for Augmented Reality — here’s how to try it out today
 
-**Edit: **This has now landed in Samsung Internet stable. You can [download here](https://galaxy.store/internet).
+**Edit:** This has now landed in Samsung Internet stable. You can [download here](https://galaxy.store/internet).
 
 Last week we [told you about our latest Beta](https://medium.com/samsung-internet-dev/samsung-internet-12-1-f5dbff60ec41?source=collection_home---4------0-----------------------), 12.1, which offers a host of quality-of-life improvements for end users. We’re also really glad to announce that with this beta we are also shipping modules for the [WebXR Device API](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) that enable Augmented Reality (AR) content to be built right in the browser: including the “[hit test](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Targeting)” module. Hit testing allows you to detect the position of the real world at a single point on the screen which can be used correctly position virtual objects in the real world.
 
@@ -21,11 +21,11 @@ One of the reasons we’re especially excited about this is because Samsung Inte
 
 You can try AR out for yourself using the XR Dinosaurs demo to place a dinosaur in your environment:
 
-**Step 1. **Download the Samsung Internet Beta from the Play Store or the Galaxy Store: [https://galaxy.store/internetbeta](https://galaxy.store/internetbeta)
+**Step 1.** Download the Samsung Internet Beta from the Play Store or the Galaxy Store: [https://galaxy.store/internetbeta](https://galaxy.store/internetbeta)
 
 **Step 2.** Go to [https://xrdinosaurs.com](https://xrdinosaurs.com) and choose Augmented Reality
 
-![](https://cdn-images-1.medium.com/max/2160/1*D-NA5joGoArlOnzhW_7_ww.jpeg)
+<img src="https://cdn-images-1.medium.com/max/2160/1*D-NA5joGoArlOnzhW_7_ww.jpeg" alt="Enter AR Message" width="480px" />
 
 When you run this demo you will see this message, this means that the demo is able to place the virtual objects onto your environment but it cannot actually record the camera feed so you don’t have to worry about it recording what you are doing.
 
@@ -39,7 +39,7 @@ This method of AR uses the Augmented Reality features of the [WebXR Device API](
 
 Here is a sample project you can use to help you get started:
 [**A-Frame Hit Test Demo**
-*Remix to make your own augmented reality scenes.*hit-test.glitch.me](https://hit-test.glitch.me/?1)
+*Remix to make your own augmented reality scenes.* hit-test.glitch.me](https://hit-test.glitch.me/?1)
 
 ![Snapshot of the scene](https://cdn-images-1.medium.com/max/2000/0*sifSVby1YajqDB_3)*Snapshot of the scene*
 
