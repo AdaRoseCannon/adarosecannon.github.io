@@ -47,6 +47,7 @@ From a user perspective people are pretty mixed about whether they want auto-pla
 
 <blockquote class="twitter-tweet" data-conversation="none" data-align="center" data-dnt="true"><p>&#x200A;&#x2014;&#x200A;<a href="https://twitter.com/ThisIsJoFrank/status/1315602837599068160">@ThisIsJoFrank</a></p></blockquote>
 
+
 On top of that some browsers such as Chrome will prevent audio from autoplaying at all until a user event triggers the audio playing. The best way to work with browsers which block autoplaying audio is to have an audio toggle switch which can be built using HTML, CSS and a little JavaScript:
 
 ![Toggle Button](https://cdn-images-1.medium.com/max/2000/1*8U1wq3VFKBHVBAdSGTifmg.png)*Toggle Button*
