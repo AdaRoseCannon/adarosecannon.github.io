@@ -17,7 +17,7 @@ These tools are not ones I use everyday but they have got me out some really sti
 
 ### **1. ngrok**
 
-[***Ngrok](https://ngrok.com) ***gives you http tunnels to your local machine. Letting you test your local environment on devices not connected to your local network. This is incredibly useful for when you cannot attach the device to your local network.
+***[Ngrok](https://ngrok.com)*** gives you http tunnels to your local machine. Letting you test your local environment on devices not connected to your local network. This is incredibly useful for when you cannot attach the device to your local network.
 
 *Example, * My dev machine is running a http server at localhost:8080.
 
@@ -29,7 +29,7 @@ I open it in a web browser on my testing device. All the requests go back to my 
 
 ### **2. weinre**
 
-[**Weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) **is a really old-school tool back from before remote debugging was available in web browsers. Which surprisingly still comes in useful when a device is unable to connect to remote debugging.
+***[Weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)*** is a really old-school tool back from before remote debugging was available in web browsers. Which surprisingly still comes in useful when a device is unable to connect to remote debugging.
 
 I often have this when trying to debug iOS devices from windows or Linux and I can’t get the [ios-webkit-debug-proxy](https://github.com/google/ios-webkit-debug-proxy) to work.
 
@@ -61,7 +61,7 @@ If you want to inspect a device which is not on your network, or the port you ar
 
 ### **3. Charles**
 
-[Charles](http://www.charlesproxy.com) is a passive utility I will often have running all the time. Charles runs as a proxy, I tell my computer to use it and it intercepts all HTTP requests and logs the contents. It can be used with HTTPS as well with a bit of set up if you want to debug live sites which these days are likely to use encryption.
+***[Charles](http://www.charlesproxy.com)*** is a passive utility I will often have running all the time. Charles runs as a proxy, I tell my computer to use it and it intercepts all HTTP requests and logs the contents. It can be used with HTTPS as well with a bit of set up if you want to debug live sites which these days are likely to use encryption.
 
 When testing a large and complex site sometimes something goes weird unexpectedly. By running charles I can look back through the log and see what the responses were to generate that weird result.
 
