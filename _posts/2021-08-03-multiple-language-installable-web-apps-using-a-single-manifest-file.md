@@ -36,7 +36,7 @@ This technique is especially useful on static site generators like Jekyll where 
 
 To make this work in Jekyll the `{{ content }}` of the page is the manifest.json code and the page’s text content is assembled by parsing and inserting the page content into the final document using Jekyll loops. Encoding and embedding the Manifest JSON is this one line in the head of the page:
 
-```javascript
+```html
 <link *rel*="manifest" *href*="data:application/manifest+json,{{ content | strip_html | uri_escape }}">
 ```
 
@@ -56,7 +56,7 @@ This does raise two issues which need to be fixed before it can work.
 
 To fix this you need to configure Jekyll to ignore quotes with the following configuration setting in your `_config.yml`:
 
-```javascript
+```yaml
 kramdown:
     smart_quotes: ["apos", "apos", "quot", "quot"]
 ```
