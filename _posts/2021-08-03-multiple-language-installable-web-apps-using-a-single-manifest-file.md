@@ -33,7 +33,9 @@ This technique is especially useful on static site generators like Jekyll where 
 To make this work in Jekyll the `{{ content }}` of the page is the manifest.json code and the page’s text content is assembled by parsing and inserting the page content into the final document using Jekyll loops. Encoding and embedding the Manifest JSON is this one line in the head of the page:
 
 ```html
+{% raw  %} 
 <link *rel*="manifest" *href*="data:application/manifest+json,{{ content | strip_html | uri_escape }}">
+{% endraw  %}
 ```
 
 I came up with this technique when working on the Samsung Internet Security and Privacy wizard which has multiple language translations, where each language is stored in a separate folder in the site:
@@ -44,7 +46,7 @@ You can view the source code for the project here:
 
 ### Making it work in Jekyll
 
-In Jekyll you can’t `{% include %}` a file and then perform transforms onto it. So by including it as the body content you can then access it via `{{ content }}` which does mean you need to find some other method for loading your actual content. Fortunately our site is a little complex and built each Single Page App out of an entire folder of pages so this was already the case.
+In Jekyll you can’t {% raw  %} `{% include %}` {% endraw  %}  a file and then perform transforms onto it. So by including it as the body content you can then access it via {% raw  %} `{{ content }}` {% endraw  %} which does mean you need to find some other method for loading your actual content. Fortunately our site is a little complex and built each Single Page App out of an entire folder of pages so this was already the case.
 
 This does raise two issues which need to be fixed before it can work.
 

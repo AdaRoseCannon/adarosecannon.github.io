@@ -297,8 +297,8 @@ app.use(
 ### 4. Using the templates on the server
 
 This step will vary depending on the framework you are using, but here is how we render with viperHTML on the server:
-
-```js
+```javascript
+{% raw  %} 
 import {myTemplate} from './static/templates.js';
 import viperHTML from 'viperhtml';
 import fetch from 'node-fetch';
@@ -325,6 +325,7 @@ app.get('/', (req,res) => {
   `)
   .then(() => res.end())
 });
+{% endraw  %} 
 ```
 
 We render the template according to what the url’s query parameter was by passing the foo query parameter into the template req.query.foo
