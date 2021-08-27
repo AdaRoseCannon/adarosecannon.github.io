@@ -6,10 +6,6 @@ category: Blog
 author: Ada Rose Cannon
 star: 1
 ---
-
-
-Many Websites provide multiple language variations allowing users to comfortably use the site without relying on machine translation. When…
-
 Many Websites provide multiple language variations allowing users to comfortably use the site without relying on machine translation. When you making this website into a Progressive Web App you have a choice to make:
 > # Do you have a single PWA for all languages or do you make a PWA on a per language basis?
 
