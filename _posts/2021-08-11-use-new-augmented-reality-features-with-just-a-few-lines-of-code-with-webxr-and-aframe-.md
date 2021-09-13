@@ -14,11 +14,10 @@ AFrame has had the ability to work in AR for a long time but it was pretty diffi
 
 To get started quickly remix the example the below, for more information about how the different pieces work carry on reading:
 
-
 <!-- Copy and Paste Me -->
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
-    src="https://glitch.com/embed/#!/embed/ar-starter-kit?path=index.html&previewSize=100"
+    src="https://glitch.com/embed/#!/embed/ar-starter-kit?path=README.md&previewSize=0"
     title="ar-starter-kit on Glitch"
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
     style="height: 100%; width: 100%; border: 0;">
@@ -30,7 +29,7 @@ The upgrades to AFrame support Augmented Reality features which are new to the w
 
 ### Lighting Estimation
 
-The [WebXR Lighting Estimation API](https://aframe.io/docs/master/components/background.htmlhttps://aframe.io/docs/master/components/background.html) enables your virtual lights to emulate real lights and for reflective surfaces to reflect the real world. (Read more on MDN)
+The [WebXR Lighting Estimation API](https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md) enables your virtual lights to emulate real lights and for reflective surfaces to reflect the real world. (Read more on MDN)
 
 The [AFrame background component](https://aframe.io/docs/master/components/background.html) provides the reflectivity for 3D models both in VR and AR. In VR it generates the reflective map using the virtual scene for AR it uses the lighting esitmation API.
 
@@ -38,8 +37,7 @@ To use it add `background` to your `<a-scene>` element and your scene will immed
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*095m72uukcyOwqjlX1ClXg.png" width="411" height="800" alt="undefined">
-
+<img src="https://cdn-images-1.medium.com/max/3552/1*095m72uukcyOwqjlX1ClXg.png" width="411" height="800" alt="An Augmented Reality Dinosaur, lit from the rear.">
 </figure></div>
 
 ### Hit Test
@@ -102,7 +100,7 @@ Use the link below to remix you own version which you can build on to make your 
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*PlmNuZCqqkdWmj8hOiaaAw.png" width="843" height="458" alt="undefined">
+<img src="https://cdn-images-1.medium.com/max/3552/1*UYPYxnoDlA2EX0GsZz1WZw.png" width="1176" height="800" alt="The same AR scene in 3 different settings, 2 in a building with different lighting and one in a virtual setting">
 
 </figure></div>
 
