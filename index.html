@@ -1,29 +1,41 @@
 ---
-layout: special-index
+layout: page
 blog_title: Ada Rose Cannon
 title: Ada.is
 ---
 
 <section class="home-posts">
   {% for post in site.posts %}
-    <div class="home-posts_item">
-	{% if post.link %}
-    	<h2><a class="article-link" href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a> <span title="External Link" style="font-size: 80%; color: #aaa;">{% if post.external %}🔗 {{ post.external }} {% endif %}</span></h2>
-			<article><p>{{ post.description }}</p></article>
+  <article>
+      {% assign paragraphs = post.content | markdownify | newline_to_br | strip_newlines | split: '<br />' %}
+      {% assign excerpt = "" %}
+      {% assign preview = post.preview %}
+      {% for paragraph in paragraphs %}
+      {% assign paragraph_length = paragraph | strip_html | strip | size %}
+      {% if paragraph contains "<img " and 1 > 0 %}
+        {% assign preview_length = preview | size %}
+        {% if preview_length < 3 %}
+          {% assign img_begin_arr = paragraph | split: "<img" %}
+          {% assign img_mid = img_begin_arr[1] | split: ">" | first %}
+          {% assign preview = "<img" | append: img_mid | append: ">" %}
+        {% endif %}
+      {% endif %}
+      {% assign length = excerpt | size %}
+      {% if paragraph_length > 1 and length < 100 %}
+        {% assign excerpt = excerpt | append: "<p>" %}
+        {% assign excerpt = excerpt | append: paragraph | strip_html %}
+        {% assign excerpt = excerpt | append: "</p>" %}
+      {% endif %}
+      {% endfor %}
+
+
+      <figure class="hero">{{ preview }}</figure>
+    	<h2><a class="article-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
+        {% if post.external %}<span title="External Link" style="font-size: 80%; color: #aaa;"></span>🔗 {{ post.external }} </span>{% endif %}
+      </h2>
     	<time>{{ post.date | date_to_string }}</time>
-	{% else %}
-		<h2><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h2>
-		<article><p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}</p></article>
-		<time>{{ post.date | date_to_string }}</time>
-	{% endif %}
-    </div>
-		{% assign loopindex = forloop.index | modulo: 3 %}
-		{% if loopindex == 0 %}
-		<input class="more-content" type="checkbox" id="toggle-{{ forloop.index }}" style="visibility: hidden;" checked />
-		<label for="toggle-{{ forloop.index }}"></label>
-		{% endif %}
+
+      {{ excerpt }}
+  </article>
   {% endfor %}
-  <div class="home-posts_item">
-		<h2>No more posts.</h2>
-  </div>
 </section>
