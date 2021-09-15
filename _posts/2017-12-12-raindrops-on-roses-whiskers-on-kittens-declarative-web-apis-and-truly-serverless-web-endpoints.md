@@ -35,11 +35,11 @@ If two websites link to each other using an <a>tag with the rel="me" attribute s
     <a rel="me" href="https://ada.is"></a>
 
     On ada.is
-    <a rel="me" href="https://twitter.com/lady_ada_king"></a>
+    <a rel="me" href="https://twitter.com/AdaRoseCannon"></a>
 
 If one of those sites provides OAuth authentication then a user that can log into one website is also the owner of the other.
 
-E.g. My website [https://ada.is](https://ada.is) links to [https://twitter.com/lady_ada_king](https://twitter.com/lady_ada_king) and vice versa. Twitter provides OAuth. So if I can prove I own that Twitter account by signing in with Twitter’s OAuth I also prove I own *ada.is*.
+E.g. My website [https://ada.is](https://ada.is) links to [https://twitter.com/AdaRoseCannon](https://twitter.com/AdaRoseCannon) and vice versa. Twitter provides OAuth. So if I can prove I own that Twitter account by signing in with Twitter’s OAuth I also prove I own *ada.is*.
 
 This allows me to authenticate by using my domain name, without exposing any permissions to any of my accounts.
 

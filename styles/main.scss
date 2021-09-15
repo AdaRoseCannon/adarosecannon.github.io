@@ -44,16 +44,19 @@ figure.hero > img {
 	}
 
 	&.glitch:after {
-		background-image: url(https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-sunset.svg);
-    -webkit-filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+		background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0D%0Aaria-label%3D%22Glitch%22%20role%3D%22img%22%0D%0AviewBox%3D%2252%2052%20460%20460%22%3E%3ClinearGradient%20id%3D%22a%22%3E%3Cstop%20offset%3D%22.2%22%20stop-color%3D%22%23e9f%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f66%22%2F%3E%3C%2FlinearGradient%3E%3Cg%20fill%3D%22%23a6f%22%3E%3Cg%20id%3D%22b%22%3E%3Cpath%20d%3D%22M78%20189q20%2025-15%2030%2050%2040%2097%2032%2014%2035%2076%2025l-2-16s72%202%20138-26c12-3%2079%2035%2064%209s6-22-5-54%22%20fill%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M139%20131q-68%2015-78%2068q9%202%2022%2011h95c-4%209%208%209%208%200h12l-5%2016c-3%206%205%209%208%203l6-19h33v-11h194c-9-31%209-19%203-60-40%203-40%2045-143-3%22%2F%3E%3Ccircle%20cx%3D%22125%22%20cy%3D%22179%22%20r%3D%2218%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M110%20189a14%2014%200%20111%201%205%205%200%2010-1-1%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20d%3D%22M184%20206h3-3s9-21-7-48m27%2048h3-3s9-24-4-53m0%200c74%200%20130%2016%20182%2041%22%20stroke%3D%22%23e9f%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M294%20136l-10-10c-8-8-77-21-77-21s-13%201-30%2025c-34-3-53%205-53%205zm-56%2062v12h53v-12%22%20fill%3D%22%23a6f%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2333f%22%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20y%3D%22120%22%2F%3E%3Cpath%20d%3D%22M293%20257l52-13v-3H209v10h-70%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
     filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
 	}
 
 	&.mastodon:after {
-		background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/48/Mastodon_Logotype_%28Simple%29.svg);
-    -webkit-filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
-    filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
-    background-size: 75%;
+		background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0D%0Aaria-label%3D%22Mastodon%22%20role%3D%22img%22%0D%0AviewBox%3D%220%200%20512%20512%22%0D%0Afill%3D%22%23fff%22%3E%3Cpath%20d%3D%22m409%20290c-5%2024-43%2050-85%2056-86%2011-137-6-137-6%203%2013-4%2054%2070%2052%2031%200%2058-7%2058-7l2%2027c-51%2024-107%2015-140%206-67-17-79-90-81-162v-59c0-74%2049-96%2049-96%2050-24%20180-22%20222%200%200%200%2049%2022%2049%2096%200%200%201%2055-7%2093%22%20fill%3D%22%233088d4%22%2F%3E%3Cpath%20d%3D%22m358%20202v91h-35v-88c0-18-8-27-23-27-18%200-27%2011-27%2033v47h-34v-47c0-22-9-33-27-33-15%200-23%209-23%2027v88h-35v-91c0-18%205-60%2052-60%2039%200%2050%2037%2050%2037s10-37%2050-37c45%200%2052%2042%2052%2060%22%2F%3E%3C%2Fsvg%3E);
+		filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+	}
+
+	&.twitch:after {
+		background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0D%0Aaria-label%3D%22Twitch%22%20role%3D%22img%22%0D%0AviewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22m115%20101-22%2056v228h78v42h44l41-42h63l85-85v-199zm260%20185-48%2048h-78l-42%2042v-42h-65v-204h233zm-48-100v85h-30v-85zm-78%200v85h-29v-85z%22%20fill%3D%22%236441a4%22%2F%3E%3C%2Fsvg%3E);
+		filter: saturate(0%) sepia(20%) saturate(100) hue-rotate(181deg) brightness(157%) saturate(65%);
+		background-size: 110%;
 	}
 
 	&.github:after {

@@ -39,7 +39,7 @@ This simple demo has an iFrame with 3 links which change the URL of the iFrame. 
 [**WebXR IFrame Demo!**
 fold-me.glitch.me](https://fold-me.glitch.me/)
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is really useful for having a web page with a lot of demos on it. Using links with target=&quot;iframe&quot; to switch between them. <a href="https://t.co/35pEqzP2Ko">pic.twitter.com/35pEqzP2Ko</a></p>&mdash; Ada Rose Cannon (@Lady_Ada_King) <a href="https://twitter.com/Lady_Ada_King/status/1347152755530596354?ref_src=twsrc%5Etfw">January 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is really useful for having a web page with a lot of demos on it. Using links with target=&quot;iframe&quot; to switch between them. <a href="https://t.co/35pEqzP2Ko">pic.twitter.com/35pEqzP2Ko</a></p>&mdash; Ada Rose Cannon (@AdaRoseCannon) <a href="https://twitter.com/AdaRoseCannon/status/1347152755530596354?ref_src=twsrc%5Etfw">January 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 Try it today in the [Samsung Internet Beta on Android!](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser.beta&hl=en_GB&gl=US)
 
