@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js">
+{% include head.html %}
+
+<body>
+	<header>
+		<nav class="isolate">
+			<a rel="me" href="https://twitter.com/AdaRoseCannon" class="grain icon twitter" aria-label="twitter"></a>
+			<a rel="me" href="https://github.com/adarosecannon" class="grain icon github" aria-label="github"></a>
+      <a rel="me" href="https://twitch.tv/AdaRoseCannon" class="grain icon twitch" aria-label="Twitch"></a>
+			<a rel="me" href="https://uk.linkedin.com/in/adarose" class="grain icon linkedin" aria-label="linkedIn"></a>
+			<a rel="me" href="https://glitch.com/@adarosecannon" class="grain icon glitch" aria-label="glitch"></a>
+      <a rel="me" href="https://mastodon.social/@ada" class="grain icon mastodon" aria-label="Mastodon"></a>
+<!-- 			<a href="https://lanyrd.com/profile/lady_ada_king/"><span class="icon lanyrd">lanyrd</span></a> -->
+<!-- 			<a href="/about/"><span class="profile-pic" /></span></a> -->
+    </nav>
+    <h1 class="hero grain isolate"><a href="{{ site.pageurl }}">{{ site.name }}</a></h1>
+    <p class="hero-subtitle">{{ site.description }}</p>
+	</header>
+  <main>
+    {{ content }}
+  </main>
+	{% include scripts.html %}
+  <img src="https://adalytics-live.glitch.me/counter.png?color=black&fallback=https%3A%2F%2Fada.is{{ page.url | cgi_escape }}" alt="" aria-hidden="true" height="15px" style="opacity: 0.5; margin-top: 1em;">
+</body>
+
+</html>

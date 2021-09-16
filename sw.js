@@ -2,7 +2,6 @@
 /* jshint browser:true */
 'use strict';
 
-
 importScripts('/scripts/sw-toolbox.js');
 
 const RESOURCES_CACHE_NAME = 'my-cache-v1';
@@ -15,8 +14,7 @@ var resources = [
 	'/favicon.ico',
 	'/images/pattern.svg',
 	'/styles/main.css',
-	'/scripts/main.js',
-	'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,800',
+	'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
 	'https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400',
 	'/'
 ];
@@ -70,22 +68,22 @@ self.addEventListener('message', function(event) {
 self.addEventListener('fetch', function (event) {
 	const request = event.request;
 	let handler = toolbox.fastest;
-	
+
 	// network first if in development mode
 	if (request.url.match(/^http:\/\/localhost/) && location.protocol === 'http:' || location.hostname === 'localhost') {
 		 handler = toolbox.networkFirst
 	}
-  
+
 	// Index page should be fresh i ncase of new stories
 	if (request.url.match(/^https:\/\/ada.is\/?(index.html)?$/)) {
 		handler = toolbox.networkFirst;
 	}
-	
+
 	// Network first if it is a page navigation to try to get an up-to-date result
 	if (request.mode === 'navigate') {
 		handler = toolbox.networkFirst;
 	}
-	
+
 	// Ignore videos
 	if (
 		request.url.match(/(\.mp4|\.webm|\.avi|\.wmv|\.m4v)$/i) ||

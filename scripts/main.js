@@ -1,6 +1,8 @@
 (function () {'use strict';
 var define = false;
 var window = window || self
+/* global $ */
+
 window.$ = document.querySelectorAll.bind(document);
 NodeList.prototype.__proto__ = Array.prototype;
 
