@@ -170,7 +170,7 @@ article.post, section.index, .grain {
     left: 0;
     top: 0;
     mix-blend-mode: soft-light;
-    background: linear-gradient(var(--angle), var(--grain_col), transparent var(--grain-stop)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.53' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background: linear-gradient(var(--angle), var(--grain_col), transparent var(--grain-stop)), url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.53' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     filter: contrast(130%) brightness(250%);
     opacity: var(--grain-opacity);
     pointer-events: none;
@@ -290,8 +290,7 @@ blockquote {
 
 .icon {
 
-  font-size: 3rem;
-	margin: 0.1em 0.1em 0 0.1em;
+  font-size: 2.9rem;
 	overflow: hidden;
 
 	&::before {
