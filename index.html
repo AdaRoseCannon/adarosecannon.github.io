@@ -103,7 +103,7 @@ title: Ada.is
 
     <figure class="hero {% if post.grain %}grain{% endif %}" {% if post.grain_color %}style="--grain_col1: grain_color;"{% endif %}>
       <div class="blur-bg" style="background-image: url({{ preview }});"></div>
-      <img src="{{ preview }}" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
+      <img src="https://im2.io/bbdkhfbzkk/600x400,crop=auto/{{ preview }}" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
     </figure>
     <article class="index">
       <h2><a class="article-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
