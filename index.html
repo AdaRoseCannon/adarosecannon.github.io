@@ -106,7 +106,7 @@ title: Ada.is
     {% endunless %}
     <figure class="hero {% if post.grain %}grain{% endif %}" {% if post.grain_color %}style="--grain_col1: grain_color;"{% endif %}>
       {% assign check = preview | split:'.gif' %}
-      {% if preview contains '.gif' %}
+      {% if false and preview contains '.gif' %}
         <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
       {% else %}
         <!-- <div class="blur-bg" style="background-image: url({{ preview }});"></div> -->
