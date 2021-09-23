@@ -102,12 +102,12 @@ title: Ada.is
     {% endfor %}
 
     <figure class="hero {% if post.grain %}grain{% endif %}" {% if post.grain_color %}style="--grain_col1: grain_color;"{% endif %}>
-      {%- assign check = preview | split:'.gif' -%}
+      {% assign check = preview | split:'.gif' %}
       {% if check.size == 1 and checkArray[0] != preview %}
-        <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
+      <div class="blur-bg" style="background-image: url({{ preview }});"></div>
+      <img src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=jpeg/{{ preview }}" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
       {% else %}
-        <div class="blur-bg" style="background-image: url({{ preview }});"></div>
-        <img src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=jpeg/{{ preview }}" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
+      <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
       {% endif %}
     </figure>
     <article class="index">
