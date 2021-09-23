@@ -101,8 +101,11 @@ title: Ada.is
     {% endif %}
     {% endfor %}
 
+    {% unless preview contains 'https://' %}
+      {% assign preview = preview | absolute_url %}
+    {% endunless %}
     <figure class="hero {% if post.grain %}grain{% endif %}" {% if post.grain_color %}style="--grain_col1: grain_color;"{% endif %}>
-      {%- assign check = preview | split:'.gif' -%}
+      {% assign check = preview | split:'.gif' %}
       {% if check.size == 2 and checkArray[0] != preview %}
         <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
       {% else %}
