@@ -180,6 +180,7 @@ article.post, section.index, .grain {
 article.post, section.index {
   --bg: lavenderblush;
   background-color: var(--bg);
+  min-width: 0;
 
   &::before {
     content: '';
