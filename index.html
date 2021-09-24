@@ -62,10 +62,10 @@ title: Ada.is
   </div>
   {% endif %}
 
-  {% if forloop.index == 3 %}
+  {% if forloop.index == 5 %}
   <div>
     <a href="https://glitch.com/@adarosecannon/xr" class="grain isolate" style="display: block;">
-      <img src="/images/VRHeadset.png" alt="Illustration of a VR Headset">
+      <img src="/images/VRHeadset.png" alt="Illustration of a VR Headset" width="449" height="335">
     </a>
 
     <h2>XR Demos - Playlist on Glitch.com</h2>
@@ -110,7 +110,7 @@ title: Ada.is
         <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
       {% else %}
         <!-- <div class="blur-bg" style="background-image: url({{ preview }});"></div> -->
-        <img src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=jpeg/{{ preview }}" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
+        <img src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=jpeg/{{ preview }}" width="600" height="400" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
       {% endif %}
     </figure>
     <article class="index">
