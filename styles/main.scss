@@ -181,6 +181,8 @@ article.post, section.index {
   --bg: lavenderblush;
   background-color: var(--bg);
   min-width: 0;
+  max-width: 100%;
+  word-break: break-word;
 
   &::before {
     content: '';
