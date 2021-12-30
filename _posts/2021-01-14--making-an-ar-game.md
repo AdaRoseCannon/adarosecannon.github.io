@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Making an AR Game"
-description: "Here is a .gif (jiff?) of the final game, click here to play the game. It uses the WebXR DOM Overlay API, and the WebXR Hit Test API. So right now the best way to play it is in Mobile Chrome or Samsung Internet Beta."
+description: "Here is a .gif of the final game, click here to play the game. It uses the WebXR DOM Overlay API, and the WebXR Hit Test API. So right now the best way to play it is in Mobile Chrome or Samsung Internet Beta."
 category: Blog
 author: Ada Rose Cannon
 star: 1
@@ -11,7 +11,7 @@ star: 1
 
 Using AFRAME, THREE.js and WebXR to build a game during a 4.5hr live stream.
 
-Here is a .gif (jiff?) of the final game, [click here to play the game](https://ada.is/basketball-demo/). It uses the [WebXR DOM Overlay API](https://github.com/immersive-web/dom-overlays/blob/master/explainer.md), and the [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md). So right now the best way to play it is in Mobile Chrome or [Samsung Internet Beta](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser.beta&hl=en_GB&gl=US).
+Here is a .gif of the final game, [click here to play the game](https://ada.is/basketball-demo/). It uses the [WebXR DOM Overlay API](https://github.com/immersive-web/dom-overlays/blob/master/explainer.md), and the [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md). So right now the best way to play it is in Mobile Chrome or [Samsung Internet Beta](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser.beta&hl=en_GB&gl=US).
 
 ![A virtual ball being shot into a virtual basketball hoop.](https://cdn-images-1.medium.com/max/2092/1*uxubAT7y_4V7U0cUCtEiQg.gif)*A virtual ball being shot into a virtual basketball hoop.*
 
@@ -146,7 +146,7 @@ But you can request it when the XR session is started in AFrame you add it to yo
 To assist in how it’s used I made a component to help with it in the library I mentioned earlier:
 
 ```html
-<script src="[https://ada.is/basketball-demo/ar-components.js](https://ada.is/basketball-demo/ar-components.js)"></script>
+<script src="https://ada.is/basketball-demo/ar-components.js"></script>
 ```
 
 The ar-hit-test component will continuously do hit-testing using the most relevant user input available assisting you to build something which works on a variety of hardware. Such as it will default from using the headset position but will use a VR controller or hand tracking if it is available.
