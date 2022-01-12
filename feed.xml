@@ -5,19 +5,20 @@
 	<channel>
 	<title>{{ site.name | xml_escape }}</title>
 	<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
-	<link>https://ada.is</link>{% for post in site.posts %}{% assign paragraphs = post.content | markdownify | newline_to_br | strip_newlines | split: '<br />' %}{% assign excerpt = "" %}{% assign default_image = '/images/pattern.svg' %}{% assign preview = default_image %}{% if post.preview %}{% assign preview = post.preview %}{% endif %}{% for paragraph in paragraphs %}{% if paragraph contains post.title %}{% continue %}{% endif %}{% if preview == default_image and paragraph contains "<img " and 1 > 0 %}{% assign img_begin_arr = paragraph | split: "<img" %}{% assign src_img_end = img_begin_arr[1] | split: 'src="' %}{% assign preview = src_img_end[1] | split: '"' | first %}{% assign alt_img_end = img_begin_arr[1] | split: 'alt="' %}{% assign preview_alt = alt_img_end[1] | split: '"' | first %}{% endif %}{% assign length = excerpt | size %}{% assign paragraph_length = paragraph | strip_html | strip | size %}{% if paragraph_length > 1 and length < 500 %}{% assign paragraph_no_html = paragraph | strip_html %}{% assign excerpt = excerpt | append: "<p>" %}{% assign excerpt = excerpt | append: paragraph_no_html %}{% assign excerpt = excerpt | append: "</p>" %}{% endif %}{% endfor %}
+	<link>https://ada.is</link>
 	<atom:link href="{{ site.url }}{{ page.path }}" rel="self" type="application/rss+xml" />
+	{% for post in site.posts %}{% assign paragraphs = post.content | markdownify | newline_to_br | strip_newlines | split: '<br />' %}{% assign excerpt = "" %}{% assign default_image = '/images/pattern.svg' %}{% assign preview = default_image %}{% if post.preview %}{% assign preview = post.preview %}{% endif %}{% for paragraph in paragraphs %}{% if paragraph contains post.title %}{% continue %}{% endif %}{% if preview == default_image and paragraph contains "<img " and 1 > 0 %}{% assign img_begin_arr = paragraph | split: "<img" %}{% assign src_img_end = img_begin_arr[1] | split: 'src="' %}{% assign preview = src_img_end[1] | split: '"' | first %}{% assign alt_img_end = img_begin_arr[1] | split: 'alt="' %}{% assign preview_alt = alt_img_end[1] | split: '"' | first %}{% endif %}{% assign length = excerpt | size %}{% assign paragraph_length = paragraph | strip_html | strip | size %}{% if paragraph_length > 1 and length < 500 %}{% assign paragraph_no_html = paragraph | strip_html %}{% assign excerpt = excerpt | append: "<p>" %}{% assign excerpt = excerpt | append: paragraph_no_html %}{% assign excerpt = excerpt | append: "</p>" %}{% endif %}{% endfor %}
 	<item>{% if post.link %}
-	<title>{{ post.title | xml_escape }}</title>
-	<description>{{ post.description | xml_escape }}</description>
-	<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-	<link>{{ post.link | xml_escape }}</link>
-	<guid isPermaLink="true">{{ post.link  | xml_escape }}</guid>{% else %}
-	<title>{{ post.title | xml_escape }}</title>
-	<description>{% if post.description %}{{ post.description | xml_escape }}{% else %}{{ excerpt | xml_escape }}{% endif %}</description>
-	<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-	<link>https://ada.is/{{ post.url }}</link>
-	<guid isPermaLink="true">https://ada.is/{{ post.url }}</guid>{% endif %}
+		<title>{{ post.title | xml_escape }}</title>
+		<description>{{ post.description | xml_escape }}</description>
+		<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		<link>{{ post.link | xml_escape }}</link>
+		<guid isPermaLink="true">{{ post.link  | xml_escape }}</guid>{% else %}
+		<title>{{ post.title | xml_escape }}</title>
+		<description>{% if post.description %}{{ post.description | xml_escape }}{% else %}{{ excerpt | xml_escape }}{% endif %}</description>
+		<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		<link>https://ada.is/{{ post.url }}</link>
+		<guid isPermaLink="true">https://ada.is/{{ post.url }}</guid>{% endif %}
 	</item>{% endfor %}
 </channel>
 </rss>
