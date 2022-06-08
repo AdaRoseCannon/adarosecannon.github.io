@@ -23,7 +23,7 @@ There would be weird behaviour like declaring the same variable twice would not 
 
 In the early days you could even get away with forgetting to declare a variable entirely. This would have the unfortunate effect of always putting the variable in the global scope and on the window object even if it was first used in a function. This behaviour is very bad. 
 
-```jsx
+```javascript
 test0 = 0;
 var test1 = 1;
 
@@ -42,7 +42,7 @@ Interestingly if you use `const` and `let` at the top level here they are not pl
 
 Because variables in functions are constrained to the scope of that function a common pattern was to contain your script you wanted to not be exposed in an Immediately Invoked Function Expression known as an IIFE (pronounced iffy). A popular pattern most JavaScript bundlers use is to place the whole file inside an IIFE.
 
-```jsx
+```javascript
 (function () {
   var cannotEscape = 'I am not declared outside of this function';
 }());
@@ -78,7 +78,7 @@ Variables defined with with `var` are declared for the whole closure no matter w
 
 The following function does not throw an error. 
 
-```jsx
+```javascript
 function () {
   "use strict"
   console.log(p); // undefined
@@ -88,7 +88,7 @@ function () {
 
 Because this is what is really happening:
 
-```jsx
+```javascript
 function () {
   "use strict"
   var p;
@@ -99,7 +99,7 @@ function () {
 
 This is a behaviour you need to look out for when you are using loops. Where the variable is referenced outside of the context of the loop.
 
-```jsx
+```javascript
 for (var i=0;i<10;i++) {
   var printMe = "Test " + i;
   setTimeout(function () {console.log(printMe)}, 100)
@@ -109,7 +109,7 @@ for (var i=0;i<10;i++) {
 
 Because it’s effectively, updating printMe 10 times then printing the final value of printMe ten times. If you change the `var` to a `let` this bug gets fixed immediately because `let` is block scoped and then each function in the loop has it’s own copy of `printMe` which it can print. 
 
-```jsx
+```javascript
 for (var i=0;i<10;i++) {
   let printMe = "Test " + i;
   setTimeout(function () {console.log(printMe)}, 100)
@@ -118,7 +118,7 @@ for (var i=0;i<10;i++) {
 
 The hoisting behaviour is not obvious to many people new to the language. So it’s best to explicitly declare your variables at the top of the function scope so you can be clear what exactly is happening.
 
-```jsx
+```javascript
 function doSomething() {
   var i=0;
   var output="";
@@ -135,7 +135,7 @@ function doSomething() {
 
 There are many ways to define a function. A named function is defined as if you used `var`
 
-```jsx
+```javascript
 if (true) {
   function myFunc() {
 
@@ -147,7 +147,7 @@ window.myFunc // function
 
 is equivalent to:
 
-```jsx
+```javascript
 var myFunc;
 if (true) {
   myFunc = function () {}
@@ -158,7 +158,7 @@ window.myFunc // function
 
 The exception is named IIFEs which are not:
 
-```jsx
+```javascript
 (function test() {
   console.log(test) // function
 }())
@@ -173,7 +173,7 @@ These slightly newer ways of describing variables have some really nice properti
 
 `const` and `let` are scoped to their containing [block](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block), i.e. the nearest curly brace the `{}` symbols. This makes them very useful for having variables which are only used in a single loop or if statement.
 
-```jsx
+```javascript
 const a = true;
 if (a) {
 	const b=2;
@@ -184,7 +184,7 @@ console.log(b); // throws an error because b is not defined.
 
 If you want to group some logic and it’s associated variables together, now instead of using an IIFE you can use a block statement:
 
-```jsx
+```javascript
 {
   const a = 2;
   console.log(a);
@@ -199,7 +199,7 @@ myBlock: {
 
 If you try to define a variable with `const` and `let` twice in the same scope an error will be thrown preventing weird bugs from accidentally creating two variables with the same name but child blocks can redeclare the variable and will replace it for that block only.
 
-```jsx
+```javascript
 const a=2;
 {
   const a=3;
@@ -213,7 +213,7 @@ console.log(a); // 2
 
 Another difference from `var` is that `const` and `let` are never hoisted. So if you try to use them before they are defined you just get a syntax error.
 
-```jsx
+```javascript
 (function () {
   "use strict"
   console.log(p); // Error, Cannot access 'p' before initialization
@@ -223,7 +223,7 @@ Another difference from `var` is that `const` and `let` are never hoisted. So if
 
 This also applies if you are going to redefine a variable in the parent lexical scope and try using it before if it is defined an error is thrown.
 
-```jsx
+```javascript
 const a=2;
 {
   const a=3;
@@ -250,19 +250,19 @@ JavaScript objects assigned to a `const` can still be modified but you cannot re
 
 They are also useful in loops, use `const` for “for of” loops or “for in” loops.
 
-```jsx
+```javascript
 for (const el of document.body.children) console.log(el);
 ```
 
 Use `let` for standard for loops because the value of the variable is modified each iteration.
 
-```jsx
+```javascript
 for (let i=0;i<10;i++) console.log(i);
 ```
 
 The block scoping behaviour of const and let includes `try{}catch(e){}` blocks. This is one situation where using `let` is important. Since `let` and `const` used in these blocks can’t be accessed from outside of them. 
 
-```jsx
+```javascript
 let answer;
 try {
   answer = canThrow();
@@ -294,7 +294,7 @@ The behaviour of this can seem confusing but there are various tools which make 
 
 At the top level `this` is the global object. The global object can be accessed any where in your code using `globalThis` ([globalThis on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)) 
 
-```jsx
+```javascript
 "use strict"
 this // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 this === globalThis // true
@@ -302,7 +302,7 @@ this === globalThis // true
 
  In Web Workers this is the global scope for the worker which is different from the window object, which it cannot access. If you want to communicate back to the window you need to use things like postMessage.
 
-```jsx
+```javascript
 "use strict"
 this // DedicatedWorkerGlobalScope {name: '', onmessage: null, onmessageerror: null, cancelAnimationFrame: ƒ, close: ƒ, …}
 this === globalThis // true
@@ -310,7 +310,7 @@ this === globalThis // true
 
 The value of `this` in a function changes depending on how a function is called. If you call a function which on an object then `this` is set to that object. If you run the same function independently then in strict mode it is undefined. **In this situation when not in not strict mode `this` is the global object which can lead to all sorts of hard to spot errors.**
 
-```jsx
+```javascript
 "use strict"
 const o = {
     b() {return this}
@@ -322,7 +322,7 @@ console.log(t()) // undefined
 
 Certain methods which take functions as callbacks will set `this` to be something else. Some examples are `setTimeout` and `setInterval` which will set this to the global object.
 
-```jsx
+```javascript
 "use strict"
 const o = {
   b() {
@@ -336,7 +336,7 @@ o.b();
 
 and `element.addEventListener` callbacks where this will be the element the event listener was set to. In the example below with click set on the body, `this` is set to the body even if the actual element I clicked on was a button and the event bubbled up. 
 
-```jsx
+```javascript
 document.body.addEventListener('click', function (e) {
   console.log(this);     // <body>
   console.log(e.target); // <button>
@@ -349,7 +349,7 @@ You can manually set `this` in a few ways. Starting from my most used to least u
 
 These are incredibly useful when you are setting events in a class where the accessing the class from inside the event listener function is much more useful than the element that was clicked.
 
-```jsx
+```javascript
 "use strict"
 const o = {
     a() {
@@ -364,7 +364,7 @@ console.log(t()) // {b: function () }
 
 1. **function.bind( newThisElement ),** this creates a new function where `this` is fixed to a particular value. If you need to use `removeEventListener` this is really useful because you can define a function bound to where you need it and can then remove it later using the same function definition.
 
-```jsx
+```javascript
 "use strict"
 const o = {a:2};
 function f() {return this.a};
@@ -382,7 +382,7 @@ You can set public variables on this as you would expect.
 
 You can declare private variables when you define the class. They can only be accessed from functions defined in the class description. Trying to access them or add functions to access them later results Syntax errors. So they really are private! [Private class fields on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 
-```jsx
+```javascript
 class A {
   #myPrivate
   constructor(){
@@ -402,7 +402,7 @@ test.hackTheGibson2() // Syntax error
 
 You can use closures to emulate private data by having data which is only available in a closure in a function.
 
-```jsx
+```javascript
 "use strict"
 const o = {};
 (function () {
