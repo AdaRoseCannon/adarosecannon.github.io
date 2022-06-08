@@ -111,6 +111,9 @@ title: Ada.is
       {% assign check = preview | split:'.gif' %}
       {% if false and preview contains '.gif' %}
         <video src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=webm/{{ preview }}" loop autoplay></video>
+      {% elseif preview == default_image %}
+        <img src="{{ preview }}" width="600" height="400" alt="">
+        <p class="no-image-preview-text">{{ post.title }}</p>
       {% else %}
         <!-- <div class="blur-bg" style="background-image: url({{ preview }});"></div> -->
         <img src="https://img.gs/bbdkhfbzkk/600x400,crop=auto,format=jpeg/{{ preview }}" width="600" height="400" {% if preview_alt and preview_alt != "undefined" %}alt="{{preview_alt}}"{% endif %}>
