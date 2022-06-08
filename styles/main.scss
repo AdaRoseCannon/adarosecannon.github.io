@@ -176,6 +176,10 @@ article.post, section.index, .grain {
     pointer-events: none;
   }
 }
+article.post {
+  width: 1024px;
+}
+
 
 article.post, section.index {
   --bg: lavenderblush;
