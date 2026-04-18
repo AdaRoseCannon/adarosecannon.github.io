@@ -53,9 +53,7 @@ title: Ada.is
       {% endif %}
     </figure>
     <article class="index">
-      <h2 style="view-transition-name: title-{{ post.url | slugify }};"><a class="article-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
-        {% if post.external %}<span title="External Link" style="font-size: 80%; color: #aaa;">🔗 {{ post.external }}</span>{% endif %}
-      </h2>
+      <h2 style="view-transition-name: title-{{ post.url | slugify }};"><a class="article-link" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></h2>
       <time>{{ post.date | date_to_string }}</time>
       {% if post.description %}
         <p class="article-body">{{ post.description | strip_html }}</p>
