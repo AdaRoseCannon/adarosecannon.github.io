@@ -5,6 +5,8 @@ description: "Multiple Language Installable Web Apps using a single Manifest Fil
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/an-app-with-a-purple-icon-with-a-shield-called-sec.png
+inline_hero: true
 ---
 Many Websites provide multiple language variations allowing users to comfortably use the site without relying on machine translation. When you making this website into a Progressive Web App you have a choice to make:
 > # Do you have a single PWA for all languages or do you make a PWA on a per language basis?
@@ -15,7 +17,7 @@ The Web is a lot simpler you can sub-divide your site into as many progressive W
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*6P1SQ449OX3qbbbBDwT0NA.png" width="1316" height="351" alt="An app with a purple icon with a shield, called “Security and Privacy Wizard” translated into multiple languages.">
+<img src="/images/medium/an-app-with-a-purple-icon-with-a-shield-called-sec.png" width="1316" height="351" alt="An app with a purple icon with a shield, called “Security and Privacy Wizard” translated into multiple languages.">
 <figcaption>An app with a purple icon with a shield, called “Security and Privacy Wizard” translated into multiple languages.</figcaption>
 </figure></div>
 

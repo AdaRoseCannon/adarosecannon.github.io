@@ -5,11 +5,11 @@ description: "Last time we introduced about Deno and discussed how it compares t
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/the-jspm-logo.png
+inline_hero: true
 ---
 
-# Using node modules in Deno
 
-Using node modules in Deno
 
 ### A bad practice but sometimes there is no alternative.
 
@@ -78,7 +78,7 @@ In that situation try the next method:
 
 Fortunately there is a service called [JSPM](https://jspm.org/) which will resolve the 3rd party modules and compile the commonjs modules to work as esmodule imports. This tool is for using node modules in the browser without a build step. But we can use it here too.
 
-![The JSPM logo](https://cdn-images-1.medium.com/max/2000/1*o58qtVB981PVm9XV67ZTJg.png)*The JSPM logo*
+![The JSPM logo](/images/medium/the-jspm-logo.png)*The JSPM logo*
 
 In my most recent project i wanted to do push notifications, which involves generating the credentials for VAPID, there is a deno crypto library which can do encryption but doing the full procedure is difficult and I’d rather use the popular [web-push](https://www.npmjs.com/package/web-push) library. I can import it using the JSPM CDN using the URL like below:
 

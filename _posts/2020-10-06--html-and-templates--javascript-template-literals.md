@@ -5,11 +5,11 @@ description: "HTML in the Web is often made of reusable components, composed by 
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/html-syntax-highlighting-in-a-js-file.png
+inline_hero: true
 ---
 
-# HTML and Templates & JavaScript Template Literals
 
-HTML and Templates & JavaScript Template Literals
 
 HTML in the Web is often made of reusable components, composed by templates, making it convenient to edit the different parts that make up a website. There are many templating languages used in the web such as handlebars, Pug, Vue and JSX; these are primarily used for composing HTML. Modern JavaScript has templating syntax built in which can use for all kinds of purposes including composing HTML.
 
@@ -128,7 +128,7 @@ const myHTMLTemplate = (title, class) => `
 
 If you use Visual Studio Code the [Lit-HTML extension](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) will add syntax highlighting and HTML intellisense features and [emmet](https://code.visualstudio.com/docs/editor/emmet) shortcuts for templates tagged with a tag called html . The html tag doesn’t have to be the one from the lit-html library even using String.raw will give you the really nice features of HTML inside a JavaScript or TypeScript file.
 
-![HTML syntax highlighting in a JS file](https://cdn-images-1.medium.com/max/2000/1*YLFHrT-DNqURE-6xg-sjYw.png)*HTML syntax highlighting in a JS file*
+![HTML syntax highlighting in a JS file](/images/medium/html-syntax-highlighting-in-a-js-file.png)*HTML syntax highlighting in a JS file*
 
 ### Sanitising HTML with a Tagged Template Literal
 

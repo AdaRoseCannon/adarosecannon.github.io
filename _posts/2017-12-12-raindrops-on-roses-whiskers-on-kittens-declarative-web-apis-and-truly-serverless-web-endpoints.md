@@ -5,13 +5,14 @@ description: "This article introduces some cool things I have been playing with 
 categories: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/raindrops-on-roses-whiskers-on-1.jpeg
+inline_hero: true
 ---
 
-# Raindrops on roses, whiskers on kittens, declarative web APIs and truly serverless web endpoints
 
 Here are a few of my favourite things you may not have heard of.
 
-![](https://cdn-images-1.medium.com/max/4096/1*1YF3Hv1dN0yPNyKU9VgkyQ.jpeg)
+![](/images/medium/raindrops-on-roses-whiskers-on-1.jpeg)
 
 This article introduces some cool things I have been playing with recently that have excited me. The thread which ties them together is getting communities of sites to work together across domains, but powered by the front end.
 
@@ -45,9 +46,9 @@ This allows me to authenticate by using my domain name, without exposing any per
 
 Twitter and github are already set up to do this, check the HTML on twitter for the link back to someone’s website from their profile:
 
-![](https://cdn-images-1.medium.com/max/2000/1*9vVSZjyBEGhvJyjcC79zLg.png)
+![](/images/medium/raindrops-on-roses-whiskers-on-2.png)
 
-Demo: [https://indie-auth.glitch.me/](https://indie-auth.glitch.me/)
+Demo: [https://indie-auth.adarose.dev/](https://indie-auth.adarose.dev/)
 
 Demo Code: [https://glitch.com/edit/#!/indie-auth?path=index.html:1:0](https://glitch.com/edit/#!/indie-auth?path=index.html:1:0)
 

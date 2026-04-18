@@ -1,50 +1,42 @@
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ page.title }} - {{ site.description}}</title>
-	<meta http-equiv="cleartype" content="on" />
-	<meta name="MobileOptimized" content="width" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@AdaRoseCannon" />
+	<title>{{ page.title }} - {{ site.description }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="view-transition" content="same-origin">
 	{% if page.author %}
-	<meta name="description" content="{{ page.excerpt  | strip_html }}">
-	<meta name="twitter:title" content="{{ page.title }} by {{ page.author }}" />
-	<meta name="twitter:description" content="{{ page.excerpt  | strip_html }}" />
-	<meta name="twitter:url" content="{{ page.url }}" />
+	<meta name="description" content="{{ page.excerpt | strip_html }}">
 	{% else %}
 	<meta name="description" content="{{ site.description }}">
-	<meta name="twitter:title" content="{{ site.name }}" />
-	<meta name="twitter:description" content="{{ site.description}}" />
-	<meta name="twitter:url" content="{{ page.url }}" />
 	{% endif %}
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ page.title | default: site.name }}">
+	<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html }}">
+	<meta property="og:url" content="{{ page.url | absolute_url }}">
 	{% if page.image %}
-	<meta name="twitter:image" content="{{ page.image }}">
+	<meta property="og:image" content="{{ page.image }}">
 	{% elsif page.preview %}
-	<meta name="twitter:image" content="{{ page.preview }}">
-	{% else %}
-	<meta name="twitter:image" content="https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400">
+	<meta property="og:image" content="{{ page.preview }}">
 	{% endif %}
-  <link rel="alternate" type="application/rss+xml" href="https://ada.is/feed">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="https://ada.is/feed">
 	<link rel="icon" sizes="192x192" href="/launcher-icon-4x.png">
-	<link rel="icon" sizes="400x400" href="https://s.gravatar.com/avatar/e137ba0321f12ecb5340680815b42c26?s=400">
+	<link href='https://fonts.googleapis.com' rel='preconnect'>
 	<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap' rel='stylesheet'>
 	<link rel="prefetch" href="/images/pattern.svg">
 	<meta name="theme-color" content="#FFF0F5">
 	<link rel="stylesheet" href="/styles/main.css">
 	<link rel="stylesheet" href="/styles/syntax.css">
 	{% if page.style %}
-	<link rel="stylesheet" href="{{page.style}}">
+	<link rel="stylesheet" href="{{ page.style }}">
 	{% endif %}
 	{% if page.styles %}
 	{% for item in page.styles %}
-	<link rel="stylesheet" href="{{item}}">
+	<link rel="stylesheet" href="{{ item }}">
 	{% endfor %}
 	{% endif %}
 	{% if page.script %}
-	<script src="{{page.script}}"></script>
+	<script src="{{ page.script }}"></script>
 	{% endif %}
 	{% if page.scripts %}
 	{% for item in page.scripts %}

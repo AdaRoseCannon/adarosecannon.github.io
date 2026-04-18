@@ -5,15 +5,15 @@ description: "I recently made a relaxing koi garden demo, where koi fish swim ar
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/the-koi-garden-demo-with-300-fish.gif
+inline_hero: true
 ---
 
-# Curve Modifiers in Three.js
 
-Curve Modifiers in Three.js
 
 ### My first major PR to Three.js
 
-I recently made a relaxing [koi garden](https://koi-garden.glitch.me) demo, where koi fish swim around a VR environment. The two most notable parts of the scene are the [3D positioned audio which I wrote about previously](https://medium.com/samsung-internet-dev/audio-on-the-web-for-games-and-vr-efcd523a3d58) and the 100s of fish which appear to organically swim around the trees.
+I recently made a relaxing [koi garden](https://koi-garden.adarose.dev) demo, where koi fish swim around a VR environment. The two most notable parts of the scene are the [3D positioned audio which I wrote about previously](/blog/2020/10/19/audio-on-the-web-for-games-and-vr/) and the 100s of fish which appear to organically swim around the trees.
 
 The 3D models of the fish bend as they turn tight corners. This effect is great for organic models that travel along fixed paths such as birds or fish.
 
@@ -41,9 +41,9 @@ The code example I made for Three.js is designed to take advantage of instancing
 
 In the demo I made with the fish you can control the number of fish by setting the ?fish=300 query parameter. On mobile devices it can render almost 100 fish whilst maintaining a 60fps frame rate. On laptops it can do 1000s of fish and on powerful desktop computers it can do over 10000 fish!
 
-![The Koi Garden demo with 300 fish](https://cdn-images-1.medium.com/max/2000/1*QbMbO8H5H-DfW5T3FV6Nqw.gif)*The Koi Garden demo with 300 fish*
+![The Koi Garden demo with 300 fish](/images/medium/the-koi-garden-demo-with-300-fish.gif)*The Koi Garden demo with 300 fish*
 [**XR Koi Garden**
-*A beautiful VR garden with peaceful music. Listen with headphones for the full effect.* koi-garden.glitch.me](https://koi-garden.glitch.me/?fish=300)
+*A beautiful VR garden with peaceful music. Listen with headphones for the full effect.* koi-garden.adarose.dev](https://koi-garden.adarose.dev/?fish=300)
 
 ### Using the Three.js Example
 
@@ -53,7 +53,7 @@ The [first example](https://threejs.org/examples/#webgl_modifier_curve) has a si
 
 The [second example](https://threejs.org/examples/#webgl_modifier_curve_instanced) has a single object instanced 8 times traveling around 2 separate curves.
 
-![3D text duplicated 8 times traveling along two paths.](https://cdn-images-1.medium.com/max/2000/1*D_UmP3vAp-SiyQTFOHp7Sg.gif)*3D text duplicated 8 times traveling along two paths.*
+![3D text duplicated 8 times traveling along two paths.](/images/medium/3d-text-duplicated-8-times-traveling-along-two-pat.gif)*3D text duplicated 8 times traveling along two paths.*
 
 **The not-instanced method** is the simpler method for having a single object.
 

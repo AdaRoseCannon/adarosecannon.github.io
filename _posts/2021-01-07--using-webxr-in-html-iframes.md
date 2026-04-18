@@ -7,9 +7,7 @@ author: Ada Rose Cannon
 star: 1
 ---
 
-# Using WebXR in HTML IFrames
 
-Using WebXR in HTML IFrames
 
 ### It’s really useful but there are a few pitfalls to avoid.
 
@@ -37,7 +35,7 @@ Example code:
 
 This simple demo has an iFrame with 3 links which change the URL of the iFrame. Each link works with WebXR provided the page is hosted on https:
 [**WebXR IFrame Demo!**
-fold-me.glitch.me](https://fold-me.glitch.me/)
+fold-me.adarose.dev](https://fold-me.adarose.dev/)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is really useful for having a web page with a lot of demos on it. Using links with target=&quot;iframe&quot; to switch between them. <a href="https://t.co/35pEqzP2Ko">pic.twitter.com/35pEqzP2Ko</a></p>&mdash; Ada Rose Cannon (@AdaRoseCannon) <a href="https://twitter.com/AdaRoseCannon/status/1347152755530596354?ref_src=twsrc%5Etfw">January 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 

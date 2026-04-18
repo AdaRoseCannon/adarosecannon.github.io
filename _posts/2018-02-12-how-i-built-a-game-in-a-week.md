@@ -7,7 +7,6 @@ author: Ada Rose Cannon
 star: 1
 ---
 
-# How I built a game in a week
 
 I tried to make a game mostly using tools available on the web.
 
@@ -15,7 +14,7 @@ Being so short on time I built it out of off the shelf parts carefully picking m
 
 You can play it right now, in your browser with no download. It is very short, after all I only had a week to make it:
 [**I wake up with Anxiety**
-*Test Game Engine for integrating A-Frame with Twinery. Guide the character around to answer the door.*ada-game-engine.glitch.me](https://ada-game-engine.glitch.me)
+*Test Game Engine for integrating A-Frame with Twinery. Guide the character around to answer the door.*ada-game-engine.adarose.dev](https://ada-game-engine.adarose.dev)
 
 My goal for the game was to build a 3rd person rpg you explore either through interacting with the text or by exploring the 3D environment. Which works on phones and desktop computers.
 
@@ -37,7 +36,7 @@ Fortunately Twinery gives us good JavaScript injection abilities allowing me to 
 
 You can explore full source code by saving the webpage as a .html file and opening it here: [http://twinery.org/2/](http://twinery.org/2/)
 
-![The full source doed through the Twinery Interface ([http://twinery.org/](http://twinery.org/))](https://cdn-images-1.medium.com/max/2014/1*FDsrqQfM0W_tTvAWHUb-Pg.png)*The full source doed through the Twinery Interface ([http://twinery.org/](http://twinery.org/))*
+![The full source doed through the Twinery Interface ([http://twinery.org/](http://twinery.org/))](/images/medium/the-full-source-doed-through-the-twinery-interface.png)*The full source doed through the Twinery Interface ([http://twinery.org/](http://twinery.org/))*
 
 Now we have our scene I wanted to add the 3D abilities. This meant adding A-Frame. The nice thing about A-Frame is that it is controlled through HTML so I can add my scene by using JQuery to add the A-Frame JavaScript library and injecting some HTML to the top of the page.
 
@@ -58,7 +57,7 @@ A-Frame is designed to be used for virtual reality so it provides additional con
 
 The A-Frame element I inject to the top of the page is by default hidden behind the Twinery story elements so I need to use some CSS to show the 3D scene. To do this I make the <tw-story> element transparent and ignore pointer-events. Also I move the <tw-passage> element to the bottom of the screen and let it scroll incase of long messages.
 
-![](https://cdn-images-1.medium.com/max/2000/1*4MRt-l5zZSDAOjrO3ZiKKQ.png)
+![](/images/medium/how-i-built-a-game-in-a-week-1.png)
 
 Twinery has a place to enter CSS to do this I hide the tw-story I place the tw-passage at the bottom of the screen and make the a-scene fill the whole page.
 
@@ -141,7 +140,7 @@ The most amazing feature in my opinion is the lightmap baking. Once i had built 
 
 Look at the lights in the bathroom. The sunlight streaming through the shower curtain and being projected onto the wall!!
 
-![](https://cdn-images-1.medium.com/max/3840/1*LIueed6w5yq_j6o0_AiyTw.png)
+![](/images/medium/how-i-built-a-game-in-a-week-2.png)
 
 It took me a while to figure out but I was able to embed it into A-Frame scene with a few lines of JavaScript, first I add the 3dio library with $.getScript then I use it:
 
@@ -182,9 +181,9 @@ A Navmesh describes the areas of the scene a character can walk on. There are al
 
 To generate the Navmesh for this scene I first downloaded it as an OBJ model from the Archilogic website. Unfortunately it did not download any of the furniture models with it. But it would do.
 
-![](https://cdn-images-1.medium.com/max/3840/1*kEVFZmDd-hp1gDS41_HLLA.png)
+![](/images/medium/how-i-built-a-game-in-a-week-3.png)
 
-![Close up of the settings I used.](https://cdn-images-1.medium.com/max/2000/1*6SwfU1ECCJbCH-u8XsvmJw.png)*Close up of the settings I used.*
+![Close up of the settings I used.](/images/medium/close-up-of-the-settings-i-used.png)*Close up of the settings I used.*
 
 I followed the tutorial and tweaked the settings to generate the Navmesh for the scene which I exported as Gltf.
 
@@ -301,6 +300,6 @@ To get around this I made a small custom server. When a request for the page is 
 
 Here is the link again if you want to play the game:
 [**I wake up with Anxiety**
-*Test Game Engine for integrating A-Frame with Twinery. Guide the character around to answer the door.*ada-game-engine.glitch.me](https://ada-game-engine.glitch.me)
+*Test Game Engine for integrating A-Frame with Twinery. Guide the character around to answer the door.*ada-game-engine.adarose.dev](https://ada-game-engine.adarose.dev)
 
-![For Social Media Preview](https://cdn-images-1.medium.com/max/2014/1*6Rhn4wF_iTnWo-bM-ftORA.png)*For Social Media Preview*
+![For Social Media Preview](/images/medium/for-social-media-preview.png)*For Social Media Preview*

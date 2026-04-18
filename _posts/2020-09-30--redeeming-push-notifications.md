@@ -5,9 +5,10 @@ description: "You know that thing where you go to a web site then before you can
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/a-bad-example-of-requesting-for-push-notifications.png
+inline_hero: true
 ---
 
-# Redeeming Push Notifications
 
 Push notifications have a terrible reputation but if done well can give your users a positive experience.
 
@@ -19,7 +20,7 @@ You know that thing where you go to a web site then before you can do anything y
 
 That’s just one of the many ways it’s easy to upset your users with push notifications, this article will try to detail some ways to do them better.
 
-![A bad example of requesting for push notifications on first load](https://cdn-images-1.medium.com/max/2000/1*wSOCEG0F9uKBubO3WAuuIQ.png)*A bad example of requesting for push notifications on first load*
+![A bad example of requesting for push notifications on first load](/images/medium/a-bad-example-of-requesting-for-push-notifications.png)*A bad example of requesting for push notifications on first load*
 
 ### Failing before you even begin
 
@@ -33,7 +34,7 @@ This makes it clear not only what the push notification request is for but how t
 
 In this example app users can turn on notifications for particular information channels with the “notify me on updates” checkbox:
 
-![](https://cdn-images-1.medium.com/max/2000/1*YfbShSteeWfx0j1jwOPTXw.png)
+![](/images/medium/redeeming-push-notifications-1.png)
 
 If they check the checkbox then we will call pushManager.subscribe() which will prompt the user to enable notifications. The users are more likely to enable push notifications because they chose to be prompted through their own intuition.
 
@@ -43,7 +44,7 @@ In some browsers, app install banners, pop up in a similar way to poorly done no
 
 It is possible to integrate this into your app interface, letting you hide this banner and letting you provide your own install button.
 
-![](https://cdn-images-1.medium.com/max/2160/1*14vwG1AzHleWJVWlp6XlIg.jpeg)
+![](/images/medium/redeeming-push-notifications-2.jpg)
 
 Do this in the [beforeInstallPrompt](https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent) event:
 
@@ -54,7 +55,7 @@ window.addEventListener('beforeinstallprompt', handleInstallPrompt);
 
 You can use this event to integrate an App Install Button into your app. If you get this event then you can show the button which allows the content to be installed. In the below image I put a subtle bubble at the bottom of the homepage for installing it. It’s easy to find and access but won’t intrude on the user’s app experience.
 
-![](https://cdn-images-1.medium.com/max/2000/1*ytCkSjZ4UeRozAdCFW-aQw.png)
+![](/images/medium/redeeming-push-notifications-3.png)
 
 ### The user pays the cost of notification, don’t be expensive.
 
@@ -131,7 +132,7 @@ The image is loaded from the third party site the being loaded from the RSS feed
 
 These examples of action buttons I’ve done here are probably not totally necessary since notifications can be closed by some other means and we can just listen for notification clicks. Better examples would be something like “Open” and “Remind me Later”, defaulting to “Open” if neither button is clicked.
 
-![Detailing the different parts of the notification](https://cdn-images-1.medium.com/max/2000/1*eJlQmqu-wRMJqIwICI3mqw.png)*Detailing the different parts of the notification*
+![Detailing the different parts of the notification](/images/medium/detailing-the-different-parts-of-the-notification.png)*Detailing the different parts of the notification*
 
 ### Combining notifications
 

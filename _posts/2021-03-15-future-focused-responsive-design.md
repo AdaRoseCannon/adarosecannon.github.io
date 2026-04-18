@@ -6,6 +6,8 @@ Embracing the spirit of responsive design and accessibility to…"
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/future-focused-responsive-desi-1.jpg
+inline_hero: true
 ---
 
 
@@ -21,7 +23,7 @@ In 2007–2010, during the start of the mobile phone boom, the web was facing a 
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/0*Ad5yVMoYmLdFn524.jpg" width="1200" height="675" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-1.jpg" width="1200" height="675" alt="undefined">
 
 </figure></div>
 
@@ -33,7 +35,7 @@ You can still find the legacy of m-dot sites in the web today, they aren’t all
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*-1WDhKoudBTeJstAv7pXxQ.png" width="1092" height="846" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-2.png" width="1092" height="846" alt="undefined">
 
 </figure></div>
 
@@ -47,7 +49,7 @@ The issue with this is that it conflates supporting a wide range of mobile-speci
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/0*vMWkwpYc93z_sMot.png" width="705" height="500" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-3.png" width="705" height="500" alt="undefined">
 
 </figure></div>
 
@@ -63,7 +65,7 @@ Folding phones like the Samsung Fold have an extremely narrow screen on the outs
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/0*21GOUKU5PqwUv4Xi" width="1000" height="668" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-4.jpg" width="1000" height="668" alt="undefined">
 
 </figure></div>
 
@@ -75,7 +77,7 @@ Wearable technology is another space where browsers are increasingly found. Smar
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/0*C1COEplyS2zciSBw.jpg" width="1024" height="768" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-5.jpg" width="1024" height="768" alt="undefined">
 
 </figure></div>
 
@@ -89,7 +91,7 @@ It is also important to keep in mind that many AR displays cannot go darker than
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/0*2hYNKrgCI3_xbYuj" width="1000" height="721" alt="undefined">
+<img src="/images/medium/future-focused-responsive-desi-6.jpg" width="1000" height="721" alt="undefined">
 
 </figure></div>
 

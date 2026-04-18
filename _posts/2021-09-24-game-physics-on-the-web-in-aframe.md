@@ -5,7 +5,8 @@ description: "Game Physics on the Web in AFrame
 Adding physics to Virtual Reality and Augmented Reality scenes greatly improves the illusion of…"
 category: Blog
 author: Ada Rose Cannon
-preview: https://cdn-images-1.medium.com/1*mImUo9SUjL84UTe_4Pq0RQ.png
+preview: /images/previews/2021-09-24-game-physics-on-the-web-in-aframe.png
+inline_hero: true
 ---
 
 
@@ -13,10 +14,9 @@ Adding physics to Virtual Reality and Augmented Reality scenes greatly improves 
 
 This guide came together to cover how the physics work in the Augmented Reality Basketball Game:
 [**bARsketball**
-*Shoot some hoops in your own home with Augmented Reality!* xr-basketball.glitch.me](https://xr-basketball.glitch.me)
+*Shoot some hoops in your own home with Augmented Reality!* xr-basketball.adarose.dev](https://xr-basketball.adarose.dev)
 
-
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FGlRe0uY3-l8%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGlRe0uY3-l8&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGlRe0uY3-l8%2Fhqdefault.jpg&key=a19fcc184b9711e1b4764040d3dc5c07&type=text%2Fhtml&schema=youtube" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
 
 The component I use for physics is called `[aframe-physics-system`](https://github.com/n5ro/aframe-physics-system) this works best with ammo.js but needs a bit of configuration to use.
@@ -38,7 +38,7 @@ The debugging is useful for seeing the generated shape of the physics objects. b
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*mImUo9SUjL84UTe_4Pq0RQ.png" width="988" height="651" alt="Two versions of the same virtual basketball hoop, in the latter the normally invisible physics objects are visible">
+<img src="/images/previews/2021-09-24-game-physics-on-the-web-in-aframe.png" width="988" height="651" alt="Two versions of the same virtual basketball hoop, in the latter the normally invisible physics objects are visible">
 <figcaption>Two versions of the same virtual basketball hoop, in the latter the normally invisible physics objects are visible</figcaption>
 </figure></div>
 
@@ -180,9 +180,6 @@ body.setActivationState(4);
 ```
 
 Thank you for reading, I tried to cover all of the pitfalls I fell into when building this simple game. Feel free to remix the project on Glitch to make your own version. Or take a look through the source code of the project on Glitch:
-
-
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fxr-basketball%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dtrue%26path%3Dindex.html%26previewFirst%3Dfalse&dntp=1&display_name=Glitch&url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fxr-basketball&image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&key=a19fcc184b9711e1b4764040d3dc5c07&type=text%2Fhtml&schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
 
 
 [Canonical Link](https://medium.com/samsung-internet-dev/game-physics-on-the-web-in-aframe-628fbf7c32a3)

@@ -5,15 +5,16 @@ description: "Here is a .gif of the final game, click here to play the game. It 
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/a-virtual-ball-being-shot-into-a-virtual-basketbal.gif
+inline_hero: true
 ---
 
-# Making an AR Game with AFrame
 
 Using AFRAME, THREE.js and WebXR to build a game during a 4.5hr live stream.
 
 Here is a .gif of the final game, [click here to play the game](https://ada.is/basketball-demo/). It uses the [WebXR DOM Overlay API](https://github.com/immersive-web/dom-overlays/blob/master/explainer.md), and the [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md). So right now the best way to play it is in Mobile Chrome or [Samsung Internet Beta](https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser.beta&hl=en_GB&gl=US).
 
-![A virtual ball being shot into a virtual basketball hoop.](https://cdn-images-1.medium.com/max/2092/1*uxubAT7y_4V7U0cUCtEiQg.gif)*A virtual ball being shot into a virtual basketball hoop.*
+![A virtual ball being shot into a virtual basketball hoop.](/images/medium/a-virtual-ball-being-shot-into-a-virtual-basketbal.gif)*A virtual ball being shot into a virtual basketball hoop.*
 
 If you want to watch all four-plus hours of the live stream the URLs are here:
 
@@ -81,7 +82,7 @@ Unfortunately the requirement for a secure origin makes things tricky for testin
 
 To test it on my phone there are two options which work well, the most convenient option is to plug in my phone using USB and use Chrome’s remote debugging to forward the port of the http server. Open chrome://inspect in Chrome to access this feature:
 
-![chrome://inspect](https://cdn-images-1.medium.com/max/2000/1*Ss-HR1WZoUBXdahUHCsLzw.png)*chrome://inspect*
+![chrome://inspect](/images/medium/chrome-inspect.png)*chrome://inspect*
 
 Once that is set up you can then open up http://localhost:8080 (replace 8080 with whatever port you are using) on your phone and test like you would on your computer.
 
@@ -165,7 +166,7 @@ We’ll make a 20cm square to use for the guiding reticle:
 ></a-plane>
 ```
 
-![arrow.png](https://cdn-images-1.medium.com/max/2000/1*apen6MoiJxGX4BeNUjNNlw.png)*arrow.png*
+![arrow.png](/images/medium/arrow-png.png)*arrow.png*
 
 Like `<div>` is for HTML for AFrame it is `<a-entity>`. This is a plain element with no additional properties such as 3D models. We will make a new <a-entity> which uses the ar-hit-test component to be positioned by hit-testing.
 
@@ -211,7 +212,7 @@ The hoop will be made of 3 simple shapes, a plane for the back board a torus for
 
 The end result is simple but should be clear what is.
 
-![The basketball hoop created by the code earlier](https://cdn-images-1.medium.com/max/2000/1*5TaP9YnC8N6TLK4lHyLKrA.png)*The basketball hoop created by the code earlier*
+![The basketball hoop created by the code earlier](/images/medium/the-basketball-hoop-created-by-the-code-earlier.png)*The basketball hoop created by the code earlier*
 
 ### Positioning the hoop
 

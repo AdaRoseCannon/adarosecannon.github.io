@@ -5,23 +5,24 @@ description: "In the previous article we built a magazine style page layout of h
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/3-pane-layout.png
+inline_hero: true
 ---
 
-# Enhancing Multi Pane, Single Page Web Apps with Intersection Observer
 
 Using IntersectionObserver and history APIs
 
-In the previous article we built a magazine style page layout of horizontal scrolling panes using only CSS and HTML, [link to the demo](https://pink-paper.glitch.me/#article1). This works really well and is great experience with touch and mouse.
+In the previous article we built a magazine style page layout of horizontal scrolling panes using only CSS and HTML, [link to the demo](https://pink-paper.adarose.dev/#article1). This works really well and is great experience with touch and mouse.
 [**Horizontally Scrolling Panes with clean HTML and modern CSS**
-*This used to be a really hard problem, new CSS tools make it simpler. Here’s how it works…*medium.com](https://medium.com/samsung-internet-dev/horizontally-scrolling-panes-with-clean-html-and-modern-css-7372596932c7)
+*This used to be a really hard problem, new CSS tools make it simpler. Here’s how it works…*medium.com](/blog/2020/03/11/horizontally-scrolling-panes-with-clean-html-and-modern-css/)
 
 There are some improvements we can make by being aware of what the user is currently looking at. The two which are most important are displaying what article is currently in view in the navigation element ( <nav> ) and ensuring that the history is correctly updated so that the back and forward buttons work.
 
-![3 Pane Layout](https://cdn-images-1.medium.com/max/2162/1*3J1hHOWCD9Q_adAndvuOnQ.png)*3 Pane Layout*
+![3 Pane Layout](/images/medium/3-pane-layout.png)*3 Pane Layout*
 
 ### Updating the Nav on Scroll
 
-![Navigation Bar with ‘Article 2’ highlighted.](https://cdn-images-1.medium.com/max/2512/1*bCKlPZ3imXnVKr_Nkm4o5A.png)*Navigation Bar with ‘Article 2’ highlighted.*
+![Navigation Bar with ‘Article 2’ highlighted.](/images/medium/navigation-bar-with-article-2-highlighted.png)*Navigation Bar with ‘Article 2’ highlighted.*
 
 We will need to do this in JavaScript, to be aware of what is currently in view we will use the [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) API this is a JavaScript API which runs a callback when an observed element is scrolled into view in a root element.
 

@@ -5,17 +5,18 @@ description: "I built this demo as a quick experiment when we were working on an
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/the-final-demo.gif
+inline_hero: true
 ---
 
-# Building a menu which reveals on scroll.
 
 I built this demo as a quick experiment when we were working on an Internal Samsung product. One feature I implemented was the menu where items reveal themselves as you scroll down.
 
 This is a perfect use case for IntersectionObserver, the API which tells you when things enter the screen.
 
-You can try [this demo live on glitch](https://slide-on-scroll.glitch.me/), and I have pasted a GIF below:
+You can try [this demo live on glitch](https://slide-on-scroll.adarose.dev/), and I have pasted a GIF below:
 
-![The final demo](https://cdn-images-1.medium.com/max/2000/1*4FDEnrezCUGy6kEX9UJDnQ.gif)*The final demo*
+![The final demo](/images/medium/the-final-demo.gif)*The final demo*
 
 ### Writing the Demo
 
@@ -132,13 +133,13 @@ Thank you [Ashley Bischoff (@handcoding](https://twitter.com/handcoding)) for br
       });
     }
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fslide-on-scroll%3FpreviewSize%3D100%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dscript.js%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fslide-on-scroll&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
-![](https://cdn-images-1.medium.com/max/2000/1*7qJTWPouMUzkKUYir50J2g.gif)
+![](/images/medium/building-a-menu-which-reveals--1.gif)
 
-If you want another IntersectionObserver example I wrote about using it for tracking what page the user is reading in [my previous article](https://medium.com/samsung-internet-dev/enhancing-multi-pane-single-page-web-apps-with-intersection-observer-5929e2c0c6b):
+If you want another IntersectionObserver example I wrote about using it for tracking what page the user is reading in [my previous article](/blog/2020/03/17/enhancing-multi-pane-single-page-web-apps-with-intersection-observer/):
 [**Using Intersection Observer for updating page navigation and history.**
-*Using progressive enhancement, to add features to HTML and CSS only layouts.*medium.com](https://medium.com/samsung-internet-dev/enhancing-multi-pane-single-page-web-apps-with-intersection-observer-5929e2c0c6b)
+*Using progressive enhancement, to add features to HTML and CSS only layouts.*medium.com](/blog/2020/03/17/enhancing-multi-pane-single-page-web-apps-with-intersection-observer/)
 
 For more Web Developer articles from the team follow this medium publication or [@SamsungInternet on twitter](http://twitter.com/samsunginternet).
 

@@ -5,11 +5,11 @@ description: "Audio is a fundamental way of adding important theming and immersi
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/toggle-button.png
+inline_hero: true
 ---
 
-# Audio on the Web, for Games and VR!
 
-Audio on the Web, for Games and VR!
 
 ### Tips, tricks and getting started.
 
@@ -49,7 +49,7 @@ From a user perspective people are pretty mixed about whether they want auto-pla
 
 On top of that some browsers such as Chrome will prevent audio from autoplaying at all until a user event triggers the audio playing. The best way to work with browsers which block autoplaying audio is to have an audio toggle switch which can be built using HTML, CSS and a little JavaScript:
 
-![Toggle Button](https://cdn-images-1.medium.com/max/2000/1*8U1wq3VFKBHVBAdSGTifmg.png)*Toggle Button*
+![Toggle Button](/images/medium/toggle-button.png)*Toggle Button*
 
 The HTML is a checkbox and a label:
 

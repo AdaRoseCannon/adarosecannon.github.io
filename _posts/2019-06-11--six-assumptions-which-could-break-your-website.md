@@ -5,6 +5,8 @@ description: "A mistake consistently made by some of the biggest websites shows 
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/samsung-dex.jpg
+inline_hero: true
 ---
 
 ### A mistake consistently made by some of the biggest websites shows they are thinking about responsive web design incorrectly.
@@ -47,13 +49,13 @@ I have seen situations where each device which breaks the layout becomes a new e
 
 ### “Window size on mobile devices doesn’t change.”
 
-![Samsung DeX](https://cdn-images-1.medium.com/max/2800/0*no_TDgqEm9RlY9Dl.jpg)*Samsung DeX*
+![Samsung DeX](/images/medium/samsung-dex.jpg)*Samsung DeX*
 
 It’s not just desktop users which change the window size though. A couple of years ago we released Samsung DeX to let phones be used as desktop computers. When the phone is attached to a computer monitor it behaves as a Desktop computer, our web browser Samsung Internet would seamlessly continue where the user left off on the phone.
 
 This capability was only possible because of responsive design. Unfortunately some sites which had mobile only pages on a separate URL gave a poor user experience when they were resized to become a full desktop web site.
 
-![Samsung Galaxy Fold](https://cdn-images-1.medium.com/max/2000/0*GT6qIBjKPumukmRv.png)*Samsung Galaxy Fold*
+![Samsung Galaxy Fold](/images/medium/samsung-galaxy-fold.png)*Samsung Galaxy Fold*
 
 We still see these issues today, recently with the release of the Galaxy Fold series, the folding phones.
 

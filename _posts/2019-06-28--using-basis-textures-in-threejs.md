@@ -5,9 +5,10 @@ description: "You can have 6-8x more images in your WebGL scene by using Basis U
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/using-basis-textures-in-threej-1.png
+inline_hero: true
 ---
 
-# Using Basis Textures in Three.js
 
 Basis Universal is a new image format designed to produce very small file sizes and to be decoded on graphics cards instead of on the CPU, making it very fast to decode and perfect for WebGL scenes. Support for this is very new and requires the latest THREE.js 106.
 
@@ -17,7 +18,7 @@ As a demonstration of how efficient Basis is, I bought an 8000×4000px¹ image t
 
 For the example below the image gets shrunk from 15MB as a PNG to 0.6MB as a Basis file. Letting me have this huge beautiful skybox with only a small very quick file download and without sacrificing all of my precious texture space leaving my lots of room for other game textures.
 
-![](https://cdn-images-1.medium.com/max/4794/1*HF1WfS2x0mTGiKZtRi9-qw.png)
+![](/images/medium/using-basis-textures-in-threej-1.png)
 
 It only took a few minutes to set up Basis but it is really worth it.
 

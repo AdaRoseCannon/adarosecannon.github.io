@@ -5,9 +5,10 @@ description: "(If you are already familiar with HSL jump to the end for some fun
 categories: Blog
 author: Ada Rose Cannon
 star: 0
+preview: /images/medium/hsl-280deg-80-80.png
+inline_hero: true
 ---
 
-# Human Friendly Colours using HSL
 
 (If you are already familiar with HSL jump to the end for some fun tips.)
 
@@ -37,7 +38,7 @@ This is HSL. In CSS it looks like this:
 
     hsl(280deg, 80%, 80%)
 
-![hsl(280deg, 80%, 80%)](https://cdn-images-1.medium.com/max/2000/1*3uIcQQhDMwMBeA9c56Pqrw.png)*hsl(280deg, 80%, 80%)*
+![hsl(280deg, 80%, 80%)](/images/medium/hsl-280deg-80-80.png)*hsl(280deg, 80%, 80%)*
 
 * H is hue, the colour it is described by an Angle between 0 and 360 degrees. Where 0 degrees is red, 120 degress is green, 240 degrees is blue. It is written like “[Number]deg”
 
@@ -51,7 +52,7 @@ HSLA is similar, with an additional value between 0 and 1 for how transparent th
 
 Brandon Mathis’s great HSL Color picker is a fun way to play with HSL colours: [http://hslpicker.com/](http://hslpicker.com/) (Thanks [Matthew Graybosch](undefined) for the tip!!)
 
-![](https://cdn-images-1.medium.com/max/2000/1*Q255aGoO2-MCgbesFtXx5Q.png)
+![](/images/medium/human-friendly-colours-using-h-1.png)
 
 ## Where it is handy
 
@@ -63,11 +64,11 @@ e.g. A gradient where instead of going from light to dark it goes from one colou
       background: linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%))
     }
 
-![linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%))](https://cdn-images-1.medium.com/max/2000/1*W6s6zl_IQKuCf1_jOE9D0A.png)*linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%))*
+![linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%))](/images/medium/linear-gradient-hsl-220deg-80-80-hsl-250deg-80-80.png)*linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%))*
 
 It is great for having consistent colours that relate to eachother. In the example The type has the same hue as the body but just a very pale version.
 
-![](https://cdn-images-1.medium.com/max/2000/1*jRAQYyvNUtyQN70BV3jvrA.png)
+![](/images/medium/human-friendly-colours-using-h-2.png)
 
     div {
       background-color: hsl(200deg, 100%, 32%);
@@ -80,7 +81,7 @@ These two tips were taken from @UX_Grant on twitter’s amazing twitter moment f
 
 ### Generating colors
 
-![Increasing the Hue by 10 degrees per box.](https://cdn-images-1.medium.com/max/2000/1*DG-03t17jdGfeKb9kdmCzQ.png)*Increasing the Hue by 10 degrees per box.*
+![Increasing the Hue by 10 degrees per box.](/images/medium/increasing-the-hue-by-10-degrees-per-box.png)*Increasing the Hue by 10 degrees per box.*
 
 A nice property is that you can get colours of many hues which have a similar feel because they share the same saturation and lightness.
 
@@ -92,13 +93,13 @@ This has a nice rainbow effect.
 
 By setting the hue to a random angle between 0 and 360 degrees we will get a random selection of colors, this can be useful but sometimes you get the same colours close together which does not look so good.
 
-![Random Hues](https://cdn-images-1.medium.com/max/2000/1*aiqgub24aaVUrWp2xQXg3w.png)*Random Hues*
+![Random Hues](/images/medium/random-hues.png)*Random Hues*
 
 A neat maths trick allows us to **generate random appearing colours** with fewer collisions.
 
 Multiples of the golden angle (~137.6 degrees) has a nice property of landing on visually distinct points on the colour wheel where colours seldom colide.
 
-![Increasing the Hue by 137.5 degrees per box](https://cdn-images-1.medium.com/max/2000/1*jRLlGQTfyaNZ7i8UAVaMAA.png)*Increasing the Hue by 137.5 degrees per box*
+![Increasing the Hue by 137.5 degrees per box](/images/medium/increasing-the-hue-by-137-5-degrees-per-box.png)*Increasing the Hue by 137.5 degrees per box*
 
     function (el, i) {
       el.style.background = 'hsl(' + 137.50 * i + 'deg, 80%, 80%)';
@@ -106,7 +107,7 @@ Multiples of the golden angle (~137.6 degrees) has a nice property of landing on
 
 Of course this property is maintained if you shift it round the colour wheel:
 
-![Same as before but the hue is roated by an additional 120 degrees.](https://cdn-images-1.medium.com/max/2000/1*t83SE2vS2wCcVKvvmlDvxg.png)*Same as before but the hue is roated by an additional 120 degrees.*
+![Same as before but the hue is roated by an additional 120 degrees.](/images/medium/same-as-before-but-the-hue-is-roated-by-an-additio.png)*Same as before but the hue is roated by an additional 120 degrees.*
 
     'hsl(' + 120 + (137.50 * i) + 'deg, 80%, 80%)'
 

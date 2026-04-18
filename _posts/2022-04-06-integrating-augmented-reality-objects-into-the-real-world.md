@@ -5,6 +5,7 @@ description: "Using the WebXR Light Estimation API we can make 3D objects appear
 category: Blog
 author: Ada Rose Cannon
 preview: https://ada.is/images/lightandshadow.jpg
+inline_hero: true
 ---
 
 Using the WebXR Light Estimation API we can make 3D objects appear to be physical parts of our real environment by having real lights affect virtual objects and virtual objects casting shadows onto real surfaces.
@@ -13,7 +14,7 @@ This article will explore how to set it up in AFrame to make your own AR look re
 
 ![Two screenshots side by side one with lighting estimation turned off and one with it turned on](https://ada.is/images/lightandshadow.jpg)
 
-Demo URL: [https://aframe-light-and-shadow.glitch.me/](https://aframe-light-and-shadow.glitch.me/)
+Demo URL: [https://aframe-light-and-shadow.adarose.dev/](https://aframe-light-and-shadow.adarose.dev/)
 
 Starting from the standard [AFrame Boilerplate](https://aframe.io/docs/1.3.0/introduction/):
 

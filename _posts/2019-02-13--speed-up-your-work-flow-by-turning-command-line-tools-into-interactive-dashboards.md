@@ -5,9 +5,10 @@ description: "Ever feel like you live in a terminal? This guide is to show how y
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/my-tmux-configuration-on-chromeos.png
+inline_hero: true
 ---
 
-# Speed up your work flow by turning command line tools into interactive dashboards
 
 Ever feel like you live in a terminal?
 
@@ -17,7 +18,7 @@ I ‘m talking about the computer terminal, to run command line applications. Wh
 
 If you are a terminal power user you probably run multiple windows or a terminal multiplexer like tmux (pictured) to compartmentalise your work into different sessions in each one you will probably run the same few commands, one to view the state of something and others to modify it.
 
-![My TMUX configuration on ChromeOS.](https://cdn-images-1.medium.com/max/4000/0*1t4HX79oa6-UpZRX)*My TMUX configuration on ChromeOS.*
+![My TMUX configuration on ChromeOS.](/images/medium/my-tmux-configuration-on-chromeos.png)*My TMUX configuration on ChromeOS.*
 
 One of these tools I keep in it’s own session is a [command line to-do-list tool](https://github.com/gammons/ultralist) to keep track of what I am currently working on. It’s really handy and I can sync it across my computers, but it can be a little cumbersome for quick usage. I have to do a lot of typing to make use of it. E.g.
 

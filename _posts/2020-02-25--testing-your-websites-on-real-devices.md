@@ -5,11 +5,11 @@ description: "As desktop browser developer tools improve continuously, the respo
 category: Blog
 author: Ada Rose Cannon
 star: 0
+preview: /images/medium/testing-your-websites-on-real--1.jpg
+inline_hero: true
 ---
 
-# Testing your websites on real devices
 
-Testing your websites on real devices
 
 ### A guide to remote debugging with Samsung Internet
 
@@ -68,7 +68,7 @@ This is a little bit involved, tap on Build Number until the hidden Developer Mo
 
 Insert one end of the cable in to the device and the other end into the laptop, the phone will ask if you want to allow debugging.
 
-![](https://cdn-images-1.medium.com/max/2160/1*Vi3n5DcwNsZGWfFlnsFr0Q.jpeg)
+![](/images/medium/testing-your-websites-on-real--1.jpg)
 
 If your phone doesn’t present this message you may have to check a few things there are some things you can check here:
 [**Chrome DevTools Devices does not detect device when plugged in**
@@ -82,21 +82,21 @@ On the phone open Samsung Internet (also works with Google Chrome) to the page y
 
 On the desktop, open a Chromium browser (such as Chrome or Edge) and navigate to chrome://inspect. You should see a list of available web pages to debug. Press *inspect* on the page you want to debug.
 
-![](https://cdn-images-1.medium.com/max/2000/1*GFRWjKo1kLdtk0aB6zl8bw.png)
+![](/images/medium/testing-your-websites-on-real--2.png)
 
 This will open an inspector ready to debug. It will give you a live screen view of the device as you are debugging you have a terminal, full source code navigation and the ability to use break points. All of the features you would expect from developer tooling.
 
-![DevTools running on a mobile phone.](https://cdn-images-1.medium.com/max/2532/1*i4G0BbzrOeUXs6XAXsGtPA.png)*DevTools running on a mobile phone.*
+![DevTools running on a mobile phone.](/images/medium/devtools-running-on-a-mobile-phone.png)*DevTools running on a mobile phone.*
 
 ### Port forwarding
 
 If you are running your product locally on your machine and want to share it to your device you can turn on port forwarding to forward the local http server to your device. First press the “Port forwarding…” button
 
-![](https://cdn-images-1.medium.com/max/2000/1*eSWROsCEPpkxgIHaXbc-cQ.png)
+![](/images/medium/testing-your-websites-on-real--3.png)
 
 then enter your local server details, and check “**Enable port forwarding”**
 
-![Port forwarding settings.](https://cdn-images-1.medium.com/max/2000/1*9gFIUmAMEPIN_3FfR9Y6aw.png)*Port forwarding settings.*
+![Port forwarding settings.](/images/medium/port-forwarding-settings.png)*Port forwarding settings.*
 
 The page is available on the mobile device at http://127.0.0.1:8080 replace 8080 with what ever port you are forwarding.
 

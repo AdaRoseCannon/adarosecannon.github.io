@@ -5,11 +5,12 @@ description: "These tools are not ones I use everyday but they have got me out s
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/a-screen-shot-of-the-inspector.png
+inline_hero: true
 ---
 
 # My Three Fave Tools in my Web Development Swiss Army Knife
 
-Three Powerful Tools in my Web Development Swiss Army Knife
 
 ### I’ve been doing this for a long time so here are some tools you may not have seen before.
 
@@ -57,7 +58,7 @@ If you want to inspect a device which is not on your network, or the port you ar
 [**weinre - Home**
 *Edit description* people.apache.org](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html)
 
-![A screen shot of the inspector](https://cdn-images-1.medium.com/max/2000/1*GjzndClI1Ds7hryyPuVxUw.png)*A screen shot of the inspector*
+![A screen shot of the inspector](/images/medium/a-screen-shot-of-the-inspector.png)*A screen shot of the inspector*
 
 ### **3. Charles**
 

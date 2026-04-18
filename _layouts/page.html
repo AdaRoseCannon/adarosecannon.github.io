@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
 {% include head.html %}
 
 <body>
 	<header>
-		<nav class="isolate">
-			<a rel="me" href="https://twitter.com/AdaRoseCannon" class="grain icon twitter" aria-label="twitter"></a>
-			<a rel="me" href="https://github.com/adarosecannon" class="grain icon github" aria-label="github"></a>
-      <a rel="me" href="https://twitch.tv/AdaRoseCannon" class="grain icon twitch" aria-label="Twitch"></a>
-			<a rel="me" href="https://uk.linkedin.com/in/adarose" class="grain icon linkedin" aria-label="linkedIn"></a>
-			<a rel="me" href="https://glitch.com/@adarosecannon" class="grain icon glitch" aria-label="glitch"></a>
-      <a rel="me" href="https://mastodon.social/@ada" class="grain icon mastodon" aria-label="Mastodon"></a>
-<!-- 			<a href="https://lanyrd.com/profile/lady_ada_king/"><span class="icon lanyrd">lanyrd</span></a> -->
-<!-- 			<a href="/about/"><span class="profile-pic" /></span></a> -->
-    </nav>
-    <h1 class="hero grain isolate"><a href="{{ site.pageurl }}">{{ site.name }}</a></h1>
-    <p class="hero-subtitle">{{ site.description }}</p>
+		<nav>
+			<!-- Icons from https://edent.github.io/SuperTinyIcons/ -->
+			<a rel="me" href="https://github.com/adarosecannon" aria-label="GitHub">
+				<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-label='GitHub' role='img' viewBox='0 0 512 512'%3E%3Cpath d='m0 0H512V512H0' fill='%23181717'/%3E%3Cpath fill='%23fff' d='M335 499c-13 0-16-6-16-12l1-70c0-24-8-40-18-48 57-6 117-28 117-126 0-28-10-51-26-69 3-6 11-32-3-67 0 0-21-7-70 26-42-12-86-12-128 0-49-33-70-26-70-26-14 35-6 61-3 67-16 18-26 41-26 69 0 98 59 120 116 126-7 7-14 18-16 35-15 6-52 17-74-22 0 0-14-24-40-26 0 0-25 0-1 16 0 0 16 7 28 37 0 0 15 50 86 34l1 44c0 6-3 12-16 12-14 0-12 17-12 17H347s2-17-12-17Z'/%3E%3C/svg%3E" alt="GitHub" width="40" height="40">
+			</a>
+			<a rel="me" href="https://uk.linkedin.com/in/adarose" aria-label="LinkedIn">
+				<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-label='LinkedIn' role='img' viewBox='0 0 512 512' fill='%23fff'%3E%3Cpath d='m0 0H512V512H0' fill='%230077b5'/%3E%3Ccircle cx='142' cy='138' r='37'/%3E%3Cpath stroke='%23fff' stroke-width='66' d='M244 194v198M142 194v198'/%3E%3Cpath d='M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32'/%3E%3C/svg%3E" alt="LinkedIn" width="40" height="40">
+			</a>
+			<a rel="me" href="https://mastodon.social/@ada" aria-label="Mastodon">
+				<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-label='Mastodon' role='img' viewBox='0 0 512 512' fill='%23fff'%3E%3Cpath d='m0 0H512V512H0'/%3E%3ClinearGradient id='a' y2='1'%3E%3Cstop offset='0' stop-color='%236364ff'/%3E%3Cstop offset='1' stop-color='%23563acc'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23a)' d='M317 408q-55 32-138 9-57-23-70-69-6-21-9-53-9-116 3-147 19-48 75-58 64-10 162 0 53 9 72 58 6 15 3 116-5 67-72 80-80 13-149-2-1 67 123 39'/%3E%3Cpath d='M360 202q0-51-43-60-35-5-51 21l-9 15-9-15q-18-26-51-21-43 9-44 60v91h36V205q0-31 30-28 20 3 20 34v47h36V211q0-31 20-34 28-3 29 23v93h36'/%3E%3C/svg%3E" alt="Mastodon" width="40" height="40">
+			</a>
+			<a rel="me" href="https://adarose.dev" aria-label="Bluesky">
+				<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-label='Bluesky' role='img' viewBox='0 0 512 512'%3E%3Cpath d='m0 0H512V512H0' fill='%23fff'/%3E%3Cpath d='M159 126c-28-22-74-38-74 14 0 11 6 88 9 101 13 43 57 54 97 48-69 11-87 50-49 89 72 75 104-18 112-42l2-5 2 5c8 24 40 117 112 42 38-39 20-78-49-89 40 6 84-5 97-48 3-13 9-90 9-101 0-52-46-36-74-14-39 29-82 89-97 121-15-32-58-92-97-121Z' fill='%231185fe'/%3E%3C/svg%3E" alt="Bluesky" width="40" height="40">
+			</a>
+			<a href="https://ada.is/feed" aria-label="RSS Feed">
+				<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-label='RSS' role='img' viewBox='0 0 512 512'%3E%3Cpath d='m0 0H512V512H0' fill='%23f80'/%3E%3Cpath fill='%23fff' d='m109 271A132 133 0 01241 403h60A192 193 0 00109 211v-54A246 247 0 01355 403h60A306 307 0 00109 97m35 235a35 35 0 102 0'/%3E%3C/svg%3E" alt="RSS" width="40" height="40">
+			</a>
+		</nav>
+		<h1 class="hero grain isolate"><a href="{{ site.pageurl }}">{{ site.name }}</a></h1>
+		<p class="hero-subtitle">{{ site.description }}</p>
 	</header>
-  <main>
-    {{ content }}
-  </main>
-	{% include scripts.html %}
-  <img src="https://adalytics-live.glitch.me/counter.png?color=black&fallback=https%3A%2F%2Fada.is{{ page.url | cgi_escape }}" alt="" aria-hidden="true" width="50px" height="15px" style="opacity: 0.5; margin-top: 1em;">
+	{{ content }}
+	<footer>
+		&copy; {{ 'now' | date: '%Y' }}, Ada Rose Cannon
+	</footer>
 </body>
 
 </html>

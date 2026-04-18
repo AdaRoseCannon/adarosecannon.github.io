@@ -5,11 +5,11 @@ description: "Edit: This has now landed in Samsung Internet stable. You can down
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/enter-ar-message.jpg
+inline_hero: true
 ---
 
-# AR in the Web, now in Samsung Internet Stable
 
-AR in the Web, now in Samsung Internet Stable
 
 ### Samsung Internet 12.1 Beta adds support for Augmented Reality — here’s how to try it out today
 
@@ -25,13 +25,13 @@ You can try AR out for yourself using the XR Dinosaurs demo to place a dinosaur 
 
 **Step 2.** Go to [https://xrdinosaurs.com](https://xrdinosaurs.com) and choose Augmented Reality
 
-<img src="https://cdn-images-1.medium.com/max/2160/1*D-NA5joGoArlOnzhW_7_ww.jpeg" alt="Enter AR Message" width="480px" />
+<img src="/images/medium/enter-ar-message.jpg" alt="Enter AR Message" width="480px" />
 
 When you run this demo you will see this message, this means that the demo is able to place the virtual objects onto your environment but it cannot actually record the camera feed so you don’t have to worry about it recording what you are doing.
 
 **Step 3.** Select a place on the floor to place the dinosaur
 
-![XR Dinosaurs was built by [Brandon Jones (Tojiro)](https://twitter.com/tojiro) using THREE.js.](https://cdn-images-1.medium.com/max/2000/1*uKvPUe6WKQQ0JtIejnXNvw.gif)*XR Dinosaurs was built by [Brandon Jones (Tojiro)](https://twitter.com/tojiro) using THREE.js.*
+![XR Dinosaurs was built by [Brandon Jones (Tojiro)](https://twitter.com/tojiro) using THREE.js.](/images/medium/xr-dinosaurs-was-built-by-brandon-jones-tojiro.gif)*XR Dinosaurs was built by [Brandon Jones (Tojiro)](https://twitter.com/tojiro) using THREE.js.*
 
 ### Making your own AR Web Sites
 
@@ -39,13 +39,13 @@ This method of AR uses the Augmented Reality features of the [WebXR Device API](
 
 Here is a sample project you can use to help you get started:
 [**A-Frame Hit Test Demo**
-*Remix to make your own augmented reality scenes.* hit-test.glitch.me](https://hit-test.glitch.me/?1)
+*Remix to make your own augmented reality scenes.* hit-test.adarose.dev](https://hit-test.adarose.dev/?1)
 
-![Snapshot of the scene](https://cdn-images-1.medium.com/max/2000/0*sifSVby1YajqDB_3)*Snapshot of the scene*
+![Snapshot of the scene](/images/medium/snapshot-of-the-scene.png)*Snapshot of the scene*
 
 To make your own press the fish button then the remix on glitch button:
 
-![How to remix the app](https://cdn-images-1.medium.com/max/2000/1*9A0ZSl7pU-wVptkXThl1fg.png)*How to remix the app*
+![How to remix the app](/images/medium/how-to-remix-the-app.png)*How to remix the app*
 
 It shows a 3D object and some basic shapes around and lets the user reposition them as they need. You can then add interactivity or other models and 3D shapes to the scene.
 

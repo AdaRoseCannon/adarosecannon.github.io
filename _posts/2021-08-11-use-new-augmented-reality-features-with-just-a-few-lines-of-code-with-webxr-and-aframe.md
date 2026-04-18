@@ -5,6 +5,8 @@ description: "Use new Augmented Reality features with just a few lines of code w
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/use-new-augmented-reality-feat-1.png
+inline_hero: true
 ---
 
 
@@ -38,7 +40,7 @@ To use it add `background` to your `<a-scene>` element and your scene will immed
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*095m72uukcyOwqjlX1ClXg.png" width="411" height="800" alt="undefined">
+<img src="/images/medium/use-new-augmented-reality-feat-1.png" width="411" height="800" alt="undefined">
 
 </figure></div>
 
@@ -102,7 +104,7 @@ Use the link below to remix you own version which you can build on to make your 
 
 
 <div><figure>
-<img src="https://cdn-images-1.medium.com/max/3552/1*PlmNuZCqqkdWmj8hOiaaAw.png" width="843" height="458" alt="undefined">
+<img src="/images/medium/use-new-augmented-reality-feat-2.png" width="843" height="458" alt="undefined">
 
 </figure></div>
 
@@ -116,6 +118,6 @@ To see a more fully fledged AR project check out the source code for my *RollAR-
 
 *Source Code:* 
 [**GitHub - AdaRoseCannon/rollAR-coaster: AR Roller Coaster**
-*Permalink Failed to load latest commit information. This demo lets you build your own Roller Coaster in AR using the…* github.com](https://github.com/AdaRoseCannon/rollAR-coaster)
+*This demo lets you build your own Roller Coaster in AR using the…* github.com](https://github.com/AdaRoseCannon/rollAR-coaster)
 
 [Canonical Link](https://medium.com/samsung-internet-dev/use-new-augmented-reality-features-with-just-a-few-lines-of-code-with-webxr-and-aframe-c6f3f5789345)

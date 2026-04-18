@@ -5,13 +5,14 @@ description: "I wrote this article whilst building a demo website which uses bot
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/illustration-of-how-processing-power-is-split-up-o.png
+inline_hero: true
 ---
 
-# Web Workers in the Real World
 
 Comlink simplifies using web workers and makes them safer to use but beware these hidden costs.
 
-I wrote this article whilst building [a demo website](https://mind-map.glitch.me/1pqetyp3nx7/) which uses both expensive physics and an expensive SVG filter. It was important that it felt really tactile on mobile devices, so it had to run very smoothly.
+I wrote this article whilst building [a demo website](https://mind-map.adarose.dev/1pqetyp3nx7/) which uses both expensive physics and an expensive SVG filter. It was important that it felt really tactile on mobile devices, so it had to run very smoothly.
 
 Running both the physics and the SVG filter in the same thread was too expensive so I moved the physics into a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) to take advantage of the available resources.
 
@@ -106,14 +107,10 @@ It will download the JavaScript file and run it in a different thread, this allo
 
 When it is done in the main thread the rest of the page is blocked, when it is done in the worker the page can keep running in the background until the calculation is completed.
 
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/a-slice-of-pi?path=static/index.html&previewSize=100"
-    alt="a-slice-of-pi on Glitch"
+<iframe
+    src="https://a-slice-of-pi.adarose.dev"
     style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+</iframe>
 
 To display the results of the worker the final Pi calculation has to be sent in a message to the main thread. The main thread then just handles displaying the number. The worker cannot display the number itself because it cannot access the variables of the main script or the document itself all it can do is pass back the final result of the calculations.
 
@@ -142,7 +139,7 @@ Whilst in traditional desktop/server computers each processor core is almost ide
 
 The Exynos 9820 in my phone as illustrated below has 2 big cores, 2 medium cores and 4 little cores.
 
-![Illustration of how processing power is split up on a mobile chipset.](https://cdn-images-1.medium.com/max/2068/1*-xS66iiLmGoICMl1HcO1tQ.png)*Illustration of how processing power is split up on a mobile chipset.*
+![Illustration of how processing power is split up on a mobile chipset.](/images/medium/illustration-of-how-processing-power-is-split-up-o.png)*Illustration of how processing power is split up on a mobile chipset.*
 > [**Exynos 9 Series 9820 Processor: Specs, Features | Samsung Exynos**
 *Samsung Exynos 9 Series 9820 is an LTE modem integrated octa-core mobile processor with tri-cluster that features 4th…*www.samsung.com](https://www.samsung.com/semiconductor/minisite/exynos/products/mobileprocessor/exynos-9-series-9820/)
 
@@ -276,7 +273,7 @@ You may get a small improvement in your frame rate because more work is taken of
 
 ### For Example…
 
-[I wrote a demo](https://mind-map.glitch.me/) in which Verlet integration is combined with SVGs to create wobbly interfaces.
+[I wrote a demo](https://mind-map.adarose.dev/) in which Verlet integration is combined with SVGs to create wobbly interfaces.
 
 Verlet Integration is a simple Physics model based on points and constraints. Each frame I would need to do a new physics calculation for the moving parts.
 

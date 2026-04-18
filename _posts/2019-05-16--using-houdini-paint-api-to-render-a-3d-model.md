@@ -5,11 +5,12 @@ description: "The demo in this article show’s how to uses the Houdini paint AP
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/export-all-interface-in-clara-io.png
+inline_hero: true
 ---
 
 # Using the CSS Houdini Paint API to show a 3D Model!
 
-Using Houdini Paint API to Render a 3D Model
 >> That’s f*cked up  
 >> — Daniel Appelquist, co-chair of the W3C Technical Architecture Group
 
@@ -74,7 +75,7 @@ This was tricky to get right and took some trial and error with different 3D mod
 
 * Export the scene as a Three.js JSON
 
-![Export All Interface in Clara.io](https://cdn-images-1.medium.com/max/3438/1*J7ledLdxP1vlSN6SlotP4g.png)*Export All Interface in Clara.io*
+![Export All Interface in Clara.io](/images/medium/export-all-interface-in-clara-io.png)*Export All Interface in Clara.io*
 
 * I then imported this JSON file using the Rollup json loader.
 

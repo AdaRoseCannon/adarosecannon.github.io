@@ -1,21 +1,22 @@
 ---
 layout: post
 title: "Generating a water effect, part 1. SVG and Canvas"
-description: "This is a 3 part breakdown of how this water effect works, you can view the finished demo here: https://a-toon-ocean.glitch.me/"
+description: "This is a 3 part breakdown of how this water effect works, you can view the finished demo here: https://a-toon-ocean.adarose.dev/"
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/screenshot-of-the-finished-demo.png
+inline_hero: true
 ---
 
-# Generating a water effect, part 1. SVG and Canvas
 
-This is a 3 part breakdown of how this water effect works, you can view the finished demo here: https://a-toon-ocean.glitch.me/
+This is a 3 part breakdown of how this water effect works, you can view the finished demo here: https://a-toon-ocean.adarose.dev/
 
 Source code for this first part is at the bottom of the article.
 
 It was partly inspired by the water effects in Zelda Wind Waker.
 
-![Screenshot of the finished demo.](https://cdn-images-1.medium.com/max/2402/1*wbjAjQdyK6C405uZYQOOPw.png)*Screenshot of the finished demo.*
+![Screenshot of the finished demo.](/images/medium/screenshot-of-the-finished-demo.png)*Screenshot of the finished demo.*
 
 The first thing we need to do is make a good texture for the water. This is a picture to make these lines on the surface of the water. If you look carefully you’ll see it is a repeating pattern, but the picture is carefully designed to hide that fact and there are tricks we can use later on to hide it further.
 
@@ -33,13 +34,13 @@ The finished texture should
 
 There is a type of diagram known as a [Voronoi Diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) it describes areas which are closest to a particular point.
 
-![Voronoi diagram from Wikipedia](https://cdn-images-1.medium.com/max/2000/0*liPZ-uSuTeRzFNGG.png)*Voronoi diagram from Wikipedia*
+![Voronoi diagram from Wikipedia](/images/medium/voronoi-diagram-from-wikipedia.png)*Voronoi diagram from Wikipedia*
 
 This is often used for working out catchment areas for public utilities like schools and doctors by finding the area closest to that point.
 
 It generates nice looking cells which seemed like they could be a good starting point.
 
-I used [this library](https://github.com/gorhill/Javascript-Voronoi/) to do the calculations. For this project I combined it with some helper functions from some of the demos in the source code and put them into an [ES6 module](https://caustic-texture.glitch.me/voronoi.js).
+I used [this library](https://github.com/gorhill/Javascript-Voronoi/) to do the calculations. For this project I combined it with some helper functions from some of the demos in the source code and put them into an [ES6 module](https://caustic-texture.adarose.dev/voronoi.js).
 
 I tested it out by running it on 15 random points.
 
@@ -108,7 +109,7 @@ This just makes a white SVG rectangle we now want to draw our cells, each cell w
 
 The end result shows it is working as expected:
 
-![Our rendered SVG, I have added circles at each site location.](https://cdn-images-1.medium.com/max/2000/1*Mw2A38EovHSHY5bd7jOrSQ.png)*Our rendered SVG, I have added circles at each site location.*
+![Our rendered SVG, I have added circles at each site location.](/images/medium/our-rendered-svg-i-have-added-circles-at-each-site.png)*Our rendered SVG, I have added circles at each site location.*
 
 Unfortunately this does not tile. To make it tile we can duplicate all the points on the 8 adjacent squares. That’s 8 times above, below, left, right and the diagonals, before we compute the cells.
 
@@ -126,7 +127,7 @@ Most of the polygons will be rendered off the edges of the SVGs viewBox but they
       }
     }
 
-![Now it tiles.](https://cdn-images-1.medium.com/max/2000/1*enQrreTGp2Iz-0lCE4UdYg.png)*Now it tiles.*
+![Now it tiles.](/images/medium/now-it-tiles.png)*Now it tiles.*
 
 Next we will increase the spacing between each polygon by moving the vertices of each polygon a certain amount towards the center. First we will write a linear interpolation (lerp) function which returns a point that lies on a line between two other points.
 
@@ -143,7 +144,7 @@ Then we will apply this to move each vertex a little bit between it’s current 
       .map(vertex => lerp(cell.site, vertex, 0.9)) // this line is new
       .map(vertex => `${vertex.x},${vertex.y}`).join(' '));
 
-![](https://cdn-images-1.medium.com/max/2000/1*3Em7Ct7BZR8KX4WNUO9adg.png)
+![](/images/medium/generating-a-water-effect-part-1.png)
 
 This looks okay, but some lines are too thick and some are too thin. So instead of doing a constant lerp we will make it try to be a consistent distance.
 
@@ -159,7 +160,7 @@ This looks okay, but some lines are too thick and some are too thin. So instead 
 
 This new interpolation looks a little more even and aesthetically pleasing.
 
-![Lerp applied](https://cdn-images-1.medium.com/max/2000/1*UtmwRcKCF7c7nSA1mSUJzA.png)*Lerp applied*
+![Lerp applied](/images/medium/lerp-applied.png)*Lerp applied*
 
 This is looking better but still too angular. To fix this we are going to use a trick I found on [CSS Tricks for Gooey Effects](https://css-tricks.com/gooey-effect/). I love this effect.
 
@@ -181,7 +182,7 @@ If we apply it as a filter to each polygon we get nice rounded corners.
 
     p.setAttribute('style', "fill:green;filter: url(#goo);");
 
-![Getting closer.](https://cdn-images-1.medium.com/max/2000/1*CUyvD92_1m5Dun_bBVKg8g.png)*Getting closer.*
+![Getting closer.](/images/medium/getting-closer.png)*Getting closer.*
 
 This is looking even better, but some of the fine lines look a little too fine so we can then apply a slightly modified goo effect to the group as well.
 
@@ -201,11 +202,11 @@ This is looking even better, but some of the fine lines look a little too fine s
     <rect x="0" y="0" width="100%" height="100%" fill="white" />
     <g style="filter: url(#goo2)"></g>`;
 
-![The final result looks pretty good!](https://cdn-images-1.medium.com/max/2000/1*KYsOyvq0BtvpFu1V3mYoBQ.png)*The final result looks pretty good!*
+![The final result looks pretty good!](/images/medium/the-final-result-looks-pretty-good.png)*The final result looks pretty good!*
 
 Now we just need to make it black and white to use it as a texture for WebGL.
 
-![](https://cdn-images-1.medium.com/max/2000/1*KajagmwV8k_TwQUUhGKOCA.png)
+![](/images/medium/generating-a-water-effect-part-2.png)
 
 Unfortunately SVG can’t be used in WebGL directly — it has to be rasterised to a canvas which involves a little trickery:
 
@@ -236,11 +237,6 @@ This will encode the SVG we made to a URL and assign it to the image. Once the i
 It’s now ready to use in WebGL.
 
 Next we will look at making this as a [shader](https://aframe.io/docs/1.0.0/components/material.html#register-a-custom-shader-material) for use with AFrame.
-
-Final Image Generator Source (without texture loading bit)
-
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fcaustic-texture%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dcaustic-texture.js%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fcaustic-texture&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
-
 
 
 By Ada Rose Cannon on February 11, 2020.

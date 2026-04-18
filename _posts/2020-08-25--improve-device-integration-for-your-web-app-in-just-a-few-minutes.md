@@ -7,9 +7,7 @@ author: Ada Rose Cannon
 star: 1
 ---
 
-# Improve device integration for your Web App in just a few minutes
 
-Improve device integration for your Web App in just a few minutes
 
 ### Make your app a Web Share Target to enable
 

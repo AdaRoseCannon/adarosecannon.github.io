@@ -5,6 +5,8 @@ description: <b>Progressive Web Apps</b> are in flux at the moment, these are th
 categories: Blog
 author: Ada Rose Cannon
 star: 1
+preview: https://ada.is/progressive-web-apps-talk/images/FinancialTimes_G-FTUS_Balloon_LordMayorsAppeal.jpg
+inline_hero: true
 ---
 
 Progressive Web Apps are in flux at the moment, these are the opinions of someone who has been working on web apps before they got conflated with Service Workers and new web tech.

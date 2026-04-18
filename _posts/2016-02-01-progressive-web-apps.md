@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Sci-Fi swords and Progressive Web Apps"
+description: "Unable to afford a real lightsabre, I did what any reasonable developer would do and built my own. A quick one-afternoon project breaking down Web Audio, device motion and progressive web app techniques."
 categories: Blog
 author: Ada Rose Cannon
 image: https://ada.is/images/post_resources/photo.jpg
+inline_hero: true
 ---
 
 A major Science Fiction blockbuster, in a Franchise I am a big fan of, hit cinemas a short while ago.

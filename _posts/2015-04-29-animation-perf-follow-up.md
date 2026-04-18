@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Animation Performance - Follow Up"
+description: "A follow-up to my animation performance talk. Implementing an accordion with CSS transforms didn't work as expected — here's why, and the maths behind fixing it."
 categories: Blog
 author: Ada Rose Cannon
 ---

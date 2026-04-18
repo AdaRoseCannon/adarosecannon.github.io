@@ -1,7 +1,20 @@
 ---
 layout: page
 ---
-<article class="post">
-<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+<main>
+{% if page.vt_name %}
+<article class="post" style="view-transition-name: {{ page.vt_name }};">
+{% else %}
+<article class="post" style="view-transition-name: card-{{ page.url | slugify }};">
+{% endif %}
+{% if page.inline_hero %}
+<style>article.post img[src="{{ page.preview | default: page.image }}"] { view-transition-name: hero-{{ page.url | slugify }}; }</style>
+{% elsif page.preview or page.image %}
+<figure class="hero post-hero" style="view-transition-name: hero-{{ page.url | slugify }};">
+  <img src="{{ page.preview | default: page.image }}" alt="Header image for {{ page.title }}" width="1024" height="400">
+</figure>
+{% endif %}
+<h2 style="view-transition-name: title-{{ page.url | slugify }};">{{ page.title }}</h2>
 {{ content }}
 </article>
+</main>

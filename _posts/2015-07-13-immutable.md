@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Const & Immutable Objects"
+description: "ES6 introduces const, but objects defined with const are not immutable. This post goes into detail about const and covers some ways ES6 handles immutability."
 categories: Blog
 author: Ada Rose Cannon
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pusa_hispida_pup.jpg/1023px-Pusa_hispida_pup.jpg
+inline_hero: true
 star: 1
 ---
 

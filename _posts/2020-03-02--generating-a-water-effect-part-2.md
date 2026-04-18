@@ -5,17 +5,18 @@ description: "In the first part of this series we looked at generating the textu
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/output-image-of-the-first-article-a-tiling-pattern.png
+inline_hero: true
 ---
 
-# Generating a water effect, part 2.
 
 Writing the shader, generating the surface details.
 [**Generating a water effect, part 1. SVG and Canvas**
-*This is a 3 part breakdown of how this water effect works, you can view the finished demo here…*medium.com](https://medium.com/samsung-internet-dev/generating-a-water-effect-part-1-svg-and-canvas-2ad07060cc0d)
+*This is a 3 part breakdown of how this water effect works, you can view the finished demo here…*medium.com](/blog/2020/02/11/generating-a-water-effect-part-1-svg-and-canvas/)
 
-In the [first part of this series](https://medium.com/samsung-internet-dev/generating-a-water-effect-part-1-svg-and-canvas-2ad07060cc0d) we looked at generating the texture that goes on top of the water which looks like this, using SVG and canvas:
+In the [first part of this series](/blog/2020/02/11/generating-a-water-effect-part-1-svg-and-canvas/) we looked at generating the texture that goes on top of the water which looks like this, using SVG and canvas:
 
-![Output image of the first article. A tiling pattern made of black blobs.](https://cdn-images-1.medium.com/max/2000/1*DJvZtIdovu2GDSeLvxd4JA.png)*Output image of the first article. A tiling pattern made of black blobs.*
+![Output image of the first article. A tiling pattern made of black blobs.](/images/medium/output-image-of-the-first-article-a-tiling-pattern.png)*Output image of the first article. A tiling pattern made of black blobs.*
 
 We can now use this texture when writing our shader.
 
@@ -62,7 +63,7 @@ By making variations on these two programs you can do amazing things very effici
 
 ### Writing our water shader
 
-![The final outcome after the final part of the article.](https://cdn-images-1.medium.com/max/2000/1*XEd0nXZ4wFHvx6jxE8tE-g.png)*The final outcome after the final part of the article.*
+![The final outcome after the final part of the article.](/images/medium/the-final-outcome-after-the-final-part-of-the-arti.png)*The final outcome after the final part of the article.*
 
 For this part of the article we will only focus on the surface details, the underwater parts of this example and the border where the water touches the other objects use complex techniques we will talk about in the final part.
 
@@ -105,13 +106,13 @@ I set material to shader:myshader;color1: red; color2:blue; to load the custom s
 
 If you want to follow along in code, I have made a [sample project](https://glitch.com/edit/#!/ada-shader-starter?path=index.html:101:26) you can remix to play around with writing your own shaders:
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dindex.html%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
 We’re now ready to start writing the water shader.
 
 ### Bringing in the material we made.
 
-In the [first part of this series](https://medium.com/samsung-internet-dev/generating-a-water-effect-part-1-svg-and-canvas-2ad07060cc0d) we made a tiling image and exposed it as a THREE.CanvasTexture we can use this in our code assigning it to a map in the shader.
+In the [first part of this series](/blog/2020/02/11/generating-a-water-effect-part-1-svg-and-canvas/) we made a tiling image and exposed it as a THREE.CanvasTexture we can use this in our code assigning it to a map in the shader.
 > **Note: **You can’t define shaders or components in a script which gets deferred until after the HTML is parsed. This means that if you need to use <script type="module"> then you should either use the dynamic import() function instead, or use AFRAME’s registerPrimitive to assign the shader material, that way the newly made components and shaders get assigned correctly.
 
 **Step 1.** Add a new map uniform to the material, this is done in the schema part of registerShader. We then import it into the shader code with uniform sampler2D map; and use this map using the texture2D function. We’re multiplying it by 100.0 to make it repeat many times.
@@ -155,11 +156,11 @@ Because we couldn’t use JS modules to import our script I did it dynamically u
 
 Finally test it:
 
-![](https://cdn-images-1.medium.com/max/2000/1*b5bA1ZvIWf0-_kEiBJsMGg.png)
+![](/images/medium/generating-a-water-effect-part-1-2.png)
 
 The texture is in and works! It tiles nicely. The code within the glitch project I made earlier is here:
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dwater-step1.html%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
 ### Recolouring our texture
 
@@ -184,7 +185,7 @@ To let the user define the colours we will add two new variables to the schema. 
 
 This sets the output colour to the basecolor if the texture is dark and the foamcolor if it is light.
 
-![The foam is pink the water is blue](https://cdn-images-1.medium.com/max/2000/1*OEP1-JS8WFndQ2m-Y8YJDQ.png)*The foam is pink the water is blue*
+![The foam is pink the water is blue](/images/medium/the-foam-is-pink-the-water-is-blue.png)*The foam is pink the water is blue*
 
 ### Animating the water effect
 
@@ -227,7 +228,7 @@ This effect is a start but doesn’t feel water like. What we can do is compress
       )
     ).rgb;
 
-![](https://cdn-images-1.medium.com/max/2000/1*KCbtZjBOaHVHZ0KtEqH4sQ.png)
+![](/images/medium/generating-a-water-effect-part-2-2.png)
 
 There are lots of ways to tweak this to get the animation to feel how you like. I’m going to reuse the texture for a second layer of water by sampling it again at a different coordinate.
 
@@ -244,15 +245,15 @@ There are lots of ways to tweak this to get the animation to feel how you like. 
     ).rgb;
     gl_FragColor.rgb = mix(basecolor * clamp(1.0 - color2, 0.9, 1.0), foamcolor, color.r);
 
-![](https://cdn-images-1.medium.com/max/2000/1*6gQ1Q91WCgzDLOfUxmNKqA.png)
+![](/images/medium/generating-a-water-effect-part-3.png)
 
 The demo for this step is here:
 [**Shader Test**
-*Edit description*ada-shader-starter.glitch.me](https://ada-shader-starter.glitch.me/water-step3.html)
+*Edit description*ada-shader-starter.adarose.dev](https://ada-shader-starter.adarose.dev/water-step3.html)
 
 The code is here:
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dwater-step3.html%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
 ### Adding transparency
 
@@ -264,7 +265,7 @@ then set the alpha channel in the shader itself.
 
     gl_FragColor.a = 0.5;
 
-![Transparent water.](https://cdn-images-1.medium.com/max/2000/1*hSNh-GwhWMRo1fpMGBgygw.png)*Transparent water.*
+![Transparent water.](/images/medium/transparent-water.png)*Transparent water.*
 
 ### Making Waves
 
@@ -291,11 +292,11 @@ Then in the **Vertex Shader** we will add an offset to the position of each elem
       }
     `
 
-![](https://cdn-images-1.medium.com/max/2000/1*n2nPHGuqVUG76-Mz2FgATA.png)
+![](/images/medium/generating-a-water-effect-part-4.png)
 
 This now makes the water itself rise and fall in a pleasing way. The final code:
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter%3FpreviewSize%3D0%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dwater-step4.html%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fada-shader-starter&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
+[Sample embed removed because glitch no longer exists]
 
 ### Adding depth
 

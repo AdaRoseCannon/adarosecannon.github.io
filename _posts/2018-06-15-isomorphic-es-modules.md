@@ -5,15 +5,16 @@ description: "Earlier I demonstrated how to build a Single Page App which shares
 categories: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/es-modules-can-be-shared-with-your-server-code-and.png
+inline_hero: true
 ---
 
-# Isomorphic ES Modules
 
 Earlier I demonstrated how to build a Single Page App which shares templates with the Server Side Code. (See the video below.)
 
 We share the web app’s templates to enable the first page load to be pre-rendered on the server. This practice lets Web Apps start faster and be more resilient to network failure.
 
-![ES Modules can be shared with your Server code and the code run in the Web Browser.](https://cdn-images-1.medium.com/max/2000/1*9utC7ugklGeMjQoU_MluQQ.png)
+![ES Modules can be shared with your Server code and the code run in the Web Browser.](/images/medium/es-modules-can-be-shared-with-your-server-code-and.png)
 
 In the live coding session we use the new EcmaScript (ES) Modules because it allows us to share code directly without using work-arounds such as making bundles using WebPack or Browserify.
 

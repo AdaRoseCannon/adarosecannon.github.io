@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Accessibility and Contrast Bookmarklet"
+description: "A bookmarklet to analyse the contrast of text on any web page and highlight elements which may have readability issues. No 3rd party service needed."
 categories: Blog
 author: Ada Rose Cannon
 image: https://ada.is/images/post_resources/contrast.png
+inline_hero: true
 star: 1
 ---
 

@@ -5,11 +5,11 @@ description: "In ideal conditions the user will always maintain a good connectio
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/making-a-useful-offline-page-f-1.png
+inline_hero: true
 ---
 
-# Making a useful ‘offline’ page for your web app.
 
-Making a useful ‘offline’ page for your web app.
 
 ### We can’t guarantee our users have a good internet connection but we can still be helpful when they don’t.
 
@@ -19,23 +19,23 @@ If the network fails or takes too long to respond we can then use these cached r
 
 If we haven’t anticipated this we may see the dreaded no connection message:
 
-![](https://cdn-images-1.medium.com/max/2000/1*Y8lvzpBP9Sux4LR4AnQUEw.png)
+![](/images/medium/making-a-useful-offline-page-f-1.png)
 
 Fortunately we are very smart developers [[citation needed](https://xkcd.com/285/)] and can show a branded offline page. So the user still feels like they are using our web app when the connection is lost. here are some examples:
 
-![](https://cdn-images-1.medium.com/max/2000/1*5STmlrBSr_I2JBk1FU16cw.png)
+![](/images/medium/making-a-useful-offline-page-f-2.png)
 
 These are great for maintaining a consistent user experience during network failures which is the expected behaviour of a native app.
 
 These pages can do even more though, they can be used to provide entertainment such as The Guardian’s developer blog [providing a crossword](https://www.theguardian.com/info/developer-blog/2015/nov/04/building-an-offline-page-for-theguardiancom) on their offline page. Which unfortunately I can’t find a live version of any more.
 
-![The Guardian’s crossword offline page.](https://cdn-images-1.medium.com/max/2000/0*qhpLOzJQNz9uWsyk)*The Guardian’s crossword offline page.*
+![The Guardian’s crossword offline page.](/images/medium/the-guardian-s-crossword-offline-page.jpg)*The Guardian’s crossword offline page.*
 
 ### A useful offline page for almost any Web App
 
 I’m going to propose, and build, a feature which should be useful to many apps and websites and would make your app still partly usable whilst your offline. This is to show a lit of relevant cached pages to the user:
 
-![](https://cdn-images-1.medium.com/max/2000/1*VymXa3fC_jpV6L5sj_sC-Q.png)
+![](/images/medium/making-a-useful-offline-page-f-3.png)
 
 This example app is an RSS Feed reader. Where the user can read an RSS feed at a URL like so:
 
@@ -87,7 +87,7 @@ if (event.request.mode === "navigate") {
 
 This now shows the offline page when there is no alternative. Now lets provide a list of cached pages the user might like to read instead. Like in the example below.
 
-![](https://cdn-images-1.medium.com/max/2000/1*VymXa3fC_jpV6L5sj_sC-Q.png)
+![](/images/medium/making-a-useful-offline-page-f-3.png)
 
 The first step we need to do is to open the web apps caches to find pages we want to access:
 
@@ -185,7 +185,7 @@ el.insertAdjacentHTML(
 
 Here is a gif of it working, this was recorded with Chrome emulating an offline network connection:
 
-![](https://cdn-images-1.medium.com/max/2000/1*sskypZ1btwR2BKuTSmG5dA.gif)
+![](/images/medium/making-a-useful-offline-page-f-4.gif)
 
 Thanks for reading and hope this helps.
 

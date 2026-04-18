@@ -105,7 +105,7 @@ Notice the 8bit interpretation has 4 entries because the original data is 32 bit
     >> new Float32Array(typedArray.buffer)
     Float32Array [ -6.737272394695467e+37 ]
 
-![[How different data types fit into an Array Buffer from MDN](https://hacks.mozilla.org/2017/01/typedarray-or-dataview-understanding-byte-order/)](https://cdn-images-1.medium.com/max/2000/0*r3W_SXzV8ec0ASyS.png)*[How different data types fit into an Array Buffer from MDN](https://hacks.mozilla.org/2017/01/typedarray-or-dataview-understanding-byte-order/)*
+![[How different data types fit into an Array Buffer from MDN](https://hacks.mozilla.org/2017/01/typedarray-or-dataview-understanding-byte-order/)](/images/medium/how-different-data-types-fit-into-an-array-buffer-.png)*[How different data types fit into an Array Buffer from MDN](https://hacks.mozilla.org/2017/01/typedarray-or-dataview-understanding-byte-order/)*
 
 This demonstrates that as long as we are careful about the sizes of individual elements we can mix and match data types safely.
 

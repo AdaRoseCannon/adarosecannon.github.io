@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Audio visualisation in WebGL"
+description: "An audio visualisation that takes microphone input via Web Audio and maps it onto a 3D bunny in WebGL. Later updated with Google Cardboard VR support."
 categories: Blog
 author: Ada Rose Cannon
 ---

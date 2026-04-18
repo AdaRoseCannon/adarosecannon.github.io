@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Animation Performance"
+description: "Notes from my lightning talk at the Extensible Web Summit on animation performance in the browser — hitting 60fps, avoiding jank, and the difference between layout and composite animations."
 categories: Blog
 author: Ada Rose Cannon
 ---

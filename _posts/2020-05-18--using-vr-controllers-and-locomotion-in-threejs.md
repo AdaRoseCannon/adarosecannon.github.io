@@ -5,11 +5,11 @@ description: "In VR, with an advanced headset, one can explore a scene by walkin
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/using-vr-controllers-and-locom-1.jpg
+inline_hero: true
 ---
 
-# Using VR controllers and locomotion in THREE.js
 
-Using VR controllers and locomotion in THREE.js
 
 ### Going places in VR
 
@@ -76,7 +76,7 @@ To do this I use the [*WebXR emulator extension,](https://blog.mozvr.com/webxr-e
 
 This browser extension for [Chrome](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/) lets you test in emulated versions of a variety of popular headsets. With handles to move and rotate the emulated hardware. In the image below I show it being used to emulate the Oculus Quest.
 
-![](https://cdn-images-1.medium.com/max/2552/0*6p9j_TQDdwffgRmv)
+![](/images/medium/using-vr-controllers-and-locom-1.jpg)
 
 The final step which is invaluable is real device testing. Once I think I am almost finished I put on my real Oculus Quest and test it in the Oculus Browser and Firefox Reality. This is where unexpected bugs can get found. There are plenty of things you only notice when you are actually in VR.
 
@@ -135,7 +135,7 @@ This isn’t ideal, you have to point the controller always down which gets unco
 
 This model imagines that the controller is throwing out a ball, and where the ball lands is where we teleport to. This is a very common method of VR locomotion you may have experienced if you’ve used a VR headset before.
 
-![](https://cdn-images-1.medium.com/max/5624/1*2Ev7vn-f1P2bSgA9jvg3Nw.png)
+![](/images/medium/using-vr-controllers-and-locom-2.png)
 
 To draw the line we need to create a line geometry:
 
@@ -159,15 +159,15 @@ Next we have to do some math to work out where it hits the ground. We have a few
 
 From this we know how the velocity moves over time is the initial velocity plus the gravity multiplied by time.
 
-![v(t) = v0 + Gt](https://cdn-images-1.medium.com/max/2000/1*8cn5PN0nWO4u4orYandhJg.png)*v(t) = v0 + Gt*
+![v(t) = v0 + Gt](/images/medium/v-t-v0-gt.png)*v(t) = v0 + Gt*
 
 To get position from velocity you can integrate it with respect to time, so we’ll do that next.
 
-![Integrating the previous equation](https://cdn-images-1.medium.com/max/2000/1*63EBuH3Vc_mC5ur35A_2rA.png)*Integrating the previous equation*
+![Integrating the previous equation](/images/medium/integrating-the-previous-equation.png)*Integrating the previous equation*
 
 The remaining constant from the integration ( c ) in this case works out to be our starting position. So we get the equation for the position, which is a quadratic equation:
 
-![P(t) = 0.5 * Gt² + Vt + P](https://cdn-images-1.medium.com/max/2000/1*bGYF_Vsg1GzoPyjFJt1qjQ.png)*P(t) = 0.5 * Gt² + Vt + P*
+![P(t) = 0.5 * Gt² + Vt + P](/images/medium/p-t-0-5-gt-vt-p.png)*P(t) = 0.5 * Gt² + Vt + P*
 
 This equation is useful for getting the position at an arbitrary point in time. We can use this for drawing the arc.
 
@@ -185,11 +185,11 @@ We have 10 vertices in our line so will need to get the position of the ball at 
 
 To work out where the line stops we can solve the above equation in the y dimension for where y = 0;
 
-![0 = 0.5 * Gt² + Vt + P](https://cdn-images-1.medium.com/max/2000/1*9N8NO2OKPIF-4OlRaoYg7Q.png)*0 = 0.5 * Gt² + Vt + P*
+![0 = 0.5 * Gt² + Vt + P](/images/medium/0-0-5-gt-vt-p.png)*0 = 0.5 * Gt² + Vt + P*
 
 Fortunately the [general solution to the quadratic equation](https://en.wikipedia.org/wiki/Quadratic_formula) is well-known, giving us:
 
-![](https://cdn-images-1.medium.com/max/2000/1*FLM2-1uUIDjHlHtfB460Qg.png)
+![](/images/medium/using-vr-controllers-and-locom-3.png)
 
 This will have two solutions: one in the future and one in the past. We are only interested in the future one so we can discard the other, which in JavaScript is:
 
@@ -291,7 +291,7 @@ The animation we will do here is one which I have experienced in the Google Eart
 
 This works by changing the appearance that you are moving to instead the world moving around you. This gives a continual experience with less of a nauseating effect.
 
-![Static scene in our peripheral vision](https://cdn-images-1.medium.com/max/2000/1*CdRCpFfsLo3CezTqjDeoZg.png)*Static scene in our peripheral vision*
+![Static scene in our peripheral vision](/images/medium/static-scene-in-our-peripheral-vision.png)*Static scene in our peripheral vision*
 
 This is how we make the environment: it’s a simple grid in a grey inside-out sphere. It’s nothing eye catching, it just needs to steady the user.
 
@@ -299,7 +299,7 @@ They both have a negative renderOrder and have depthWrite turned off and no tran
 
 We occlude the rest of the scene by having a sphere with the front removed placed over the user’s head, kind of like a diving helmet.
 
-![A diving helmet.](https://cdn-images-1.medium.com/max/2000/0*2RENQHQxjF5n1_UZ.png)*A diving helmet.*
+![A diving helmet.](/images/medium/a-diving-helmet.png)*A diving helmet.*
 
 We set the sphere’s material to have colorWrite: false so that even though it occludes the main scene nothing is drawn.
 

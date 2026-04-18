@@ -5,11 +5,13 @@ description: "Last year I wrote about how you can use a phone for web developmen
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/linux-on-dex-running-in-terminal-mode-on-the-phone.png
+inline_hero: true
 ---
 
 > NB! Update 10/2019, The Linux on DeX project is not being continued I will continue looking for a solution for using a single phone as a development maching with DeX.
 
-Last year I wrote about how you can use a phone for web development using an Android Linux Terminal and a simple editor I'd made as a [Progressive Web App](https://medium.com/samsung-internet-dev/writing-software-using-a-phone-e71976f1f18d). It worked pretty well but had some drawbacks, for example you couldn't debug Samsung Internet on the DeX you had to use an external laptop.
+Last year I wrote about how you can use a phone for web development using an Android Linux Terminal and a simple editor I'd made as a [Progressive Web App](/blog/2017/05/29/writing-software-using-a-phone/). It worked pretty well but had some drawbacks, for example you couldn't debug Samsung Internet on the DeX you had to use an external laptop.
 
 <iframe width="560" height="315" name="youtube" src="https://www.youtube.com/embed/yvpOIz7zAtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -38,14 +40,14 @@ I plugged in a USB charger and mouse and keyboard to the dongle and DeX started 
 
 [Linux on Dex](https://www.linuxondex.com/) is an app for the Note 9 which gives you a Linux container you can access as a full desktop Linux environment on DeX. You can also access a terminal only version on the phone.
 
-![Linux on DeX running in terminal mode on the phone.](https://cdn-images-1.medium.com/max/800/0*paVGmwLb-LRi1h5E.png)
+![Linux on DeX running in terminal mode on the phone.](/images/medium/linux-on-dex-running-in-terminal-mode-on-the-phone.png)
 *Linux on DeX running in terminal mode on the phone.*
 
 The terminal only mode is a great way to run commands when you are on the move.
 
 When you run it from the DeX you get full desktop Linux you'd inspect.
 
-![Linux on DeX running desktop mode in DeX](https://cdn-images-1.medium.com/max/800/0*yjvTXOmxIqg3uTaJ.png)
+![Linux on DeX running desktop mode in DeX](/images/medium/linux-on-dex-running-desktop-mode-in-dex.png)
 *Linux on DeX running desktop mode in DeX*
 
 Linux on DeX is so performant because it's not running in a virtual machine, it's a container which takes advantage of the device's resources. So software written for it needs to be made for the device's ARM architecture.

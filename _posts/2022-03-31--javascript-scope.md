@@ -4,7 +4,7 @@ title: "JavaScript scope and closures"
 description: "JavaScript is almost famous for some of it’s weird behaviours around variables. This goal of this article is to make it so that you will never be surprised by the value of `this` or why a variable seems to not change when you set it somewhere else."
 category: Blog
 author: Ada Rose Cannon
-preview: https://miro.medium.com/max/1400/1*Uzrj7mSB1zP3AIq45uXNRg.jpeg
+preview: /images/previews/2022-03-31--javascript-scope.jpeg
 ---
 
 JavaScript is almost famous for some of it’s weird behaviours around variables. This goal of this article is to make it so that you will never be surprised by the value of `this` or why a variable seems to not change when you set it somewhere else.

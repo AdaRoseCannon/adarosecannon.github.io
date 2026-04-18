@@ -3,17 +3,28 @@ description: The blog of Ada Rose Cannon
 author:
   name: Ada Rose Cannon
   email: ada@ada.is
-  twitter: AdaRoseCannon
 
 include: ['.htaccess']
 
-# _config.build.yml sets future and show_drafts to false on `grunt build`
 future: false
 show_drafts: false
 
 permalink: pretty
 
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+collections:
+  demos:
+    output: false
+
 giturl: https://github.com/AdaRoseCannon
 pageurl: /
 pullreq: https://github.com/AdaRoseCannon/adarosecannon.github.io/tree/master/
+
+exclude:
+  - styles/main.scss
 

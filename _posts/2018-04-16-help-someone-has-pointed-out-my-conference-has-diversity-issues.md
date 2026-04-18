@@ -7,7 +7,6 @@ author: Ada Rose Cannon
 star: 1
 ---
 
-# “Help! someone has pointed out my conference has diversity issues!
 
 How do I fix this?”
 

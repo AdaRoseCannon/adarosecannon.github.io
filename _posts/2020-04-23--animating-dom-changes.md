@@ -5,11 +5,11 @@ description: "A common misconception in Web Development is that the DOM is slow.
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/a-gif-of-the-demo.gif
+inline_hero: true
 ---
 
-# Animating DOM Changes
 
-Animating DOM Changes
 
 ### Smoothly adding, removing, resizing and reordering elements
 
@@ -46,7 +46,7 @@ Before we cover this in depth, here is a page where I test this technique in dif
 [**Layout Tween**
 *Below are a selection of different layouts: List, Floats, Flexbox, Grid. With controls for adding elements, try…*samsunginter.net](https://samsunginter.net/layout-tween/)
 
-![A gif of the demo.](https://cdn-images-1.medium.com/max/2000/1*1Y5HMvdeIciEAlQowm1YDw.gif)*A gif of the demo.*
+![A gif of the demo.](/images/medium/a-gif-of-the-demo.gif)*A gif of the demo.*
 
 We use the same technique for adding elements and changing between different layout modes in each of the demos in the example page.
 
@@ -93,7 +93,7 @@ When scaling size the math is a lot easier to do if you do all of the transforma
 
     const clipPath = `inset(0px ${widthDiff}px ${heightDiff}px 0px)`;
 
-![Examples of the animation change between scaling and clipping. Scale on top, clipping below.](https://cdn-images-1.medium.com/max/2000/1*tpMPkudHBnHd6iPz_9uDYg.gif)*Examples of the animation change between scaling and clipping. Scale on top, clipping below.*
+![Examples of the animation change between scaling and clipping. Scale on top, clipping below.](/images/medium/examples-of-the-animation-change-between-scaling-a.gif)*Examples of the animation change between scaling and clipping. Scale on top, clipping below.*
 
 We can then animate these using the Web Animation API. Don’t animate both scale and clip path just pick one to use.
 

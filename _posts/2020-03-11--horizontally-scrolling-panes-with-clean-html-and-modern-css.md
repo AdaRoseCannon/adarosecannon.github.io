@@ -5,9 +5,10 @@ description: "Isn’t it nice when the tools you work with get better and better
 category: Blog
 author: Ada Rose Cannon
 star: 1
+preview: /images/medium/3-pages-laid-out-horizontally.png
+inline_hero: true
 ---
 
-# Horizontally Scrolling Panes with clean HTML and modern CSS
 
 This used to be a really hard problem, new CSS tools make it simpler. Here’s how it works…
 
@@ -17,13 +18,13 @@ Many years ago when I was still a front-end engineer on real products, I helped 
 
 Since it was a newspaper the aesthetic had pages sat next to each other which could be swiped between with a flick of a finger.
 
-![3 Pages laid out horizontally](https://cdn-images-1.medium.com/max/3184/1*3UnXFGsneIrFLRplgsD45g.png)*3 Pages laid out horizontally*
+![3 Pages laid out horizontally](/images/medium/3-pages-laid-out-horizontally.png)*3 Pages laid out horizontally*
 
 To implement this was a huge hack involving significant amounts of JavaScript and some really awkward HTML. It was flaky and sometimes suffered from poor performance, since we had to constantly track user input.
 
 I tried remaking it for a project today and I was able to build the whole thing with only CSS!
 
-Here’s how… *(Demo at the bottom, [direct link](https://pink-paper.glitch.me))*
+Here’s how… *(Demo at the bottom, [direct link](https://pink-paper.adarose.dev))*
 
 ### Step 1
 
@@ -115,11 +116,9 @@ This is almost ready, the deep links in the <nav> still work but the instantaneo
 
 ### Final Demo
 
-Try opening [https://pink-paper.glitch.me](https://pink-paper.glitch.me) in a mobile phone browser to try it with touch.
+Try opening [https://pink-paper.adarose.dev](https://pink-paper.adarose.dev) in a mobile phone browser to try it with touch.
 
-<iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fpink-paper%3FpreviewSize%3D100%26attributionHidden%3Dfalse%26sidebarCollapsed%3Dfalse%26path%3Dindex.html%26previewFirst%3Dfalse&amp;dntp=1&amp;display_name=Glitch&amp;url=https%3A%2F%2Fglitch.com%2Fembed%2F%23%21%2Fembed%2Fpink-paper&amp;image=https%3A%2F%2Fglitch.com%2Fedit%2Fimages%2Flogos%2Fglitch%2Fsocial-card%402x.png&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=glitch" allowfullscreen frameborder="0" scrolling="no"></iframe>
-
-
+[Sample embed removed because glitch no longer exists]
 
 By Ada Rose Cannon on March 11, 2020.
 
