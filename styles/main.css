@@ -32,7 +32,7 @@ body {
   padding: 0 5vw;
   background: #E3EAFF;
   background-image: url(/images/pattern.svg);
-  background-size: 100vw 50vh;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 
   @media (max-width: 600px) {
