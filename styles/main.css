@@ -32,9 +32,9 @@ body {
   padding: 0 5vw;
   background: #E3EAFF;
   background-image: url(/images/pattern.svg);
-  background-size: 100% auto;
+  background-size: max(100%, 75vh) auto;
   background-repeat: no-repeat;
-  background-position-y: 0 calc(-60.777vw + min(50vh, 60.777vw));
+  background-position-y: calc(-60.777vw + min(50vh, 60.777vw));
 
   @media (max-width: 600px) {
     padding: 0 1rem;
@@ -133,8 +133,17 @@ article.post {
   }
 
   @media (max-width: 600px) {
-    & .highlight-card p {
-      display: none;
+    gap: 0.5rem;
+    font-size: 75%;
+
+
+    & .highlight-card {
+      padding: 0.5rem;
+      text-align: center;
+
+      p {
+        display: none;
+      }
     }
   }
 }
