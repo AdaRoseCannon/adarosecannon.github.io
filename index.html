@@ -26,9 +26,16 @@ title: Ada.is
 <h2 id="writing" class="blog-archive-heading">Writing</h2>
 
 <main>
+{% assign per_page = paginator.per_page %}
+{% assign page_start = paginator.page | minus: 1 | times: per_page %}
 {% for post in paginator.posts %}
   {% assign default_image = '/images/pattern.svg' %}
   {% assign preview = default_image %}
+  {% assign global_index = page_start | plus: forloop.index0 %}
+  {% assign prevPagePostIndex = global_index | minus: per_page %}
+  {% assign nextPagePostIndex = global_index | plus: per_page %}
+  {% assign prevpagepost = site.posts[prevPagePostIndex] %}
+  {% assign nextpagepost = site.posts[nextPagePostIndex] %}
   {% if post.image %}{% assign preview = post.image %}{% endif %}
   {% if post.preview %}{% assign preview = post.preview %}{% endif %}
   {% if preview == default_image %}
@@ -40,7 +47,17 @@ title: Ada.is
       {% endif %}
     {% endif %}
   {% endif %}
-  <section class="index" style="view-transition-name: card-{{ post.url | slugify }};">
+  {% if paginator.previous_page %}
+  <section aria-hidden="true" class="index dummy" style="transform: translateX(-100vw); position-anchor: --{{ post.url | slugify }}; view-transition-name: card-{{ prevpagepost.url | slugify }};">
+    <figure class="hero" style="view-transition-name: hero-{{ prevpagepost.url | slugify }};"><img src="/images/pattern.svg" width="600" height="400" alt=""></figure>
+    <article class="index">
+      <h2 style="view-transition-name: title-{{ prevpagepost.url | slugify }};">Lorem Ipsum</h2>
+      <time>Jan 01 2000</time>
+      <p class="article-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+    </article>
+  </section>
+  {% endif %}
+  <section class="index" style="anchor-name: --{{ post.url | slugify }}; view-transition-name: card-{{ post.url | slugify }};">
     <figure class="hero" style="view-transition-name: hero-{{ post.url | slugify }};">
       {% if preview == default_image %}
         <img src="{{ preview }}" width="600" height="400" alt="">
@@ -60,6 +77,16 @@ title: Ada.is
       {% endif %}
     </article>
   </section>
+  {% if paginator.next_page %}
+  <section aria-hidden="true" class="index dummy" style="transform: translateX(100vw); position-anchor: --{{ post.url | slugify }}; view-transition-name: card-{{ nextpagepost.url | slugify }};">
+    <figure class="hero" style="view-transition-name: hero-{{ nextpagepost.url | slugify }};"><img src="/images/pattern.svg" width="600" height="400" alt=""></figure>
+    <article class="index">
+      <h2 style="view-transition-name: title-{{ nextpagepost.url | slugify }};">Lorem Ipsum</h2>
+      <time>Jan 01 2000</time>
+      <p class="article-body">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+    </article>
+  </section>
+  {% endif %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
@@ -74,3 +101,16 @@ title: Ada.is
 </nav>
 {% endif %}
 </main>
+
+<script>
+addEventListener('pageswap', (e) => {
+  if (e.viewTransition && e.activation?.entry.url.includes('#writing')) {
+    document.querySelector('#writing')?.scrollIntoView({ behavior: 'instant' });
+  }
+});
+addEventListener('pagereveal', (e) => {
+  if (e.viewTransition && navigation.activation?.entry.url.includes('#writing')) {
+    document.querySelector('#writing')?.scrollIntoView({ behavior: 'instant' });
+  }
+});
+</script>
