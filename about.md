@@ -6,20 +6,20 @@ layout: post
 
 <figure class="about-photo"><img src="/images/ada-pedestal.jpg" alt="Ada Rose Cannon presenting at QConSf" /></figure>
 
-I'm a web platform engineer at Apple, working on Safari and WebKit. I design, prototype, and test browser APIs for immersive hardware like AR/VR and spatial computing. The work is roughly half development, half web standards.
+Hi, I’m Ada. I work on the web platform, focusing on immersive technologies and standards like WebXR, helping shape how the web adapts to AR, VR, and spatial computing. I care about keeping the web open, competitive, and a platform that anyone can build on as new kinds of devices emerge.
 
-I chair both the [W3C Immersive Web Working Group](https://www.w3.org/immersive-web/) and the W3C Immersive Web Community Group, coordinating between browser vendors, hardware manufacturers, and the wider web standards community. I helped to establish the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/policies/code-of-conduct/) which grew out of a code of conduct I originally wrote for the Immersive Web Groups.
+### For talks, events, or media, here’s a short bio:
 
-## Before Apple
+Ada Rose Cannon is a web platform engineer at Apple, working on Safari and WebKit. Her work focuses on designing and shipping web APIs for immersive hardware—bridging the gap between emerging spatial computing platforms and the open web. This sits at the intersection of implementation and standards, with roughly equal time spent building prototypes and shaping how the platform evolves.
 
-I was a developer advocate at Samsung Internet for about six years, where I built [demos](/demos/), wrote articles, gave [talks](/talks/), and contributed to WebXR, THREE.js, and A-Frame. I also spent time keeping MDN accurate and making sure Samsung Internet was properly represented across web documentation.
+She chairs both the [W3C Immersive Web Working Group](https://www.w3.org/immersive-web/) and Community Group, coordinating across browser vendors, hardware manufacturers, and the wider standards community. She also helped establish the [W3C's Code of Conduct](https://www.w3.org/policies/code-of-conduct/), expanding on earlier work she led within the immersive web community.
 
-Before that I was at FT Labs, doing rapid prototyping. Short sprints solving varied problems across the full stack. That was the team that got me interested in public speaking. And before that, I was a PlayStation developer at Studio Output, building dynamic themes for the PlayStation Store.
+Previously, she was a developer advocate at Samsung Internet, where she spent six years helping developers adopt emerging web technologies. Her work included building demos, writing, and contributing to projects like WebXR, Three.js, and A-Frame, as well as maintaining documentation on MDN Web Docs.
 
-I came to all of this from a physics background. I studied at UCL.
+Before that, she worked at FT Labs on rapid prototyping across the stack, and earlier as a PlayStation developer at Studio Output, building dynamic themes for the PlayStation Store.
 
-## Speaking
+She studied physics at University College London.
 
-I've spoken at WWDC, CSS Day, FFConf, dotJS, BrazilJS, and others, and appeared on HTTP 203 with Jake Archibald. A collection of some of my [talks is here](/talks/).
+Ada is also a regular speaker, having presented at events including WWDC, CSS Day, FFConf, dotJS, and BrazilJS, and has appeared on HTTP 203 with Jake Archibald.
 
 <p style="margin-top: 3em;"><a href="/">&larr; Back to homepage</a></p>
